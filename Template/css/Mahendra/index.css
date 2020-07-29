@@ -102,6 +102,7 @@ nav a {
 }
 .slideCardFooter{
     background-color: white;
+    height: 60px;
 }
 .SeperaterLine {
     height: 4px;
@@ -178,4 +179,58 @@ nav a {
 
 .SocialBtn{
     color: white;
+}
+
+.tourcardDist{
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(104, 104, 104);
+}
+
+.tourcardL1{
+    position: relative;
+    font-size: medium;
+    font-weight: 700;
+    color: rgb(104, 104, 104);
+    top: -9px;
+    left: 8px;
+}
+
+.tourcardL2 {
+    position: relative;
+    font-size: small;
+    font-weight: lighter;
+    color: rgb(104, 104, 104);
+    top: -9px;
+    left: 8px;
+}
+
+.tourcardReview{
+    color: rgb(0, 79, 153);
+}
+
+.tourPrice{
+    color: rgb(5, 156, 25);
+}
+
+.tourtitle{
+    color: crimson;
+}
+
+.percent{
+    position: relative;
+    color: white;
+    font-size: large;
+    top: -16px;
+    left: -35px;
+
+}
+
+.cardimg{
+    
+    transition: transform .2s;
+}
+
+.cardimg:hover {
+    transform: scale(0.9);
 }
