@@ -82,9 +82,10 @@ header .overlay {
     color: black;
 }
 
-.topnavScroll2{
+.topnav .topnavScroll2 {
     color: blue;
 }
+
 
 nav a {
     color: aliceblue;

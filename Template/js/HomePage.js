@@ -21,11 +21,15 @@ var swiper = new Swiper('.swiper-container', {
 
     $(window).scroll(function () {
 
-        //$('nav').toggleClass('topnavScroll', $(this).scrollTop() > 0);
-        $('nav').toggleClass('topnavScroll a:hover', $(this).scrollTop() > 0);
-        $('topnavScroll').hover(function(){
-            $(this).addClass('topnavScroll2');
-        })
-        //$('nav').removeClass('nav a');
+        
+        $('nav').toggleClass('topnavScroll', $(this).scrollTop() > 0);
+        //$('nav ul li a').toggleClass('topnavScroll2', $(this).hover() == true);
+
+        $('.topnav').hover(function () {
+            //$('.topnavScroll a').removeClass('topnav');
+            $('.topnav').toggleClass('topnavScroll2');
+            
+        });
+        
 
     })
