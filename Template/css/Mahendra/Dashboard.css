@@ -7,10 +7,11 @@ html {
 .sidebar{
     position: fixed;
     width: 250px;
+    left: 0px;
     background-color: #1c2331;
     height: 100%;
     padding: 0px;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     
 }
 
@@ -62,9 +63,14 @@ nav ul .dropCont1.show {
     display: block;
 }
 
-nav ul .dropCont1.show1 {
+nav ul .dropCont2.show {
     display: block;
 }
+
+nav ul .dropCont3.show {
+    display: block;
+}
+
 
 nav ul ul li{
     line-height: 40px;

@@ -35,27 +35,28 @@
                 <div class="sidebarTop">HOTEL</div>
 
                 <ul>
-                    <li class="sidebarText"><a class="dropBtn1" href="">Employees <span  class="fas fa-chevron-down"></span ></a>
+                    <li>
+                        <a class="dropBtn1" href="#">Employees <span  class="fas fa-chevron-down first-sp"></span ></a>
                         <ul class="dropCont1">
-                            <li class="sidebarText"><a href="">View Employees</a></li>
-                            <li class="sidebarText"><a href="">Add Employee</a></li>
+                            <li><a href="">View Employees</a></li>
+                            <li><a href="">Add Employee</a></li>
                         </ul>
                     </li>
-                    <li class="sidebarText  "><a class="dropBtn2" href="">Packages<span  class="fas fa-chevron-down"></span ></a>
+                    <li><a class="dropBtn2" href="#">Packages<span  class="fas fa-chevron-down secound-sp"></span ></a>
                         <ul class="dropCont2">
-                            <li class="sidebarText"><a href="">View Employees</a></li>
-                            <li class="sidebarText"><a href="">Add Employee</a></li>
+                            <li><a href="">View Employees</a></li>
+                            <li><a href="">Add Employee</a></li>
                         </ul>
                     </li>
-                    <li class="sidebarText"><a href="">Reception Halls<span   class="fas fa-chevron-down"></span></a>
+                    <li><a class="dropBtn3" href="#">Reception Halls<span class="fas fa-chevron-down third-sp"></span></a>
                         <ul class="dropCont3">
-                            <li class="sidebarText"><a href="">View Employees</a></li>
-                            <li class="sidebarText"><a href="">Add Employee</a></li>
+                            <li><a href="">View Employees</a></li>
+                            <li><a href="">Add Employee</a></li>
                         </ul>
                     </li>
 
-                    <li class="sidebarText"><a href="">Feedback</a></li>
-                    <li class="sidebarText"><a href="">Contact Us</a></li>
+                    <li><a href="">Feedback</a></li>
+                    <li><a href="">Contact Us</a></li>
 
 
 
@@ -99,9 +100,27 @@
     <script src="https://cdnjs.com/libraries/Chart.js"></script>
     <!--User Js-->
     <script>
-        $('.dropBtn1').click(function () {
-            $('nav ul .dropCont1').toggleClass("show");
+        $(document).ready(function() {
+            $('.dropBtn1').click(function(){
+                $('nav ul .dropCont1').toggleClass('show');
+            });
         });
+        
+
+        $(document).ready(function() {
+            $('.dropBtn2').click(function(){
+                $('nav ul .dropCont2').toggleClass('show');
+            });
+        });
+        
+
+        $(document).ready(function() {
+            $('.dropBtn3').click(function(){
+                $('nav ul .dropCont3').toggleClass('show');
+            });
+        });
+        
+        
     </script>
 
 </body>
