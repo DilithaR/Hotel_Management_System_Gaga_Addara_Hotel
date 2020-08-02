@@ -57,8 +57,8 @@ header .overlay {
 }
 
 .navLogo{
-    width: 70px;
-    height: 80px;
+    width: 60px;
+    height: 70px;
 }
 
 .topnav {
@@ -73,17 +73,23 @@ header .overlay {
 }
 
 .topnavScroll {
-    background-color: white;
-    height: 80px;
-    color: black;
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    animation-name: laydown;
+    animation-duration: 1s;
+
+}
+@keyframes laydown{
+    from {height: 0px;}
+  to {height: 70px;}
 }
 
 .topnavScroll a{
     color: black;
 }
 
-.topnav .topnavScroll2 {
-    color: blue;
+.topnavScroll a:hover{
+    color: green;
 }
 
 
@@ -91,13 +97,16 @@ nav a {
     color: aliceblue;
 }
 
+
 .topnav a:hover {
-    color: honeydew;
+    color: rgb(255, 85, 119);
     -ms-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 
 }
+
+
 
 .topnav .dropdown-item:hover {
     color: rgba(252, 3, 45, 0.87);
@@ -227,6 +236,7 @@ nav a {
     color: rgb(104, 104, 104);
     top: -9px;
     left: 8px;
+    
 }
 
 .tourcardReview{
@@ -268,4 +278,24 @@ nav a {
 
 .HomeCommonBtn:hover{
     background-color: rgba(39, 100, 214, 0.938);
+}
+
+.promoCardAct{
+     position: relative;
+     background-size: 360px 260px;
+     background-repeat: no-repeat;
+     cursor: pointer;
+}
+
+.promoCardAct:hover{
+    
+    background-repeat: no-repeat;
+    background-size: 360px 260px;
+    animation: mymove 100s;
+    
+}
+@keyframes mymove {
+    1% {
+        background-size: 340px 240px;
+    }
 }

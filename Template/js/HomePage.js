@@ -1,5 +1,3 @@
-
-
 var swiper = new Swiper('.swiper-container', {
     initialSlide: 4,
     loop: true,
@@ -19,17 +17,10 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 
-    $(window).scroll(function () {
 
-        
-        $('nav').toggleClass('topnavScroll', $(this).scrollTop() > 0);
-        //$('nav ul li a').toggleClass('topnavScroll2', $(this).hover() == true);
 
-        $('.topnav').hover(function () {
-            //$('.topnavScroll a').removeClass('topnav');
-            $('.topnav').toggleClass('topnavScroll2');
-            
-        });
-        
+$(window).scroll(function () {
 
-    })
+    $('nav').toggleClass('topnavScroll', $(this).scrollTop() > 0);
+
+});
