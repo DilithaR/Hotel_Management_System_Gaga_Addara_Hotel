@@ -67,6 +67,7 @@ header .overlay {
     z-index: 3;
     font-size: medium;
     font-weight: bold;
+    font-size: large;
     font-variant: small-caps;
     transition: transform .2s;
     
@@ -106,6 +107,22 @@ nav a {
 
 }
 
+.topnav li .fas{
+    color: rgb(0, 79, 153);
+    -ms-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+
+}
+
+.topnav li .fas:hover {
+    color: rgb(0, 79, 153);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+
+}
+
 
 
 .topnav .dropdown-item:hover {
@@ -114,6 +131,7 @@ nav a {
     
 
 }
+
 
 .swiper-container {
     width: 100%;
@@ -197,11 +215,22 @@ nav a {
 
 .isolateAd{
     position: relative;
-    top: 200px;
+    top: 160px;
     left: 800px;
     background-color: #1c2331;
     width: 1000px;
     height: 350px;
+    display: none;
+}
+
+.isolateAd_inani {
+    position: relative;
+    top: 160px;
+    left: 800px;
+    background-color: #1c2331;
+    width: 1000px;
+    height: 350px;
+    display: block;
 }
 
 .footertop{
@@ -271,7 +300,8 @@ nav a {
 
 .HomeCommonBtn{
     background-color: rgb(250, 41, 69);
-    border-radius: 20px;
+    border-radius: 40px;
+    height: 50px;
     font-weight: bold;
     font-size: large;
 }
@@ -287,7 +317,7 @@ nav a {
      cursor: pointer;
 }
 
-.promoCardAct:hover{
+/* .promoCardAct:hover{
     
     background-repeat: no-repeat;
     background-size: 360px 260px;
@@ -295,7 +325,24 @@ nav a {
     
 }
 @keyframes mymove {
-    1% {
+    0.5% {
         background-size: 340px 240px;
     }
+} */
+
+.promoCardAct:hover{
+    
+    animation: mymove 100s;
+    
+}
+@keyframes mymove {
+    
+    0.75% {
+        transform: scale(1.1);
+    }
+}
+
+.newsHead{
+    color: crimson;
+    text-decoration: none;
 }

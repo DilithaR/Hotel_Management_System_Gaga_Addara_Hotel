@@ -23,4 +23,9 @@ $(window).scroll(function () {
 
     $('nav').toggleClass('topnavScroll', $(this).scrollTop() > 0);
 
+    if ($(this).scrollTop() > 3150) {
+        $('.isolateAd').addClass('isolateAd_inani animated zoomIn slow');
+    };
+
 });
+

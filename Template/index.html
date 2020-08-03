@@ -8,12 +8,13 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!--Bootstrap Core CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <!--Swiper CDN-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -40,26 +41,26 @@
         </button> -->
         <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item active ml-2 mr-1">
                     <a class="nav-link" href="#">Home </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item active ml-2 mr-1">
                     <a class="nav-link" href="#">Featurs 1</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item active ml-2 mr-1">
                     <a class="nav-link" href="#">Feature 2</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item active ml-2 mr-1">
                     <a class="nav-link" href="#">Feature 3</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item active ml-2 mr-1">
                     <a class="nav-link" href="#">Features</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item active ml-2 mr-1">
                     <a class="nav-link" href="#">Pricing</a>
                 </li>
 
-                <li class="nav-item dropdown active">
+                <li class="nav-item dropdown active ml-2 mr-1">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         Dropdown link
@@ -71,9 +72,15 @@
                     </div>
                 </li>
 
-                <li class="nav-item active ml-4">
-                    <a class="nav-link" href="#" title="Sign in"><i class="fas fa-sign-in-alt"></i></a>
+                <li class="nav-item active ml-4 row">
+                    <a class="nav-link" href="#" title="My Profile"><i class="fas fa-user-circle fa-1x"></i></a>
                 </li>
+
+                <li class="nav-item active ml-4 mr-2 row">
+                    <a class="nav-link" href="#" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>
+                </li>
+
+                
 
             </ul>
         </div>
@@ -492,74 +499,94 @@
         <hr style="height: 3px; background-color: rgb(228, 228, 228); border-radius: 5px;" class="ml-5 mr-4">
 
         <hr class="SeperaterLine ml-5" class="d-flex justify-content-start">
-        <h2 class="d-flex justify-content-start ml-5">Our Popular Tours</h2>
+        <h2 class="d-flex justify-content-start ml-5">Our Popular Food</h2>
         <h3 class="d-flex justify-content-start  ml-5 subtopic">Lorem ipsum dolor sit amet consectetur adipisicing
             elit..</h3>
 
         <div class="row m-5">
 
             <!-- Card -->
-            <div class="card card-image col mr-4 highlitCard promoCardAct"
-                style="background-image: url(img/large-LKI9500084-E-1587985702278.jpg);">
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url(img/strawberry.jpg);">
 
                 <!-- Content -->
-                <div
-                    class="text-white text-center d-flex align-self-start justify-content-end align-items-start
-                    rgba-black-strong py-5
-                    px-4">
-                    <div>
-                        <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Marketing</h5>
-                    </div>
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-utensils"></i> Marketing</h5>
                 </div>
 
             </div>
             <!-- Card -->
 
 
-            <div class="card card-image col mr-4 highlitCard"
-                style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url(img/food\ 1.jpg);">
 
                 <!-- Content -->
-                <div
-                    class="text-white text-center d-flex align-items-center  rgba-black-strong py-5 px-4">
-                    <div>
-                        <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Marketing</h5>
-                        <h3 class="card-title pt-2"><strong>This is the card title</strong></h3 <a class="btn btn-pink">
-                        <i class="fas fa-clone left"></i> View project</a>
-                    </div>
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-utensils"></i> Marketing</h5>
                 </div>
 
             </div>
+            <!-- Card -->
 
 
-            <div class="card card-image col mr-4 highlitCard"
-                style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url(img/food\ 2.jpg);">
 
                 <!-- Content -->
-                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                    <div>
-                        <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Marketing</h5>
-                        <h3 class="card-title pt-2"><strong>This is the card title</strong></h3 <a class="btn btn-pink">
-                        <i class="fas fa-clone left"></i> View project</a>
-                    </div>
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-utensils"></i> Marketing</h5>
                 </div>
 
             </div>
+            <!-- Card -->
 
 
-            <div class="card card-image col mr-4 highlitCard"
-                style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url(img/food\ 3.jpg);">
 
                 <!-- Content -->
-                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                    <div>
-                        <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Marketing</h5>
-                        <h3 class="card-title pt-2"><strong>This is the card title</strong></h3 <a class="btn btn-pink">
-                        <i class="fas fa-clone left"></i> View project</a>
-                    </div>
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-utensils"></i> Marketing</h5>
                 </div>
 
             </div>
+            <!-- Card -->
 
 
         </div>
@@ -571,72 +598,94 @@
 
 
         <hr class="SeperaterLine ml-5" class="d-flex justify-content-start">
-        <h2 class="d-flex justify-content-start ml-5">Our Popular Tours</h2>
+        <h2 class="d-flex justify-content-start ml-5">Our Popular Rooms</h2>
         <h3 class="d-flex justify-content-start  ml-5 subtopic">Lorem ipsum dolor sit amet consectetur adipisicing
             elit..</h3>
 
-        <div class="row m-5">
+        <div class="row m-5 testanimCX">
 
             <!-- Card -->
-            <div class="card card-image col mr-4 highlitCard"
-                style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            <div class="card card-image col mr-4 highlitCard d-flex flex-row-reverse justify-content-between promoCardAct"
+                style="background-image: url(img/room\ 1.jpg);" onmouseover="zoomfun(this)" onmouseup="zoomfun(this)">
 
                 <!-- Content -->
-                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                    <div>
-                        <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Marketing</h5>
-                        <h3 class="card-title pt-2"><strong>This is the card title</strong></h3>
-                        <a class="btn btn-pink"><i class="fas fa-clone left"></i> View project</a>
-                    </div>
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-bed"></i> Marketing</h5>
                 </div>
 
             </div>
             <!-- Card -->
 
 
-            <div class="card card-image col mr-4 highlitCard"
-                style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url(img/room\ 3.jpg);">
 
                 <!-- Content -->
-                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                    <div>
-                        <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Marketing</h5>
-                        <h3 class="card-title pt-2"><strong>This is the card title</strong></h3>
-                        <a class="btn btn-pink"><i class="fas fa-clone left"></i> View project</a>
-                    </div>
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-bed"></i> Marketing</h5>
                 </div>
 
             </div>
+            <!-- Card -->
 
 
-            <div class="card card-image col mr-4 highlitCard"
-                style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url(img/room\ 4.jpg);">
 
                 <!-- Content -->
-                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                    <div>
-                        <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Marketing</h5>
-                        <h3 class="card-title pt-2"><strong>This is the card title</strong></h3>
-                        <a class="btn btn-pink"><i class="fas fa-clone left"></i> View project</a>
-                    </div>
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-bed"></i> Marketing</h5>
                 </div>
 
             </div>
+            <!-- Card -->
 
 
-            <div class="card card-image col mr-4 highlitCard"
-                style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url(img/Room\ 5.jpg);">
 
                 <!-- Content -->
-                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
-                    <div>
-                        <h5 class="pink-text"><i class="fas fa-chart-pie"></i> Marketing</h5>
-                        <h3 class="card-title pt-2"><strong>This is the card title</strong></h3>
-                        <a class="btn btn-pink"><i class="fas fa-clone left"></i> View project</a>
-                    </div>
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-bed"></i> Marketing</h5>
                 </div>
 
             </div>
+            <!-- Card -->
 
 
         </div>
@@ -650,7 +699,7 @@
 
 
         <hr class="SeperaterLine">
-        <h2 class="d-flex justify-content-center">Our Popular Tours</h2>
+        <h2 class="d-flex justify-content-center">News And Events</h2>
         <h3 class="d-flex justify-content-center subtopic">Lorem ipsum dolor sit amet consectetur adipisicing
             elit..</h3>
 
@@ -667,15 +716,13 @@
 
 
                         <!-- Grid column -->
-                        <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
 
                             <!-- Featured image -->
                             <div class="view overlay">
                                 <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
                                     alt="Sample image for first version of blog listing">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
+                                
                             </div>
 
                         </div>
@@ -685,9 +732,9 @@
                         <div class="col-md-7 text-md-left ml-3 mt-3">
 
                             <!-- Excerpt -->
-                            <a href="#!" class="green-text">
-                                <h6 class="h6 pb-1"><i class="fas fa-desktop pr-1"></i> Work</h6>
-                            </a>
+                            
+                                <h6 class="h6 pb-1 newsHead"><i class="fas fa-desktop pr-1"></i> Hot Deal</h6>
+                            
 
                             <h4 class="h4 mb-4">This is title of the news</h4>
 
@@ -715,15 +762,13 @@
                     <div class="row">
 
                         <!-- Grid column -->
-                        <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
 
                             <!-- Featured image -->
                             <div class="view overlay">
                                 <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
                                     alt="Sample image for first version of blog listing">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
+                                
                             </div>
 
                         </div>
@@ -733,9 +778,9 @@
                         <div class="col-md-7 text-md-left ml-3 mt-3">
 
                             <!-- Excerpt -->
-                            <a href="#!" class="green-text">
-                                <h6 class="h6 pb-1"><i class="fas fa-desktop pr-1"></i> Work</h6>
-                            </a>
+                            
+                                <h6 class="h6 pb-1 newsHead"><i class="fas fa-desktop pr-1"></i> Hot Deal</h6>
+                            
 
                             <h4 class="h4 mb-4">This is title of the news</h4>
 
@@ -765,15 +810,13 @@
                     <div class="row">
 
                         <!-- Grid column -->
-                        <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
 
                             <!-- Featured image -->
                             <div class="view overlay">
                                 <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
                                     alt="Sample image for first version of blog listing">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
+                                
                             </div>
 
                         </div>
@@ -783,9 +826,9 @@
                         <div class="col-md-7 text-md-left ml-3 mt-3">
 
                             <!-- Excerpt -->
-                            <a href="#!" class="green-text">
-                                <h6 class="h6 pb-1"><i class="fas fa-desktop pr-1"></i> Work</h6>
-                            </a>
+                        
+                                <h6 class="h6 pb-1 newsHead"><i class="fas fa-desktop pr-1"></i> Hot Deal</h6>
+                        
 
                             <h4 class="h4 mb-4">This is title of the news</h4>
 
@@ -816,15 +859,13 @@
                     <div class="row">
 
                         <!-- Grid column -->
-                        <div class="col-md-4 offset-md-1 mx-3 my-3">
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
 
                             <!-- Featured image -->
                             <div class="view overlay">
                                 <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
                                     alt="Sample image for first version of blog listing">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
+                                
                             </div>
 
                         </div>
@@ -834,9 +875,9 @@
                         <div class="col-md-7 text-md-left ml-3 mt-3">
 
                             <!-- Excerpt -->
-                            <a href="#!" class="green-text">
-                                <h6 class="h6 pb-1"><i class="fas fa-desktop pr-1"></i> Work</h6>
-                            </a>
+                            
+                                <h6 class="h6 pb-1 newsHead"><i class="fas fa-desktop pr-1"></i> Hot Deal</h6>
+                           
 
                             <h4 class="h4 mb-4">This is title of the news</h4>
 
@@ -861,13 +902,13 @@
 
         <!--End of News Area-->
 
-        <div class="bottom_section">
+        <div class="bottom_section ">
 
             <!-- Card Dark -->
             <div class="card col-md-4 isolateAd">
 
                 <!-- Card content -->
-                <div class="card-body elegant-color white-text rounded-bottom">
+                <div class="card-body white-text rounded-bottom">
 
 
                     <!-- Title -->
