@@ -8,12 +8,13 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <!--Bootstrap Core CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2.0/dist/flickity.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <!--Swiper CDN-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -26,55 +27,191 @@
 
 <body>
 
+    <div class="container-fluid p-0 m-0 grey lighten-5">
+        <div class="row row-cols-2 p-0 m-0 pageContent">
 
-    <div class="row row-cols-2">
+            <!--Start of SlideBar-->
+            <div class="col-2 p-0 m-0">
+                <nav class="sidebar">
+                    <div class="sidebarTop">HOTEL</div>
 
-        <!--Start of SlideBar-->
-        <div class="col">
-            <nav class="sidebar">
-                <div class="sidebarTop">HOTEL</div>
+                    <ul>
+                        <li>
+                            <a class="dropBtn1" href="#">Employees <span
+                                    class="fas fa-chevron-down first-sp"></span></a>
+                            <ul class="dropCont1">
+                                <li><a href="">View Employees</a></li>
+                                <li><a href="">Add Employee</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropBtn2" href="#">Packages<span
+                                    class="fas fa-chevron-down secound-sp"></span></a>
+                            <ul class="dropCont2">
+                                <li><a href="">View Employees</a></li>
+                                <li><a href="">Add Employee</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="dropBtn3" href="#">Reception Halls<span
+                                    class="fas fa-chevron-down third-sp"></span></a>
+                            <ul class="dropCont3">
+                                <li><a href="">View Employees</a></li>
+                                <li><a href="">Add Employee</a></li>
+                            </ul>
+                        </li>
 
-                <ul>
-                    <li>
-                        <a class="dropBtn1" href="#">Employees <span  class="fas fa-chevron-down first-sp"></span ></a>
-                        <ul class="dropCont1">
-                            <li><a href="">View Employees</a></li>
-                            <li><a href="">Add Employee</a></li>
+                        <li><a href="">Feedback</a></li>
+                        <li><a href="">Contact Us</a></li>
+
+
+
+                    </ul>
+                </nav>
+            </div>
+            <!--End of SlideBar-->
+
+            <!--Start of Content Area-->
+            <div class="col-10 pl-0 contentArea">
+
+
+                <nav class="navbar navbar-expand-lg  pl-4 p-0 " style="background-color: #ec407a;">
+                    <a class="navbar-brand " href="#">Navbar w/ text</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Pricing</a>
+                            </li>
                         </ul>
-                    </li>
-                    <li><a class="dropBtn2" href="#">Packages<span  class="fas fa-chevron-down secound-sp"></span ></a>
-                        <ul class="dropCont2">
-                            <li><a href="">View Employees</a></li>
-                            <li><a href="">Add Employee</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="dropBtn3" href="#">Reception Halls<span class="fas fa-chevron-down third-sp"></span></a>
-                        <ul class="dropCont3">
-                            <li><a href="">View Employees</a></li>
-                            <li><a href="">Add Employee</a></li>
-                        </ul>
-                    </li>
+                        <span class="navbar-text white-text">
+                            Navbar text with an inline element
+                        </span>
+                    </div>
+                </nav>
 
-                    <li><a href="">Feedback</a></li>
-                    <li><a href="">Contact Us</a></li>
+                <div class="row">
+
+                </div>
+
+                <div class="row p-2 m-4 yellow">
+
+                    <div class="col-4">
+                        <div class="ml-4 mt-4">
+                            <h5 class="mb-0">Sales Summary</h5>
+                            <p class="mt-0 text-muted">Overview of Latest Month</p>
+                        </div>
+                        <div class="ml-4 mt-4">
+                            <h1 class="mb-0">452,452 Rs</h1>
+                            <p class="mt-0 text-muted">Panel subtitle</p>
+                        </div>
+                        <div class="ml-4 mt-4">
+                            <h3 class="mb-0">2514</h3>
+                            <p class="mt-0 text-muted">Current Month Sales</p>
+                        </div>
+                        <div class="ml-3 mt-4">
+                            <button class="btn btn-primary">Last Month Summary</button>
+                        </div>
+
+                    </div>
+                    <div class="col-8">
+                        <canvas id="myChart" width="100%" height="40%"></canvas>
+                    </div>
+
+                    <hr class="mt-4 mb-2" style="background-color: crimson; height: 3px; width: 100%;">
+
+                    <div class="row ml-4 d-flex justify-content-between" style="width: 100%;">
+
+                        <div class="d-flex flex-row mt-4 mr-4">
+                            <i class="fas fa-wallet d-flex align-self-center fa-3x mr-2 yellow darken-4"></i>
+                            <div class="d-flex flex-column">
+                                <p class="mb-0 text-muted">Panel subtitle</p>
+                                <h2 class="mt-0">Panel title</h2>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row mt-4 mr-4">
+                            <i class="fas fa-star d-flex align-self-center fa-3x mr-2 rgba-blue-strong"></i>
+                            <div class="d-flex flex-column">
+                                <p class="mb-0 text-muted">Panel subtitle</p>
+                                <h2 class="mt-0">Panel title</h2>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row mt-4 mr-4">
+                            <i class="fas fa-shopping-bag d-flex align-self-center fa-3x mr-2  light-blue darken-4"></i>
+                            <div class="d-flex flex-column">
+                                <p class="mb-0 text-muted">Panel subtitle</p>
+                                <h2 class="mt-0">Panel title</h2>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row mt-4 mr-4">
+                            <i class="fas fa-dollar-sign d-flex align-self-center fa-3x mr-2 deep-purple accent-2"></i>
+                            <div class="d-flex flex-column">
+                                <p class="mb-0 text-muted">Panel subtitle</p>
+                                <h2 class="mt-0">Panel title</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row p-2 m-4 yellow">
+                    <div class="col-7 m-4 pink">
+                        <div class="row d-flex flex-column blue">
+                            <h2 class="mt-3 ml-3 mb-0">Panel title</h2>
+                             <p class="mt-0 ml-3 mb-4 text-muted">Panel subtitle</p>
+                        </div>
+                        <div class="row d-flex flex-row">
+                            <canvas class="mb-4  col-6" id="pieChart" width="100%" height="80%"></canvas>
+                            <div class="col-5">
+                                <h2 class="mt-3 ml-3 mb-0">45%</h2>
+                                <p class="mt-0 ml-3 mb-4 text-muted">Successful Deliveries</p>
+                                <ul class="mt-2">
+                                    <li class="d-flex justify-content-between mt-4 mb-4">
+                                        <p>Successful</p>
+                                        <p>45%</p>
+                                    </li>
+                                    <li class="d-flex justify-content-between mt-4 mb-4">
+                                        <p>Pending</p>
+                                        <p>20%</p>
+                                    </li>
+                                    <li class="d-flex justify-content-between mt-4 mb-4">
+                                        <p>Not delirved</p>
+                                        <p>35%</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+
+                    <div class="col-4 m-4 blue">
+                        <canvas id="pieChart" width="100%" height="50%"></canvas>
+                    </div>
+                </div>
+
+                
 
 
 
-                </ul>
-            </nav>
+            </div>
+            <!--End of Content Area-->
+
+
+
         </div>
-        <!--End of SlideBar-->
-
-        <!--Start of Content Area-->
-        <div class="col-10">
-
-
-
-        </div>
-        <!--End of Content Area-->
-
-
-
     </div>
 
 
@@ -97,10 +234,81 @@
     </script>
     <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
     <!--Chart.js CDN-->
-    <script src="https://cdnjs.com/libraries/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!--User Js-->
     <script src="js/Dashboard.js"></script>
-   
+
+    <script>
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        /*---------------------------------------------------------------------------*/
+        var ctx2 = document.getElementById('pieChart');
+
+        var myPieChart = new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            }
+        });
+    </script>
+
 
 </body>
 
