@@ -102,8 +102,20 @@ nav ul li a:hover span{
     transform: translateY(-50%) rotate(-180deg);
 }
 
+.feedbackDemo :hover{
+    background-color: rgb(235, 235, 235);
+}
 
 
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
 
 
 
