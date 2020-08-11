@@ -11,14 +11,21 @@ html {
 
 .sidebar{
     position: fixed;
-    width: 256px;
+    width: 254px;
     left: 0px;
-    background-color: #1c2331;
+    background-color: wheat;
+    background-image: url(../../img/clock_tower2_edited.jpg);
+    
     /* background-color: whitesmoke; */
     height: 100%;
     padding: 0px;
     /* overflow-y: hidden; */
     
+}
+
+.sideback{
+    background-color:rgba(255, 68, 68, 0.9);
+    height: 100%;
 }
 
 .sidebarTop{
@@ -41,8 +48,11 @@ nav ul{
 
 
 nav ul li{
-    line-height: 60px;
+    line-height: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50px;
 }
 
 nav ul li a {
@@ -53,11 +63,14 @@ nav ul li a {
     display: block;
     width: 100%;
     border-left: 2px solid transparent;
+    font-size: 16px;
+    border-radius: 5px;
 }
 .sidebar ul li a:hover {
-    color: cyan;
-    border-left-color: cyan;
+    /* color: cyan;
+    border-left-color: cyan; */
     text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 nav ul ul{ 
@@ -73,9 +86,24 @@ nav ul .dropCont2.show {
     display: block;
 }
 
-nav ul .dropCont3.show {
+nav ul .dropContReport.show {
     display: block;
 }
+
+nav ul .dropContRooms.show {
+    display: block;
+}
+nav ul .dropContHalls.show {
+    display: block;
+}
+nav ul .dropBtnMenu.show {
+    display: block;
+}
+nav ul .dropContMenu.show {
+    display: block;
+}
+
+
 
 
 nav ul ul li{
@@ -84,7 +112,7 @@ nav ul ul li{
 
 }
 nav ul ul li a{
-    font-size: 17px;
+    font-size: 16px;
     color: white;
     padding-left: 60px;
 }
@@ -98,7 +126,7 @@ nav ul li a span{
     transition: transform 0.4s ;
 }
 
-nav ul li a:hover span{
+nav ul li a span.rotate{
     transform: translateY(-50%) rotate(-180deg);
 }
 

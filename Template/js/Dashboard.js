@@ -2,6 +2,7 @@
      $(document).ready(function () {
          $('.dropBtn1').click(function () {
              $('nav ul .dropCont1').toggleClass('show');
+             $('nav ul .first-sp').toggleClass('rotate');
          });
      });
 
@@ -9,51 +10,38 @@
  $(document).ready(function () {
      $('.dropBtn2').click(function () {
          $('nav ul .dropCont2').toggleClass('show');
+         $('nav ul .secound-sp').toggleClass('rotate');
      });
  });
 
 
  $(document).ready(function () {
-     $('.dropBtn3').click(function () {
-         $('nav ul .dropCont3').toggleClass('show');
+     $('.dropBtnReport').click(function () {
+         $('nav ul .dropContReport').toggleClass('show');
+         $('nav ul .Report-sp').toggleClass('rotate');
      });
  });
 
+  $(document).ready(function () {
+      $('.dropbtnRooms').click(function () {
+          $('nav ul .dropContRooms').toggleClass('show');
+          $('nav ul .rooms-sp').toggleClass('rotate');
+      });
+  });
 
- var ctx = document.getElementById('myChart');
- var myChart = new Chart(ctx, {
-     type: 'bar',
-     data: {
-         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-         datasets: [{
-             label: '# of Votes',
-             data: [12, 19, 3, 5, 2, 3],
-             backgroundColor: [
-                 'rgba(255, 99, 132, 0.2)',
-                 'rgba(54, 162, 235, 0.2)',
-                 'rgba(255, 206, 86, 0.2)',
-                 'rgba(75, 192, 192, 0.2)',
-                 'rgba(153, 102, 255, 0.2)',
-                 'rgba(255, 159, 64, 0.2)'
-             ],
-             borderColor: [
-                 'rgba(255, 99, 132, 1)',
-                 'rgba(54, 162, 235, 1)',
-                 'rgba(255, 206, 86, 1)',
-                 'rgba(75, 192, 192, 1)',
-                 'rgba(153, 102, 255, 1)',
-                 'rgba(255, 159, 64, 1)'
-             ],
-             borderWidth: 1
-         }]
-     },
-     options: {
-         scales: {
-             yAxes: [{
-                 ticks: {
-                     beginAtZero: true
-                 }
-             }]
-         }
-     }
- });
+   $(document).ready(function () {
+       $('.dropbtnHalls').click(function () {
+           $('nav ul .dropContHalls').toggleClass('show');
+           $('nav ul .Halls-sp').toggleClass('rotate');
+       });
+   });
+
+    $(document).ready(function () {
+        $('.dropBtnMenu').click(function () {
+            $('nav ul .dropContMenu').toggleClass('show');
+            $('nav ul .Menu-sp').toggleClass('rotate');
+        });
+    });
+
+
+
