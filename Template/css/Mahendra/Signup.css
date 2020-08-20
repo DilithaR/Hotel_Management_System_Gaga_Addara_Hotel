@@ -60,6 +60,7 @@ body{
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transition: all 0.5s ease;
+    border-radius: 15px;
 }
 
 
@@ -68,7 +69,8 @@ body{
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
-    background-color: aliceblue;
+    background-color: white;
+    border-radius: 15px;
 }
 
 .back {
@@ -76,9 +78,17 @@ body{
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
-    background-color: aliceblue;
+    background-color: white;
     transform: rotateY(180deg);
+    border-radius: 15px;
 
+}
+.signupRight{
+    background-image: url(../../img/crimsonFadeBack.svg);
+    background-size: cover;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 
