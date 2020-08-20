@@ -56,32 +56,68 @@ body{
 
 
 #flipJumbo{
-    position: absolute;
+    position: relative;
     transform-style: preserve-3d;
-    /* -webkit-transform-style: preserve-3d; */
+    -webkit-transform-style: preserve-3d;
     transition: all 0.5s ease;
-    background: chartreuse;
 }
 
 
 .front{
-    position: relative;
-    
+    width: 100%;
+    height: 100%;
+    position: absolute;
     backface-visibility: hidden;
-    background: rgb(84, 30, 210);
-    
-
+    background-color: aliceblue;
 }
 
 .back {
-   
+    width: 100%;
+    height: 100%;
+    position: absolute;
     backface-visibility: hidden;
-    background: chocolate;
+    background-color: aliceblue;
     transform: rotateY(180deg);
 
 }
 
-.signupLeft{
-    backface-visibility: hidden;
+
+/*--------------------------------Signup_Copy-------------------------------------------------*/
+
+/* 
+.outer_div{
+    width: 300px;
+    height: 350px;
+    background-color: cyan;
 }
+
+.Inner_div{
+    width: 250px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    background-color: yellow;
+    
+}
+
+.Inner_div:hover{
+    transform: rotateY(180deg);
+
+}
+.front{
+    position: absolute;
+    background-color: darkblue;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    
+}
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: darkgreen;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+} */
 
