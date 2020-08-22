@@ -74,19 +74,19 @@
 
 
                                 <!-- Sign up button -->
-                                <button class="btn btn-info my-4 btn-block" type="submit">Sign Up</button>
+                                <button class="btn my-4 btn-block sign_UpIn_btn" type="submit">Sign Up</button>
 
                                 <!-- Social register -->
                                 <p>or sign up with:</p>
 
                                 <a href="#" class="mb-0 mx-2" role="button"><i
-                                        class="fab fa-facebook-f light-blue-text"></i></a>
+                                        class="fab fa-facebook-f  social_icons"></i></a>
                                 <a href="#" class="mb-0 mx-2" role="button"><i
-                                        class="fab fa-twitter light-blue-text"></i></a>
+                                        class="fab fa-twitter  social_icons"></i></a>
                                 <a href="#" class="mb-0 mx-2" role="button"><i
-                                        class="fab fa-linkedin-in light-blue-text"></i></a>
+                                        class="fab fa-linkedin-in  social_icons"></i></a>
                                 <a href="#" class="mb-0 mx-2" role="button"><i
-                                        class="fab fa-github light-blue-text"></i></a>
+                                        class="fab fa-github  social_icons"></i></a>
 
 
 
@@ -94,23 +94,103 @@
                             <!-- Default form register -->
 
                         </div>
-                        <div class="col-6 signupRight">
+                        <div class="col-6 signupRight d-flex flex-column justify-content-center align-items-center">
 
-                            <div class="d-flex flex-row justify-content-end align-self-end signlogo mt-4">
+                            <div class=" signlogomb-3 mb-3">
                                 <img src="img/Logo.png" class="signlogo ">
                             </div>
 
                             <h1 class="text-center"><b>Welcome To</b></h1>
-                            <h1 class="text-center">Gaga Addara Hotel</h1>
+                            <h1 class="text-center hotel_name">Gaga Addara Hotel</h1>
 
-                            <button class="btn btn-info my-4 btn-block" type="submit" onclick="flip()">Sign in</button>
+                            <button class="to_flip"
+                                onclick="flip()">SIGN IN</button>
 
 
                         </div>
 
                     </div>
-                    <div class="back">
-                        <button class="btn btn-info my-4 btn-block" type="submit" onclick="flip()">Sign in</button>
+                    <div class="back row">
+                        <div class="col-6 loginLeft ">
+
+                            <div
+                                class=" signlogomb-3 mb-3 mt-4 d-flex flex-column justify-content-center align-items-center">
+                                <img src="img/Logo.png" class="signlogo ">
+                            </div>
+
+                            <div class="mt-4 ml-4">
+                                <h1 class=""><b>Come in as</b></h1>
+                                <h1 class="text-center"><b>Guests,</b></h1>
+                                <h1 class=""><b>Leave as</b></h1>
+                                <h1 class="text-center hotel_name">Family</h1>
+                            </div>
+                            
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <button class="sign_in_rev" onclick="flipBack()">SIGN UP</button>
+                            </div>
+                            
+
+
+                        </div>
+                        <div class="col-6 loginRight ">
+
+                            <!-- Default form register -->
+                            <form class="text-center p-3"
+                                action="#!">
+
+                                <h1 class="h1 mb-0 d-flex flex-row mt-5">Sign In</h1>
+                                <div class="row ml-1 mb-3">
+                                    <small class="mt-0 text-muted mb-4">Dont have an account? </small>
+                                    <a style="font-size: smaller; font-weight: bold;"> Create an account..</a>
+                                </div>
+                                
+
+                                <!-- E-mail -->
+                                <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4"
+                                    placeholder="Username/E-mail">
+
+                                <!-- Password -->
+                                <input type="password" id="defaultRegisterFormPassword" class="form-control"
+                                    placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                                <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                                    At least 8 characters and 1 digit
+                                </small>
+
+                                <div class="row ml-2 d-flex justify-content-between align-items-end mb-4">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input"
+                                            id="defaultUncheckedDisabled2"  >
+                                        <label class="custom-control-label" style="font-size: medium;" for="defaultUncheckedDisabled2">
+                                            Remember me
+                                        
+                                        </label>
+                                    </div>
+                                    <a style="font-size: smaller; font-weight: bold;"> Forgot Password?</a>
+                                </div>
+
+
+                                <!-- Sign up button -->
+                                <button class="btn my-4 btn-block sign_UpIn_btn" type="submit">Sign In</button>
+
+                                <!-- Social register -->
+                                <p class="mb-1">or sign up with:</p>
+                                <a href="#" class="mb-0 mx-2" role="button"><i
+                                        class="fab fa-facebook-f  social_icons"></i></a>
+                                <a href="#" class="mb-0 mx-2" role="button"><i
+                                        class="fab fa-twitter  social_icons"></i></a>
+                                <a href="#" class="mb-0 mx-2" role="button"><i
+                                        class="fab fa-linkedin-in  social_icons"></i></a>
+                                <a href="#" class="mb-0 mx-2" role="button"><i
+                                        class="fab fa-github  social_icons"></i></a>
+
+
+                            </form>
+                            
+
+                            
+                            <!-- Default form register -->
+
+                        </div>
                     </div>
 
                     
@@ -152,7 +232,9 @@
         function flip(){
             document.getElementById("flipJumbo").style.transform = 'rotateY(180deg)';
         }
-        
+        function flipBack(){
+            document.getElementById("flipJumbo").style.transform = 'rotateY(-180deg)';
+        }
     </script>
 
 </body>
