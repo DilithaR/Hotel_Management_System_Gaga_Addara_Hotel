@@ -218,9 +218,30 @@ nav a {
 
 .UserProfStruct{
     position: absolute;
-    top: 300px;
+    top: 150px;
     z-index: 5;
     height: 400px;
+    background-color: white;
+    box-shadow: 5px 5px 6px 5px #888888;
+    ;
     
 }
+.details_right,
+.profHead {
+    font-weight: bold;
+}
+.sepLine{
+    color: crimson;
+    height: 3px;
 
+    background-color: crimson;
+}
+.btn-rounded{
+    border-radius: 100px;
+    font-weight: bold;
+    width: 150px;
+}
+.middleArea{
+    position: relative;
+    top: 200px;
+}
