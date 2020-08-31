@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/Mahendra/EmpDetails.css">
 
     <link rel="icon" type="image/gif/png" href="img/Logo.png">
-    <title>Dashboard</title>
+    <title>View Employee</title>
 </head>
 
 <body>
@@ -178,246 +178,296 @@
 
                 <div class="row ml-3  d-flex justify-content-center">
 
-                        <div class="col-3 p-2 mt-4 mr-4 mb-5 viewEmp_left">
-                            <div class="col-12">
-                                <img src="img/sample_profPic.jpg" class="img-fluid rounded mt-4"
-                                    style="width: inherit; height: 300px;">
-                                <h3 class="font-weight-bold mb-0">Customer Name</h3>
-                                <h5 class="text-muted font-weight-bold mt-0 pt-0">Reg Number</h5>
-                                <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur ducimus explicabo, cupiditate ea consequatur facere. Modi itaque quia laudantium!</p>
-                                
-                                <table class="table table-striped">
-                                    
-                                    <tbody >
-                                        <tr class="">
-                                            <th class="col-3 p-2">Status</th>
-                                            <td class="text-right p-2">
-                                                <div class="badge badge-primary text-wrap p-2">
-                                                    Available
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr >
-                                            <th class="p-2">Employee Rating</th>
-                                            <td class="text-right p-2">
-                                                <div class="row mt-1 mr-0 d-flex justify-content-end">
-                                                    <i class="fas fa-star rateStarLeft"></i>
-                                                    <i class="fas fa-star rateStarLeft"></i>
-                                                    <i class="fas fa-star rateStarLeft"></i>
-                                                    <i class="fas fa-star rateStarLeft"></i>
-                                                    <i class="fas fa-star rateStarLeft"></i>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th class="col-3 p-2">Joined On</th>
-                                            <td class="text-right p-2">15/05/2016</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <div class="col-3 p-2 mt-4 mr-4 mb-5 viewEmp_left">
+                        <div class="col-12">
+                            <img src="img/sample_profPic.jpg" class="img-fluid rounded mt-4"
+                                style="width: inherit; height: 300px;">
+                            <h3 class="font-weight-bold mb-0">Customer Name</h3>
+                            <h5 class="text-muted font-weight-bold mt-0 pt-0">Reg Number</h5>
+                            <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur
+                                ducimus explicabo, cupiditate ea consequatur facere. Modi itaque quia laudantium!</p>
 
-                                <div class="row">
-                                    <button class="btn btn-dark-green mb-0 w-100">Edit</button>
-                                    <button class="btn btn-danger w-100">Delete</button>
-                                </div>
-                            
-                            
+                            <table class="table table-striped">
+
+                                <tbody>
+                                    <tr class="">
+                                        <th class="col-3 p-2">Status</th>
+                                        <td class="text-right p-2">
+                                            <div class="badge badge-primary text-wrap p-2">
+                                                Available
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="p-2">Employee Rating</th>
+                                        <td class="text-right p-2">
+                                            <div class="row mt-1 mr-0 d-flex justify-content-end">
+                                                <i class="fas fa-star rateStarLeft"></i>
+                                                <i class="fas fa-star rateStarLeft"></i>
+                                                <i class="fas fa-star rateStarLeft"></i>
+                                                <i class="fas fa-star rateStarLeft"></i>
+                                                <i class="fas fa-star rateStarLeft"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col-3 p-2">Joined On</th>
+                                        <td class="text-right p-2">15/05/2016</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="row">
+                                <button class="btn btn-dark-green mb-0 w-100 font-weight-bold">Edit</button>
+                                <button class="btn btn-danger w-100 font-weight-bold">Delete</button>
                             </div>
+
+
                         </div>
+                    </div>
 
-                        <div class="col-8">
-                            <div class="white viewEmpRightCont">
+                    <div class="col-8">
+                        <div class="white viewEmpRightCont">
 
-                                <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" id="basic-tab" data-toggle="tab" href="#basic"
-                                            role="tab" aria-controls="basic" aria-selected="true">Basic</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="professional-tab" data-toggle="tab" href="#professional"
-                                            role="tab" aria-controls="professional"
-                                            aria-selected="false">Professional</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="reports-tab" data-toggle="tab" href="#reports"
-                                            role="tab" aria-controls="reports" aria-selected="false">Reports</a>
-                                    </li>
-                                </ul>
+                            <ul class="nav nav-tabs mt-4" id="myTab" role="tablist" style="background-color: crimson;">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="basic-tab" data-toggle="tab" href="#basic" role="tab"
+                                        aria-controls="basic" aria-selected="true">Basic</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="professional-tab" data-toggle="tab" href="#professional"
+                                        role="tab" aria-controls="professional" aria-selected="false">Professional</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="reports-tab" data-toggle="tab" href="#reports" role="tab"
+                                        aria-controls="reports" aria-selected="false">Reports</a>
+                                </li>
+                            </ul>
 
-                                <div class="tab-content pl-4" id="myTabContent">
-                                    
-                                    <div class="tab-pane fade show active d-flex justify-content-start" id="basic" role="tabpanel"
-                                        aria-labelledby="basic-tab">
+                            <div class="tab-content pl-4" id="myTabContent">
 
-                                        <div class="row p-0 m-0  d-flex justify-content-between">
-                                            <div class="col-9 mr-0">
-                                                <h2 class="text-center font-weight-bold mt-4 mb-0">ABOUT</h2>
-                                                <hr class="sepLine"> 
-                                                
-                                                <div class="row mt-4">
-                                                    <div class="col-6">
-                                                        <h5 class="font-weight-bold"><i
-                                                                class="fas fa-user fa-medium-m mr-2 detailsIcon"></i>First
-                                                            Name</h5>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">FName of Employee</h5>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <h5 class="font-weight-bold"><i
-                                                                class="far fa-user fa-medium-m mr-2 detailsIcon"></i>Last
-                                                            Name</h4>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">LName of Employee</h6>
-                                                    </div>
+                                <div class="tab-pane fade show active d-flex justify-content-start" id="basic"
+                                    role="tabpanel" aria-labelledby="basic-tab">
+
+                                    <div class="row p-0 m-0  d-flex justify-content-between">
+                                        <div class="col-9 mr-0">
+                                            <h2 class="text-center font-weight-bold mt-4 mb-0">ABOUT</h2>
+                                            <hr class="sepLine">
+
+                                            <div class="row mt-4">
+                                                <div class="col-6">
+                                                    <h5 class="font-weight-bold"><i
+                                                            class="fas fa-user fa-medium-m mr-2 detailsIcon"></i>First
+                                                        Name</h5>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">FName of Employee</h5>
                                                 </div>
-
-
-                                                <div class="row mt-4">
-                                                    <div class="col-6">
-                                                        <h5 class="font-weight-bold"><i
-                                                                class="fas fa-id-badge mr-2 detailsIcon"></i>NIC</h5>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">658925124V
-                                                            </h6>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <h5 class="font-weight-bold"><i
-                                                                class="fas fa-id-card-alt mr-2 detailsIcon"></i>Employee Id</h4>
-                                                            <h6 class="ml-5 font-weight-bold text-muted">EMP1588</h6>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="row mt-4">
-                                                    <div class="col-6">
-                                                        <h5 class="font-weight-bold"><i
-                                                                class="fas fa-shipping-fast mr-2 detailsIcon"></i>Postal
-                                                            Address</h5>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">Address Line 1</h6>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">Address Line 2</h6>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">Postal Code</h6>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <h5 class="font-weight-bold"><i
-                                                                class="fas fa-user-friends  fa-medium-m  mr-2 detailsIcon"></i>Gender
-                                                            </h4>
-                                                            <h6 class="ml-5 font-weight-bold text-muted">Female</h6>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row mt-4">
-                                                    <div class="col-10">
-                                                        <h5 class="font-weight-bold"><i
-                                                                class="fas fa-envelope-open mr-2 detailsIcon"></i>Email
-                                                        </h5>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">employeename@gmail.com</h6>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row mt-4">
-                                                    <div class="col-11">
-                                                        <h5 class="font-weight-bold"><i
-                                                                class="fas fa-phone-square mr-2 detailsIcon"></i>Contact
-                                                            No</h5>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">+94 71 245 8125</h6>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row mt-4">
-                                                    <div class="col-11">
-                                                        <h5 class="font-weight-bold"><i
-                                                                class="fas fa-user fa-medium-m grey-text mr-2"></i>Set Rating</h5>
-
-                                                                <div class="row ml-5">
-                                                                    <i class="far fa-star fa-2x ml-2"></i>
-                                                                    <i class="far fa-star fa-2x ml-2"></i>
-                                                                    <i class="far fa-star fa-2x ml-2"></i>
-                                                                    <i class="far fa-star fa-2x ml-2"></i>
-                                                                    <i class="far fa-star fa-2x ml-2"></i>
-                                                                </div>
-
+                                                <div class="col-6">
+                                                    <h5 class="font-weight-bold"><i
+                                                            class="far fa-user fa-medium-m mr-2 detailsIcon"></i>Last
+                                                        Name</h4>
+                                                        <h6 class="ml-5 font-weight-bold text-muted">LName of Employee
                                                         </h6>
-                                                    </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-3 yellow ml-0 p-0">
-                                                <img src="img/emp1-crop.gif" class="empImg">
+
+                                            <div class="row mt-4">
+                                                <div class="col-6">
+                                                    <h5 class="font-weight-bold"><i
+                                                            class="fas fa-id-badge mr-2 detailsIcon"></i>NIC</h5>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">658925124V
+                                                    </h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h5 class="font-weight-bold"><i
+                                                            class="fas fa-id-card-alt mr-2 detailsIcon"></i>Employee Id
+                                                        </h4>
+                                                        <h6 class="ml-5 font-weight-bold text-muted">EMP1588</h6>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row mt-4">
+                                                <div class="col-6">
+                                                    <h5 class="font-weight-bold"><i
+                                                            class="fas fa-shipping-fast mr-2 detailsIcon"></i>Postal
+                                                        Address</h5>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">Address Line 1</h6>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">Address Line 2</h6>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">Postal Code</h6>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h5 class="font-weight-bold"><i
+                                                            class="fas fa-user-friends  fa-medium-m  mr-2 detailsIcon"></i>Gender
+                                                        </h4>
+                                                        <h6 class="ml-5 font-weight-bold text-muted">Female</h6>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-4">
+                                                <div class="col-10">
+                                                    <h5 class="font-weight-bold"><i
+                                                            class="fas fa-envelope-open mr-2 detailsIcon"></i>Email
+                                                    </h5>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">employeename@gmail.com
+                                                    </h6>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-4">
+                                                <div class="col-11">
+                                                    <h5 class="font-weight-bold"><i
+                                                            class="fas fa-phone-square mr-2 detailsIcon"></i>Contact
+                                                        No</h5>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">+94 71 245 8125</h6>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mt-4">
+                                                <div class="col-11">
+                                                    <h5 class="font-weight-bold"><i
+                                                            class="fas fa-user fa-medium-m grey-text mr-2"></i>Set
+                                                        Rating</h5>
+
+                                                    <div class="row ml-5">
+                                                        <i class="far fa-star fa-2x ml-2"></i>
+                                                        <i class="far fa-star fa-2x ml-2"></i>
+                                                        <i class="far fa-star fa-2x ml-2"></i>
+                                                        <i class="far fa-star fa-2x ml-2"></i>
+                                                        <i class="far fa-star fa-2x ml-2"></i>
+                                                    </div>
+
+                                                    </h6>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        <div class="col-3 yellow ml-0 p-0">
+                                            <img src="img/emp1-crop.gif" class="empImg">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="tab-pane fade" id="professional" role="tabpanel"
+                                    aria-labelledby="professional-tab" style="position: relative; top: -700px;">
+
+                                    <h2 class="text-center font-weight-bold mt-4 mb-0">PROFESSIONAL INFO</h2>
+                                    <hr class="sepLine mb-5">
+
+                                    <div class="row d-flex justify-content-center">
+
+                                        <div class="col-5 tabe_topCards mr-3 p-0">
+                                            <div class="row ml-0 p-0">
+                                                <div class="col-5 ml-0 p-0">
+                                                    <img src="img/Working-crop.gif" alt="" class="tab2_img">
+                                                </div>
+                                                <div class="col-6">
+                                                    <h3 class="font-weight-bold mt-2 mb-0">OT Hours</h3>
+                                                    <h5 class="font-weight-bold text-muted mt-0">January</h5>
+                                                    <h1 class="font-weight-bold mt-4 text-right">24</h1>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-5 tabe_topCards  p-0">
+                                            <div class="row ml-0 pl-0">
+                                                <div class="col-5 ml-0 pl-0">
+                                                    <img src="img/leaves-crop.gif" alt="" class="tab2_img">
+                                                </div>
+                                                <div class="col-6">
+                                                    <h3 class="font-weight-bold mt-2 mb-0">Leaves</h3>
+                                                    <h5 class="font-weight-bold text-muted mt-0">January</h5>
+                                                    <h1 class="font-weight-bold mt-4 text-right">2</h1>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row m-4 mt-5">
+                                        <div class="col-4  mt-3">
+                                            <h5 class="font-weight-bold"><i
+                                                    class="fas fa-user-tie mr-2 detailsIcon"></i>Current
+                                                Position
+                                            </h5>
+                                            <h6 class="ml-5 font-weight-bold text-muted">Cashier</h6>
+                                        </div>
+                                        <div class="col-4 mt-3">
+                                            <h5 class="font-weight-bold"><i
+                                                    class="fas fa-hand-holding-usd mr-2 detailsIcon"></i>Basic
+                                                Salary
+                                                </h4>
+                                                <h6 class="ml-5 font-weight-bold text-muted">00000.00 Rs</h6>
+                                        </div>
+                                        <div class="col-4 mt-3">
+                                            <h5 class="font-weight-bold"><i
+                                                    class="fas fa-business-time mr-2 detailsIcon"></i>OT Rate
+                                            </h5>
+                                            <h6 class="ml-5 font-weight-bold text-muted">000.00 Rs/Hr
+                                            </h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="row m-4">
+                                        <div class="col-11">
+                                            <h5 class="font-weight-bold"><i
+                                                    class="fas fa-edit mr-2 detailsIcon"></i>Special Remarks
+                                            </h5>
+                                            <textarea class="form-control ml-5 mt-2 w-100  col-12 "
+                                                id="exampleFormControlTextarea4" rows="3"></textarea>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <button class="btn btn-secondary btn-sm mr-3">Place Remark</button>
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab"
+                                    style=" position: relative; top: -700px;">
+
+                                    <h2 class="text-center font-weight-bold mt-4 mb-0">REPORTS</h2>
+                                    <hr class="sepLine mb-5">
+
+                                    <div class="row mb-4 yellow mr-4">
+                                        <h2 class="text-center font-weight-bold mt-4 mb-0">Monthly OT Report</h2>
+
+                                        <div class="col-11 ml-5 mr-5">
+                                            <canvas  id="OTReport" width="120px"
+                                                height="40px"></canvas>
+                                        </div>
+
                                         
 
                                     </div>
-                                    <div class="tab-pane fade" id="professional" role="tabpanel"
-                                        aria-labelledby="professional-tab">
-                                        Food truck
-                                        fixie
-                                        locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-                                        Exercitation
-                                        +1
-                                        labore
-                                        velit,
-                                        blog sartorial PBR leggings next level wes anderson artisan four loko
-                                        farm-to-table
-                                        craft
-                                        beer
-                                        twee.
-                                        Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-                                        ullamco ad
-                                        vinyl
-                                        cillum
-                                        PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
-                                        Keytar
-                                        helvetica
-                                        VHS
-                                        salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio
-                                        cillum
-                                        wes
-                                        anderson
-                                        8-bit,
-                                        sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel.
-                                        Art
-                                        party
-                                        scenester
-                                        stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.
+                                    <div class="row yellow mr-4">
+                                         <h2 class="text-center font-weight-bold mt-4 mb-0">Monthly Attendence Report</h2>
                                     </div>
-                                    <div class="tab-pane fade" id="reports" role="tabpanel"
-                                        aria-labelledby="reports-tab">
-                                        Etsy
-                                        mixtape
-                                        wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic
-                                        lomo
-                                        retro
-                                        fanny
-                                        pack
-                                        lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft
-                                        beer,
-                                        iphone
-                                        skateboard
-                                        locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
-                                        Leggings
-                                        gentrify
-                                        squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles
-                                        pitchfork
-                                        biodiesel fixie
-                                        etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them,
-                                        vinyl craft
-                                        beer
-                                        blog
-                                        stumptown. Pitchfork sustainable tofu synth chambray yr.</div>
+                                   
                                 </div>
-
                             </div>
-
-                            
 
                         </div>
 
+
+
+                    </div>
+
                 </div>
 
-            
 
-                
-                
+
+
+
                 <!--End Of Middle Content Area-->
-                
+
 
                 <!-- Footer -->
                 <footer class="page-footer font-small text-light">
@@ -593,15 +643,21 @@
     <script src="js/Dashboard.js"></script>
 
     <script>
-        var ctx = document.getElementById('myChart');
+        var ctx = document.getElementById('OTReport');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
                 datasets: [{
                     label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [12, 19, 3, 5, 2, 3, 12, 19, 3, 5, 2, 3],
                     backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
                         'rgba(255, 206, 86, 0.2)',
@@ -615,7 +671,13 @@
                         'rgba(255, 206, 86, 1)',
                         'rgba(75, 192, 192, 1)',
                         'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'rgba(255, 159, 64, 1)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
                     ],
                     borderWidth: 1
                 }]
@@ -632,79 +694,7 @@
         });
 
         /*---------------------------------------------------------------------------*/
-        var ctx2 = document.getElementById('pieChart');
 
-        var myPieChart = new Chart(ctx2, {
-            type: 'doughnut',
-            data: {
-                //labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            }
-        });
-
-        /*---------------------------------------------------------------------------*/
-
-        var ctx3 = document.getElementById('attendenceChart');
-        var myChart = new Chart(ctx3, {
-            type: 'bar',
-            data: {
-                labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3, 15],
-                    backgroundColor: [
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)'
-                    ],
-                    borderColor: [
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)'
-                    ],
-                    borderWidth: 0
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-
-
-        /*---------------------------------------------------------------------------*/
 
         var ctx4 = document.getElementById('hallChart');
         var myChart = new Chart(ctx4, {
@@ -726,45 +716,6 @@
                         'rgba(48, 79, 254, 1)',
                         'rgba(48, 79, 254, 1)',
                         'rgba(48, 79, 254, 1)',
-                        'rgba(48, 79, 254, 1)'
-                    ],
-                    borderColor: [],
-                    borderWidth: 0
-                }]
-            }
-        });
-
-
-        /*---------------------------------------------------------------------------*/
-
-        var ctx5 = document.getElementById('foodChart');
-        var myChart = new Chart(ctx5, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3, 15, 12, 03, 5, 15, 3],
-                    backgroundColor: [
-                        'rgba(48, 79, 254, 1)'
-                    ],
-                    borderColor: [],
-                    borderWidth: 0
-                }]
-            }
-        });
-
-        /*---------------------------------------------------------------------------*/
-
-        var ctx6 = document.getElementById('roomChart');
-        var myChart = new Chart(ctx6, {
-            type: 'line',
-            data: {
-                labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2, 3, 15],
-                    backgroundColor: [
                         'rgba(48, 79, 254, 1)'
                     ],
                     borderColor: [],
