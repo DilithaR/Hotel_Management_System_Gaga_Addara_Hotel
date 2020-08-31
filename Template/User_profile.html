@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <!--Bootstrap Core CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    <!-- MDBootstrap Datatables  -->
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
     <!--Swiper CDN-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -100,7 +101,8 @@
             </div>
             <div class="col-7 ml-3">
                 <div class="row ml-1 mt-4">
-                    <h2 class="text-muted">I'm </h2> <h2 class="ml-1 profHead"> Customer name</h2>
+                    <h2 class="text-muted pink-text">I'm </h2>
+                    <h2 class="ml-2 profHead"> Customer name</h2>
                 </div>
                 <h4 class="ml-1 profHead">Reg Number</h4>
                 <hr class="sepLine">
@@ -152,7 +154,7 @@
                         <p>+94 17 6 458 125</p>
                     </div>
                     <div class="col-6 d-flex justify-content-end">
-                        <button class="btn btn-pink btn-rounded">EDIT</button>
+                        <button class="btn btn-pink btn-rounded" data-toggle="modal" data-target="#Edit_UserModel">EDIT</button>
                     </div>
                 </div>
                 <!-- <div class="row mb-3">
@@ -168,11 +170,11 @@
 
     
 
-    <div class="middleArea d-flex justify-content-center align-items-center" style="overflow-x: hidden;">
+    <div class="middleArea d-flex justify-content-center align-items-center mb-0" style="overflow-x: hidden;">
         
         
         
-        <div class="col-10 white p-5 profContArea">
+        <div class="col-10 white p-5 mb-5 profContArea">
 
             
             <div class="row topicArea mb-3 pt-2">
@@ -426,17 +428,17 @@
             <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
                 <thead>
                     <tr>
-                        <th class="th-sm">Name
+                        <th class="th-sm">Order No
                         </th>
-                        <th class="th-sm">Position
+                        <th class="th-sm">Items
                         </th>
-                        <th class="th-sm">Office
+                        <th class="th-sm">No if Items
                         </th>
-                        <th class="th-sm">Age
+                        <th class="th-sm">Total Price
                         </th>
-                        <th class="th-sm">Start date
+                        <th class="th-sm">Date
                         </th>
-                        <th class="th-sm">Salary
+                        <th class="th-sm">Time
                         </th>
                     </tr>
                 </thead>
@@ -508,7 +510,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="page-footer font-small text-light mt-2" style="position: relative; overflow-x: hidden; top: 280px;">
+    <footer class="page-footer font-small text-light mt-2" style="position: relative; overflow-x: hidden; top: 195px;">
 
 
         <div class="footertop d-flex align-items-center">
@@ -637,23 +639,184 @@
     </footer>
     <!-- Footer -->
 
-    <!--Jquery CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    <!--Edit User Model-->
+    <div class="modal fade" id="Edit_UserModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+
+        <div class="modal-dialog modal-lg " role="document">
+
+
+            <div class="modal-content">
+                <div class="modal-header ripe-malinka-gradient">
+                    <h2 class="modal-title w-100 font-weight-bold" id="myModalLabel"><i
+                            class="fas fa-user-edit mr-3"></i>Edit User</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row row-cols-3">
+                        <div class="col-xl-5 col-md-5 ml-4 mb-0 text-center">
+
+                            <img src="img/sample_profPic.jpg"
+                                class="img-fluid rounded ">
+                                <input type="image" class="btn btn-warning rounded btn-sm" value="Upload Image">
+
+                        </div>
+
+                        <div class="col-3 mt-4 pt-4">
+                            <h5 class="ml-4"> <i class="fas fa-envelope-open-text"></i> <strong> User Id : </strong>
+                            </h5>
+                            <h5 class="ml-4"> <i class="fas fa-user-alt"></i> <strong> User name : </strong> </h4>
+                            <h5 class="ml-4"> <i class="fas fa-car"></i> <strong> User NIC : </strong> </h4>
+
+                        </div>
+                        <div class="col-3 mt-4 pt-4 pr-0 mr-0">
+                                <h5 class="text-right">Reg No</h5>
+
+                                <h5 class="text-right">Customer Name</h5>
+
+                                <h5 class="text-right">+94 17 6 458 125</h5>
+                        </div>
+                    </div>
+
+                    <hr style="border-width: 3px; border-color: crimson;">
+
+
+
+                    <form action="EditAppointmentServlet" method="get">
+                        <input type="hidden" name="CurrentAppID" value="<%=Appointment.getAppId()%>">
+                        <input type="hidden" name="CurrentVehiId" value="<%=Vehicle.getVehicleId() %>">
+
+                        <h3 style="color: #577a1f ;font-weight: bold;" class="mb-4"> User Information</h3>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-5 ml-4">
+                                <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i> First
+                                    Name</label>
+                                <input id="inputState" class="form-control ml-3" name="Edit_Fname"
+                                    placeholder="First Name"
+                                    value="Current First Name">
+                            </div>
+
+                            <div class="form-group col-md-5 ml-4">
+                                <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last Name</label>
+                                <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                    placeholder="Last Name"
+                                    value="Current Last Name">
+
+                            </div>
+
+                        </div>
+                        
+                        <div class="row">
+
+                            <div class="form-group col-md-6 ml-4">
+                                <label for="inputState"><i class="fas fa-envelope-open grey-text fa-2x"></i>
+                                    Email</label>
+                                <input id="inputState" class="form-control ml-3" type="email" name="Edit_Email"
+                                    placeholder="Email"
+                                    value="Current Email">
+                            </div>
+
+                            <div class="form-group col-md-4 ml-4">
+                                <label for="inputState"><i class="fas fa-phone-square grey-text fa-2x"></i> Current
+                                    Phone</label>
+                                <input id="inputState" class="form-control ml-3" type="text" name="Edit_Phone"
+                                    placeholder="Phone No"
+                                    value="Current Phone">
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-4 ml-4">
+                                <label for="inputState"><i class="fas fa-shipping-fast grey-text fa-2x"></i>
+                                    Address</label>
+                                <input id="inputState" placeholder="EditAddLine1" class="form-control ml-3" type="text" name="Edit_Email"
+                                    value="Current Address">
+                            </div>
+
+                            <div class="form-group col-md-4 ml-4 mt-5">
+                                <input id="inputState" placeholder="Line Two" class="form-control ml-3" type="text"
+                                    name="Edit_AddLine2"
+                                    value="Current Line Two">
+
+                            </div>
+
+                            <div class="form-group col-md-2 ml-4 mt-5">
+                                <input id="inputState" placeholder="Post Code" class="form-control ml-3" type="text"
+                                    name="Edit_PCode" value="">
+
+                            </div>
+
+                        </div>
+
+                        <label for="inputState" class="ml-4"><i
+                                class="fas fa-user-friends  fa-medium-m grey-text fa-2x"></i> Gender</label>
+
+                        <div class="row">
+                            
+                            <!-- Group of default radios - option 1 -->
+                            <div class="custom-radio form-group col-md-2 ml-5 mt-2 row_radio">
+                                <input type="radio" class="custom-control-input ml-5" id="defaultGroupExample1"
+                                    name="groupOfDefaultRadios">
+                                <label class="custom-control-label" for="defaultGroupExample1">Male</label>
+                            </div>
+
+                            <!-- Group of default radios - option 2 -->
+                            <div class="custom-radio form-group col-md-2 mt-2 row_radio">
+                                <input type="radio" class="custom-control-input ml-5" id="defaultGroupExample2"
+                                    name="groupOfDefaultRadios">
+                                <label class="custom-control-label" for="defaultGroupExample2">Female</label>
+                            </div>
+
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-blue-grey btn-sm" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-dark-green btn-sm">Save changes</button>
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Edit User Model-->
+
+    
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
     </script>
-    <!--Popper.js CDN-->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js">
     </script>
-    <!--Bootstrap js CDN-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
-    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+    <!-- MDBootstrap Datatables  -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <!--Swiper.js CDN-->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
     <!--User Js-->
     <script src="js/HomePage.js"></script>
+
+
     <script>
         $(document).ready(function () {
             $('#dtBasicExample').DataTable();
