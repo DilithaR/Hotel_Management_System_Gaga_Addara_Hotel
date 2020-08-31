@@ -1,0 +1,31 @@
+.viewEmp_left{
+    border-top-style: solid;
+    border-top-color: crimson;
+    border-top-width: 5px;
+    background-color: white;
+
+}
+
+.viewEmpRightCont{
+    height: 750px;
+}
+.empImg{
+    width: 260px;
+    height: 706px;
+}
+
+.sepLine{
+    margin-top: 5px;
+    border-width: 5px;
+    border-color: crimson;
+    width: 300px;
+    border-radius: 15px;
+
+}
+
+.detailsIcon{
+    color: burlywood;
+}
+.rateStarLeft{
+    color: rgb(255, 210, 11);
+}
