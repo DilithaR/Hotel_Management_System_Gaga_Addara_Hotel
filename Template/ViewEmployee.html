@@ -157,7 +157,7 @@
 
                                         <div class="d-flex flex-column">
                                             <p class="m-0 p-0">Name</p>
-                                            mane15488@gmail.com
+                                            name15488@gmail.com
                                         </div>
                                     </div>
                                     <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"><i
@@ -229,7 +229,7 @@
                     <div class="col-8">
                         <div class="white viewEmpRightCont">
 
-                            <ul class="nav nav-tabs mt-4" id="myTab" role="tablist" style="background-color: crimson;">
+                            <ul class="nav nav-tabs mt-4 smallNav" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="basic-tab" data-toggle="tab" href="#basic" role="tab"
                                         aria-controls="basic" aria-selected="true">Basic</a>
@@ -434,10 +434,10 @@
                                     style=" position: relative; top: -700px;">
 
                                     <h2 class="text-center font-weight-bold mt-4 mb-0">REPORTS</h2>
-                                    <hr class="sepLine mb-5">
+                                    <hr class="sepLine mb-3">
 
-                                    <div class="row mb-4 yellow mr-4">
-                                        <h2 class="text-center font-weight-bold mt-4 mb-0">Monthly OT Report</h2>
+                                    <div class="row mb-4 white mr-5 ml-3 repoDiv">
+                                        <h2 class="text-center font-weight-bold mt-3 mb-0 ml-2">Monthly OT Report</h2>
 
                                         <div class="col-11 ml-5 mr-5">
                                             <canvas  id="OTReport" width="120px"
@@ -447,8 +447,12 @@
                                         
 
                                     </div>
-                                    <div class="row yellow mr-4">
-                                         <h2 class="text-center font-weight-bold mt-4 mb-0">Monthly Attendence Report</h2>
+                                    <div class="row white mr-5 ml-3 repoDiv">
+                                         <h2 class="text-center font-weight-bold mt-3 mb-0 ml-2">Monthly Attendence Report</h2>
+
+                                         <div class="col-11 ml-5 mr-5">
+                                             <canvas id="AttReport" width="120px" height="40px"></canvas>
+                                         </div>
                                     </div>
                                    
                                 </div>
@@ -696,7 +700,7 @@
         /*---------------------------------------------------------------------------*/
 
 
-        var ctx4 = document.getElementById('hallChart');
+        var ctx4 = document.getElementById('AttReport');
         var myChart = new Chart(ctx4, {
             type: 'bar',
             data: {
