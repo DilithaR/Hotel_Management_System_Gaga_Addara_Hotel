@@ -77,3 +77,9 @@
 .smallNav li a[aria-selected="true"] {
     border-radius: 0px;
 }
+
+.EmpEditLabText{
+}
+.edit_sec_Icon{
+    color: #525252;
+}
