@@ -25,11 +25,23 @@
 
 }
 
+.empEdiFrmUnderline{
+    border-width: 5px;
+    border-color: crimson;
+    width: 80px;
+    border-radius: 15px;
+    justify-self: flex-start;
+    position: relative;
+    left: -440px;
+}
+
 .detailsIcon{
-    color: burlywood;
+    /* color: burlywood; */
+    color: rgb(121, 1, 61)
 }
 .rateStarLeft{
     color: rgb(255, 210, 11);
+    
 }
 .tab2_img{
     width: 150px;

@@ -61,6 +61,7 @@ body{
     -webkit-transform-style: preserve-3d;
     transition: all 0.5s ease;
     border-radius: 15px;
+    box-shadow: 0 10px 15px #000000;
 }
 
 

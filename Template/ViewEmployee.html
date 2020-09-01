@@ -218,7 +218,8 @@
                             </table>
 
                             <div class="row">
-                                <button class="btn btn-dark-green mb-0 w-100 font-weight-bold">Edit</button>
+                                <button class="btn btn-dark-green mb-0 w-100 font-weight-bold" data-toggle="modal"
+                                    data-target="#editEmployee">Edit</button>
                                 <button class="btn btn-danger w-100 font-weight-bold">Delete</button>
                             </div>
 
@@ -613,6 +614,215 @@
 
         </div>
 
+        <!-- Full Height Modal Right -->
+        <div class="modal fade right" id="editEmployee" tabindex="-1" role="dialog"
+            aria-labelledby="myModalLabel" aria-hidden="true">
+
+            <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+            <div class="modal-dialog modal-full-height modal-right modal-lg " role="document">
+
+
+                <div class="modal-content">
+                    <div class="modal-header p-2 mean-fruit-gradient">
+                        <h3 class="modal-title w-100 font-weight-bold ml-2" id="myModalLabel">Edit Employee</h3>
+                        <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <form action="" class="ml-2">
+                            
+                            <h4 class="font-weight-bold">Basic Information</h4>
+                            <hr class="empEdiFrmUnderline" />
+                            <div class="row mt-3">
+                                <img src="img/sample_profPic.jpg" alt="" class="rounded ml-3 "
+                                    style="width: 150px; height: 100px;">
+
+                                <div class="col align-items-center">
+                                    <input type="image" value="Upload Image" class="btn btn-deep-purple btn-sm mt-5">
+                                    <p class="grey-text small ml-1">Please upload a .jpg or a .png file with minimum dimesion of
+                                        400w x 400h, not exeeding 5MB</p>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4">
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                        placeholder="Last Name" value="Current Last Name">
+
+                                </div>
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i>
+                                        First
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Fname"
+                                        placeholder="First Name" value="Current First Name">
+                                </div>
+
+                                <div class="form-group ml-5">
+                                    <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                        placeholder="Last Name" value="Current Last Name">
+
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                        placeholder="Last Name" value="Current Last Name">
+
+                                </div>
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i>
+                                        First
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Fname"
+                                        placeholder="First Name" value="Current First Name">
+                                </div>
+
+                            </div>
+                            <hr/>
+                            <h4 class="font-weight-bold mt-2">Contact Information</h4>
+                            <hr class="empEdiFrmUnderline" />
+                            
+                            <div class="row row-cols-3">
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                        placeholder="Last Name" value="Current Last Name">
+
+                                </div>
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i>
+                                        First
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Fname"
+                                        placeholder="First Name" value="Current First Name">
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                        placeholder="Last Name" value="Current Last Name">
+
+                                </div>
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i>
+                                        First
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Fname"
+                                        placeholder="First Name" value="Current First Name">
+                                </div>
+
+                            </div>
+                            <div class="row row-cols-3">
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                        placeholder="Last Name" value="Current Last Name">
+
+                                </div>
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i>
+                                        First
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Fname"
+                                        placeholder="First Name" value="Current First Name">
+                                </div>
+
+                            </div>
+
+                            <hr/>
+                            <h4 class="font-weight-bold mt-2">Employee Information</h4>
+                            <hr class="empEdiFrmUnderline"/>
+                            <div class="row">
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                        placeholder="Last Name" value="Current Last Name">
+
+                                </div>
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i>
+                                        First
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Fname"
+                                        placeholder="First Name" value="Current First Name">
+                                </div>
+
+                                <div class="form-group ml-5">
+                                    <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                        placeholder="Last Name" value="Current Last Name">
+
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                        placeholder="Last Name" value="Current Last Name">
+
+                                </div>
+
+                                <div class="form-group ml-5 mr-5">
+                                    <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i>
+                                        First
+                                        Name</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_Fname"
+                                        placeholder="First Name" value="Current First Name">
+                                </div>
+
+                            </div>
+
+
+                        </form>
+
+
+                       
+                    </div>
+
+                    <div class="modal-footer justify-content-end">
+                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Full Height Modal Right -->
 
 
     </div>
