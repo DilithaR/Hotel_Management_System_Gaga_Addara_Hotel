@@ -150,5 +150,22 @@ nav ul li a span.rotate{
     display: block;
 }
 
+/*---------------------------Employee List--------------------------------*/
+
+.emp_card:hover{
+    box-shadow: 3px 3px 5px 6px rgb(141, 141, 141);
+    
+}
+.appFIltersSec{
+    box-shadow: 0 10px 5px #777;
+}
+
+.viewProfBtn:hover{
+    background-color: rgb(143, 138, 138);
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+}
 
 
