@@ -1,0 +1,29 @@
+.underline{
+    width: 75px;
+    border-width: 5px;
+    border-radius: 5px;
+    background-color: crimson;
+}
+label{
+    position: absolute;
+}
+
+.addempForm:focus+label,
+.addempForm:valid+label {
+    top: -20px;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.subbtn{
+    border-radius: 30px;
+    position: relative;
+    top: 5px;
+    width: 160px;
+    font-weight: bold;
+
+}
+
+.formTop{
+    height: 430px;
+}
