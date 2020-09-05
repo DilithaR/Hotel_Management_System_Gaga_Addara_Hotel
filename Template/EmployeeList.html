@@ -180,204 +180,295 @@
                         <h3 class="ml-2 mb-3 font-weight-bold">Apply Filters</h3>
 
                         <div class="row row-cols-4 d-flex justify-content-between mb-4 pl-5 ml-3 pr-5">
-                            <input id="inputState" class="form-control ml-3" name="Edit_E_Fname"
-                                placeholder="First Name" value="Current First Name" style="height: 50px;">
+                            <input id="inputState" class="form-control ml-3" name="srchEid"
+                                placeholder="Employee ID" style="height: 50px;">
 
-                            <input id="inputState" class="form-control ml-3" name="Edit_E_Fname"
-                                placeholder="First Name" value="Current First Name" style="height: 50px;">
+                            <input id="inputState" class="form-control ml-3" name="srchName"
+                                placeholder="Name" value="Current First Name" style="height: 50px;">
 
-                            <input id="inputState" class="form-control ml-3" name="Edit_E_Fname"
-                                placeholder="First Name" value="Current First Name" style="height: 50px;">
+                            <select class="form-control ml-3" name="srchOccu" style="height: 50px;">
+                                <option value="" disabled selected>Occupation</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Cashier">Cashier</option>
+                                <option value="Waiter">Waiter</option>
+                                <option value="Reciptionist">Reciptionist</option>
+                            </select>
                         </div>
 
                         <div class="row row-cols-4 d-flex justify-content-between pl-5 ml-3 pr-5">
-                            <input id="inputState" class="form-control ml-3" name="Edit_E_Fname"
-                                placeholder="First Name" value="Current First Name" style="height: 50px;">
+                            
+                            <select class="form-control ml-3" name="srchOccu" style="height: 50px;">
+                                <option value="" disabled selected>Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
 
                             <input id="inputState" class="form-control ml-3" name="Edit_E_Fname"
                                 placeholder="First Name" value="Current First Name" style="height: 50px;">
 
-                            <button class="btn btn-pink btn-rounded font-weight-bold mt-5 w-75">SEARCH</button>
+                            <button class="btn btn-pink font-weight-bold mt-5 w-50" style="border-radius: 30px;">SEARCH</button>
                         </div>
                     </form>
                 </div>
 
 
-                <div class="card-deck ml-4 mr-4">
+                <div class="row row-cols-1 row-cols-md-3 d-flex justify-content-between ml-4 mr-4 mb-5">
 
-                    <!-- Card -->
-                    <div class="card mt-5 emp_card">
-                        <!-- Card content -->
-                        <div class="card-body">
+                    <div class="col pl-3 pr-3">
 
-                            <div class="d-flex flex-row mb-2">
-                                <img src="img/sample_profPic.jpg" class="rounded" style="width: 60px; height: 60px;">
-                                <div class="ml-3">
-                                    <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
-                                    <h5 class="font-weight-bold text-muted">Occupation</h5>
-                                </div>
-                            </div>
+                        <!-- Card -->
+                        <div class="card mt-5 emp_card">
+                            <!-- Card content -->
+                            <div class="card-body">
 
-                            <hr style="border-width: 5px; border-color: rgb(255, 50, 136) ; border-radius: 5px;">
-
-                            <div>
-                                <div class="row d-flex justify-content-between pl-3 pr-3">
-
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">Employee Id</h6>
-                                        <h6 class="font-weight-bold ml-4">EMP1258</h6>
-                                    </div>
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">NIC</h6>
-                                        <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                <div class="d-flex flex-row mb-2">
+                                    <img src="img/sample_profPic.jpg" class="rounded"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ml-3">
+                                        <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
+                                        <h5 class="font-weight-bold text-muted">Occupation</h5>
                                     </div>
                                 </div>
-                                <div class="row d-flex justify-content-start pl-3 pr-3">
 
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">Contact No</h6>
-                                        <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                <hr style="border-width: 5px; border-color: crimson; border-radius: 5px;">
+
+                                <div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Employee Id</h6>
+                                            <h6 class="font-weight-bold ml-4">EMP1258</h6>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">NIC</h6>
+                                            <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row d-flex justify-content-between pl-3 pr-3">
+                                    <div class="row d-flex justify-content-start pl-3 pr-3">
 
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">Email</h6>
-                                        <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Contact No</h6>
+                                            <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Email</h6>
+                                            <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        </div>
+
                                     </div>
 
                                 </div>
-                                
-                            </div>
 
-                            <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
+                                <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
 
-                            <div class="d-flex flex-row justify-content-center">
-                                <a href="" style="color: rgb(243, 110, 154);" class="viewProfBtn">
-                                    <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
-                                    </h5>
-                                </a>
+                                <div class="d-flex flex-row justify-content-center">
+                                    <a href="" style="color: rgb(88, 13, 150);" class="viewProfBtn">
+                                        <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
+                                        </h5>
+                                    </a>
+                                </div>
+
                             </div>
 
                         </div>
 
                     </div>
-                    <!-- Card -->
+                        
+                    <div class="col pl-3 pr-3">
 
+                        <!-- Card -->
+                        <div class="card mt-5 emp_card">
+                            <!-- Card content -->
+                            <div class="card-body">
 
-                    <div class="card mt-5 emp_card">
-                        <!-- Card content -->
-                        <div class="card-body">
-
-                            <div class="d-flex flex-row mb-2">
-                                <img src="img/sample_profPic.jpg" class="rounded" style="width: 60px; height: 60px;">
-                                <div class="ml-3">
-                                    <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
-                                    <h5 class="font-weight-bold text-muted">Occupation</h5>
-                                </div>
-                            </div>
-
-                            <hr style="border-width: 5px; border-color: crimson ; border-radius: 5px;">
-
-                            <div>
-                                <div class="row d-flex justify-content-between pl-3 pr-3">
-
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">Employee Id</h6>
-                                        <h6 class="font-weight-bold ml-4">EMP1258</h6>
-                                    </div>
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">NIC</h6>
-                                        <h6 class="font-weight-bold ml-4">854951257V</h6>
-                                    </div>
-                                </div>
-                                <div class="row d-flex justify-content-start pl-3 pr-3">
-
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">Contact No</h6>
-                                        <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
-                                    </div>
-                                </div>
-                                <div class="row d-flex justify-content-between pl-3 pr-3">
-
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">Email</h6>
-                                        <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                <div class="d-flex flex-row mb-2">
+                                    <img src="img/sample_profPic.jpg" class="rounded"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ml-3">
+                                        <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
+                                        <h5 class="font-weight-bold text-muted">Occupation</h5>
                                     </div>
                                 </div>
 
-                            </div>
+                                <hr style="border-width: 5px; border-color: crimson; border-radius: 5px;">
 
-                            <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
+                                <div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
 
-                            <div class="d-flex flex-row justify-content-center">
-                                <a href="" style="color: rgb(243, 110, 154);" class="viewProfBtn">
-                                    <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
-                                    </h5>
-                                </a>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Employee Id</h6>
+                                            <h6 class="font-weight-bold ml-4">EMP1258</h6>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">NIC</h6>
+                                            <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-start pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Contact No</h6>
+                                            <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Email</h6>
+                                            <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
+
+                                <div class="d-flex flex-row justify-content-center">
+                                    <a href="" style="color: rgb(88, 13, 150);" class="viewProfBtn">
+                                        <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
+                                        </h5>
+                                    </a>
+                                </div>
+
                             </div>
 
                         </div>
 
                     </div>
 
-                    <div class="card mt-5 emp_card">
-                        <!-- Card content -->
-                        <div class="card-body">
+                    <div class="col pl-3 pr-3">
 
-                            <div class="d-flex flex-row mb-2">
-                                <img src="img/sample_profPic.jpg" class="rounded" style="width: 60px; height: 60px;">
-                                <div class="ml-3">
-                                    <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
-                                    <h5 class="font-weight-bold text-muted">Occupation</h5>
-                                </div>
-                            </div>
+                        <!-- Card -->
+                        <div class="card mt-5 emp_card">
+                            <!-- Card content -->
+                            <div class="card-body">
 
-                            <hr style="border-width: 5px; border-color: crimson ; border-radius: 5px;">
-
-                            <div>
-                                <div class="row d-flex justify-content-between pl-3 pr-3">
-
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">Employee Id</h6>
-                                        <h6 class="font-weight-bold ml-4">EMP1258</h6>
-                                    </div>
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">NIC</h6>
-                                        <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                <div class="d-flex flex-row mb-2">
+                                    <img src="img/sample_profPic.jpg" class="rounded"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ml-3">
+                                        <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
+                                        <h5 class="font-weight-bold text-muted">Occupation</h5>
                                     </div>
                                 </div>
-                                <div class="row d-flex justify-content-start pl-3 pr-3">
 
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">Contact No</h6>
-                                        <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                <hr style="border-width: 5px; border-color: crimson; border-radius: 5px;">
+
+                                <div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Employee Id</h6>
+                                            <h6 class="font-weight-bold ml-4">EMP1258</h6>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">NIC</h6>
+                                            <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row d-flex justify-content-between pl-3 pr-3">
+                                    <div class="row d-flex justify-content-start pl-3 pr-3">
 
-                                    <div>
-                                        <h6 class="font-weight-bold text-muted">Email</h6>
-                                        <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Contact No</h6>
+                                            <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Email</h6>
+                                            <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        </div>
+
                                     </div>
 
                                 </div>
 
-                            </div>
+                                <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
 
-                            <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
+                                <div class="d-flex flex-row justify-content-center">
+                                    <a href="" style="color: rgb(88, 13, 150);" class="viewProfBtn">
+                                        <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
+                                        </h5>
+                                    </a>
+                                </div>
 
-                            <div class="d-flex flex-row justify-content-center">
-                                <a href="" style="color: rgb(243, 110, 154);" class="viewProfBtn">
-                                    <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"
-                                            ></i>VIEW PROFILE
-                                    </h5>
-                                </a>
                             </div>
 
                         </div>
 
                     </div>
+
+                    <div class="col pl-3 pr-3">
+
+                        <!-- Card -->
+                        <div class="card mt-5 emp_card">
+                            <!-- Card content -->
+                            <div class="card-body">
+
+                                <div class="d-flex flex-row mb-2">
+                                    <img src="img/sample_profPic.jpg" class="rounded"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ml-3">
+                                        <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
+                                        <h5 class="font-weight-bold text-muted">Occupation</h5>
+                                    </div>
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: crimson; border-radius: 5px;">
+
+                                <div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Employee Id</h6>
+                                            <h6 class="font-weight-bold ml-4">EMP1258</h6>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">NIC</h6>
+                                            <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-start pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Contact No</h6>
+                                            <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Email</h6>
+                                            <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
+
+                                <div class="d-flex flex-row justify-content-center">
+                                    <a href="" style="color: rgb(88, 13, 150);" class="viewProfBtn">
+                                        <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
+                                        </h5>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    
 
                 </div>
 
