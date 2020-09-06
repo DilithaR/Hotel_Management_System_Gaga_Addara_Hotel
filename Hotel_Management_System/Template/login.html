@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{% static 'css/Mahendra/Signup.css' %}">
 
     <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png' %}">
-    <title>SignUp</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
                 <div class="jumbotron d-flex justify-content-center align-items-center p-0 col-6 h-75" id="flipJumbo">
                     
 
-                    <div class="front row">
+                    <div class="back row">
 
                         <div class="col-6 signupLeft">
 
@@ -60,18 +60,21 @@
 
                                 <!-- E-mail -->
                                 <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4"
-                                    placeholder="E-mail">
+                                    placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 
                                 <!-- Password -->
                                 <input type="password" id="defaultRegisterFormPassword" class="form-control"
-                                    placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-                                <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-3">
-                                    At least 8 characters and 1 digit
+                                    placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                                    aria-describedby="defaultRegisterFormPasswordHelpBlock" required>
+                                <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                                    At least 6 characters that are of at least one number, and one uppercase and
+                                    lowercase letter
                                 </small>
 
                                 <!-- Confirm Password -->
                                 <input type="password" id="defaultRegisterPhonePassword" class="form-control mb-3"
-                                    placeholder="Confirm Password" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+                                    placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                                    aria-describedby="defaultRegisterFormPhoneHelpBlock" required>
 
 
                                 <!-- Sign up button -->
@@ -111,7 +114,7 @@
                         </div>
 
                     </div>
-                    <div class="back row">
+                    <div class="front row">
                         <div class="col-6 loginLeft ">
 
                             <div
@@ -148,16 +151,15 @@
 
                                 <!-- E-mail -->
                                 <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4"
-                                    placeholder="Username/E-mail">
+                                    placeholder="Username/E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 
                                 <!-- Password -->
                                 <input type="password" id="defaultRegisterFormPassword" class="form-control"
-                                    placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-                                <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-                                    At least 8 characters and 1 digit
-                                </small>
+                                    placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required
+                                    aria-describedby="defaultRegisterFormPasswordHelpBlock">
+                                
 
-                                <div class="row ml-2 d-flex justify-content-between align-items-end mb-4">
+                                <div class="row mt-3 ml-1 mr-2 d-flex justify-content-between align-items-end mb-4">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input"
                                             id="defaultUncheckedDisabled2"  >
@@ -231,7 +233,7 @@
 
     <script>
         function flip(){
-            document.getElementById("flipJumbo").style.transform = 'rotateY(180deg)';
+            document.getElementById("flipJumbo").style.transform = 'rotateY(0deg)';
         }
         function flipBack(){
             document.getElementById("flipJumbo").style.transform = 'rotateY(-180deg)';
