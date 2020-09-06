@@ -1,0 +1,298 @@
+body,
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: whitesmoke;
+    /* overflow-x: hidden; */
+}
+
+header {
+    position: relative;
+    background-image: url(../../img/dikwella_beachEdi.jpg);
+    background-size: cover;
+    height: 55vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+
+    header video {
+        display: none;
+    }
+}
+
+.navLogo{
+    width: 60px;
+    height: 70px;
+}
+
+.topnav {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    font-size: medium;
+    font-weight: bold;
+    font-size: large;
+    font-variant: small-caps;
+    transition: transform .2s;
+    
+}
+
+.topnavScroll {
+    background-color: rgb(255, 255, 255);
+    height: 70px;
+    animation-name: laydown;
+    animation-duration: 1s;
+
+}
+@keyframes laydown{
+    from {height: 0px;}
+  to {height: 70px;}
+}
+
+.topnavScroll a{
+    color: black;
+}
+
+.topnavScroll a:hover{
+    color: green;
+}
+
+
+nav a {
+    color: aliceblue;
+}
+
+
+.topnav a:hover {
+    color: rgb(255, 85, 119);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+.topnav li .fas{
+    color: rgb(0, 79, 153);
+    -ms-transform: scale(1.8);
+    -webkit-transform: scale(1.8);
+    transform: scale(1.8);
+
+}
+
+.topnav li .fas:hover {
+    color: rgb(0, 79, 153);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    transform: scale(2);
+
+}
+
+
+
+.topnav .dropdown-item:hover {
+    color: rgba(252, 3, 45, 0.87);
+    font-weight: bold;
+    
+
+}
+
+
+
+
+.subtopic{
+    color: gray;
+}
+
+.swiper-pagination{
+   color: crimson;
+}
+
+.highlitCard{
+    height:200px;
+}
+
+.viewAllLink{
+    color: crimson;
+    font-weight: bold;
+    text-decoration: none;
+}
+.viewAllLink:hover{
+    color: black;
+    text-decoration: none;
+}
+
+
+.footertop{
+    
+    height: 80px;
+    background-color: rgb(255, 43, 85);
+    
+}
+
+.SocialBtn{
+    color: white;
+}
+
+.tourcardDist{
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(104, 104, 104);
+    
+}
+
+.tourcardL1{
+    position: relative;
+    font-size: medium;
+    font-weight: 700;
+    color: rgb(104, 104, 104);
+    top: -9px;
+    left: 8px;
+}
+
+.tourcardL2 {
+    position: relative;
+    font-size: small;
+    font-weight: lighter;
+    color: rgb(104, 104, 104);
+    top: -9px;
+    left: 8px;
+    
+}
+
+.tourcardReview{
+    color: rgb(0, 79, 153);
+}
+
+.tourPrice{
+    color: rgb(5, 156, 25);
+}
+
+.tourtitle{
+    color: crimson;
+}
+
+.percent{
+    position: relative;
+    color: white;
+    font-size: large;
+    top: -16px;
+    left: -35px;
+
+}
+
+.HomeCommonBtn{
+    background-color: rgb(250, 41, 69);
+    border-radius: 40px;
+    height: 50px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.HomeCommonBtn:hover{
+    background-color: rgba(39, 100, 214, 0.938);
+}
+
+.profContArea{
+    box-shadow:
+     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+     0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+     0 12.5px 10px rgba(0, 0, 0, 0.06),
+     0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+     0 100px 40px rgba(0, 0, 0, 0.02)
+}
+
+.UserProfStruct{
+    position: absolute;
+    top: 150px;
+    z-index: 2;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 40px rgba(0, 0, 0, 0.02);
+    ;
+    
+}
+.details_right,
+.profHead {
+    font-weight: bold;
+}
+.sepLine{
+    color: crimson;
+    height: 3px;
+
+    background-color: crimson;
+}
+.btn-rounded{
+    border-radius: 100px;
+    font-weight: bold;
+    width: 150px;
+}
+.middleArea{
+    position: relative;
+    top: 200px;
+}
+.img_top{
+    width: 100%;
+}
+.sum_val{
+    font-weight: bolder;
+    font-size: 40px;
+}
+.topicArea{
+    position: relative;
+    width: 103%;
+    height: 50px;
+    background-color: rgb(255, 39, 82);
+    border-radius: 10px;
+}
+
+.newsBtn{
+    height: 20px;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+    bottom: .5em;
+}
+
+.row_radio{
+    position: relative;
+    left: 20px;
+}

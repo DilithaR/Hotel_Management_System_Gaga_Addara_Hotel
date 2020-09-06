@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!--Bootstrap Core CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!--Swiper CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--Mahen CSS-->
+    <link rel="stylesheet" href="css/Mahendra/Dashboard.css">
+    <link rel="stylesheet" href="css/Mahendra/index.css">
+
+    <link rel="icon" type="image/gif/png" href="img/Logo.png">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="container-fluid p-0 m-0 grey lighten-5">
+        <div class="row row-cols-2 p-0 m-0 pageContent">
+
+            <!--Start of SlideBar-->
+            <div class="col-2 p-0 m-0" style="z-index: 0;">
+                <nav class="sidebar">
+                    <div class="sideback">
+                        <div class="sidebarTop d-flex flex-row pt-4">
+                            <div class="ml-2">
+                                <img src="img/Logo.png" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
+                            </div>
+
+                            <div class="d-flex flex-column ml-2">
+                                <h3 class="pt-3" style="font-weight: bold;">Hotel</h3>
+                                <h4 style="font-weight: bold;">Gaga Addara</h4>
+                            </div>
+
+                        </div>
+
+                        <ul>
+                            <li class=""
+                                style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;">
+                                <a href="#"> <i class="fas fa-chart-pie mr-3"> </i> Dashboard</a>
+
+
+                            </li>
+
+                            <li><a class="dropBtn2" href="#"><i class="fas fa-box mr-3"></i>Packages<span
+                                        class="fas fa-sort-down secound-sp"></span></a>
+                                <ul class="dropCont2">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="dropbtnRooms" href="#"><i class="fas fa-bed mr-3"></i>Rooms<span
+                                        class="fas fa-sort-down rooms-sp"></span></a>
+                                <ul class="dropContRooms">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="dropbtnHalls" href="#"><i class="fas fa-hotel mr-3"></i>Reception Halls<span
+                                        class="fas fa-sort-down Halls-sp"></span></a>
+                                <ul class="dropContHalls">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="dropBtnMenu" href="#"><i class="fas fa-concierge-bell mr-3"></i>Food Menu<span
+                                        class="fas fa-sort-down Menu-sp"></span></a>
+                                <ul class="dropContMenu">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a class="dropBtn1" href="#"><i class="fas fa-users mr-3"></i>Employees <span
+                                        class="fas fa-sort-down first-sp"></span></a>
+                                <ul class="dropCont1">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="dropBtnReport" href="#"><i class="fas fa-clipboard-list mr-3"></i>Food
+                                    Report<span class="fas fa-sort-down Report-sp"></span></a>
+                                <ul class="dropContReport">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li><a href=""><i class="fas fa-star-half-alt mr-3"></i>Feedback</a></li>
+                            <li><a href=""><i class="far fa-id-card mr-3"></i>Contact Us</a></li>
+
+
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!--End of SlideBar-->
+
+            <!--Start of Content Area-->
+            <div class="col-10 pl-0 pr-0 m-0 contentArea" style="width: 100%; position: relative; left: -2px;">
+
+                <!--#ff4444-->
+                <nav class="navbar-expand-lg  pl-4 p-0 d-flex justify-content-between"
+                    style="background-color: rgba(250, 68, 68 , 0.9); height: 70px;">
+
+                    <h1 class="navbar-brand mt-2" style="font-weight: bold; font-size: 30px;"><i
+                            class="fas fa-chart-pie mr-3"></i>DASHBOARD</h1>
+
+                    <div class="mr-5">
+
+
+                        <ul class="navbar-nav ml-auto nav-flex-icons">
+                            <li class="nav-item mt-1">
+                                <a class="nav-link waves-effect waves-light">
+                                    <i class="fas fa-bell fa-2x mt-2 mr-3"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item mt-1">
+                                <a class="nav-link waves-effect waves-light">
+                                    <i class="fas fa-envelope fa-2x mt-2 mr-3"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
+                                        class="img-fluid z-depth-1 rounded-circle" alt="Responsive image"
+                                        style="width: 50px; height: 50px;">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-default p-0"
+                                    aria-labelledby="navbarDropdownMenuLink-333" style="width: 300px;">
+                                    <div class="aqua-gradient d-flex flex-row" style="height: auto;">
+                                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
+                                            class="img-fluid z-depth-1 rounded m-3" alt="Responsive image"
+                                            style="width: 70px; height: 70px;">
+
+                                        <div class="d-flex flex-column">
+                                            <p class="m-0 p-0">Name</p>
+                                            mane15488@gmail.com
+                                        </div>
+                                    </div>
+                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"><i
+                                            class="far fa-user-circle mr-3"></i>My Profile</a>
+                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"> <i
+                                            class="fas fa-sign-out-alt mr-3"></i>Log
+                                        Out</a>
+                                </div>
+                            </li>
+                        </ul>
+
+
+                    </div>
+
+                </nav>
+
+                <!--Middle Part-->
+
+                <div class="row white mt-4 ml-4 mr-4 p-4 appFIltersSec">
+                    <form action="" class="w-100">
+                        <h3 class="ml-2 mb-3 font-weight-bold">Apply Filters</h3>
+
+                        <div class="row row-cols-4 d-flex justify-content-between mb-4 pl-5 ml-3 pr-5">
+                            <input id="inputState" class="form-control ml-3" name="srchEid"
+                                placeholder="Employee ID" style="height: 50px;">
+
+                            <input id="inputState" class="form-control ml-3" name="srchName"
+                                placeholder="Name" value="Current First Name" style="height: 50px;">
+
+                            <select class="form-control ml-3" name="srchOccu" style="height: 50px;">
+                                <option value="" disabled selected>Occupation</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Cashier">Cashier</option>
+                                <option value="Waiter">Waiter</option>
+                                <option value="Reciptionist">Reciptionist</option>
+                            </select>
+                        </div>
+
+                        <div class="row row-cols-4 d-flex justify-content-between pl-5 ml-3 pr-5">
+                            
+                            <select class="form-control ml-3" name="srchOccu" style="height: 50px;">
+                                <option value="" disabled selected>Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+
+                            <input id="inputState" class="form-control ml-3" name="srchSal"
+                                placeholder="Salary" style="height: 50px;">
+
+                            <button class="btn btn-pink font-weight-bold mt-5 w-50" style="border-radius: 30px;">SEARCH</button>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="row row-cols-1 row-cols-md-3 d-flex justify-content-between ml-4 mr-4 mb-5">
+
+                    <div class="col pl-3 pr-3">
+
+                        <!-- Card -->
+                        <div class="card mt-5 emp_card">
+                            <!-- Card content -->
+                            <div class="card-body">
+
+                                <div class="d-flex flex-row mb-2">
+                                    <img src="img/sample_profPic.jpg" class="rounded"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ml-3">
+                                        <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
+                                        <h5 class="font-weight-bold text-muted">Occupation</h5>
+                                    </div>
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: crimson; border-radius: 5px;">
+
+                                <div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Employee Id</h6>
+                                            <h6 class="font-weight-bold ml-4">EMP1258</h6>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">NIC</h6>
+                                            <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-start pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Contact No</h6>
+                                            <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Email</h6>
+                                            <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
+
+                                <div class="d-flex flex-row justify-content-center">
+                                    <a href="" style="color: rgb(88, 13, 150);" class="viewProfBtn">
+                                        <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
+                                        </h5>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                        
+                    <div class="col pl-3 pr-3">
+
+                        <!-- Card -->
+                        <div class="card mt-5 emp_card">
+                            <!-- Card content -->
+                            <div class="card-body">
+
+                                <div class="d-flex flex-row mb-2">
+                                    <img src="img/sample_profPic.jpg" class="rounded"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ml-3">
+                                        <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
+                                        <h5 class="font-weight-bold text-muted">Occupation</h5>
+                                    </div>
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: crimson; border-radius: 5px;">
+
+                                <div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Employee Id</h6>
+                                            <h6 class="font-weight-bold ml-4">EMP1258</h6>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">NIC</h6>
+                                            <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-start pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Contact No</h6>
+                                            <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Email</h6>
+                                            <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
+
+                                <div class="d-flex flex-row justify-content-center">
+                                    <a href="" style="color: rgb(88, 13, 150);" class="viewProfBtn">
+                                        <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
+                                        </h5>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col pl-3 pr-3">
+
+                        <!-- Card -->
+                        <div class="card mt-5 emp_card">
+                            <!-- Card content -->
+                            <div class="card-body">
+
+                                <div class="d-flex flex-row mb-2">
+                                    <img src="img/sample_profPic.jpg" class="rounded"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ml-3">
+                                        <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
+                                        <h5 class="font-weight-bold text-muted">Occupation</h5>
+                                    </div>
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: crimson; border-radius: 5px;">
+
+                                <div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Employee Id</h6>
+                                            <h6 class="font-weight-bold ml-4">EMP1258</h6>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">NIC</h6>
+                                            <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-start pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Contact No</h6>
+                                            <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Email</h6>
+                                            <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
+
+                                <div class="d-flex flex-row justify-content-center">
+                                    <a href="" style="color: rgb(88, 13, 150);" class="viewProfBtn">
+                                        <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
+                                        </h5>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col pl-3 pr-3">
+
+                        <!-- Card -->
+                        <div class="card mt-5 emp_card">
+                            <!-- Card content -->
+                            <div class="card-body">
+
+                                <div class="d-flex flex-row mb-2">
+                                    <img src="img/sample_profPic.jpg" class="rounded"
+                                        style="width: 60px; height: 60px;">
+                                    <div class="ml-3">
+                                        <h4 class="card-title font-weight-bold mb-0"><a>Employee Name</a></h4>
+                                        <h5 class="font-weight-bold text-muted">Occupation</h5>
+                                    </div>
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: crimson; border-radius: 5px;">
+
+                                <div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Employee Id</h6>
+                                            <h6 class="font-weight-bold ml-4">EMP1258</h6>
+                                        </div>
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">NIC</h6>
+                                            <h6 class="font-weight-bold ml-4">854951257V</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-start pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Contact No</h6>
+                                            <h6 class="font-weight-bold ml-4">+94 11 6 254 454</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-between pl-3 pr-3">
+
+                                        <div>
+                                            <h6 class="font-weight-bold text-muted">Email</h6>
+                                            <h6 class="font-weight-bold ml-4">example.125@gmail.com</h6>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <hr style="border-width: 5px; border-color: #636261 ; border-radius: 5px;">
+
+                                <div class="d-flex flex-row justify-content-center">
+                                    <a href="" style="color: rgb(88, 13, 150);" class="viewProfBtn">
+                                        <h5 class="font-weight-bold"><i class="fas fa-user-circle mr-3"></i>VIEW PROFILE
+                                        </h5>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    
+
+                </div>
+
+                <!--Middle Part-->
+
+                <!-- Footer -->
+                <footer class="page-footer font-small text-light">
+
+
+                    <div class="footertop d-flex align-items-center">
+                        <div class="col-5 d-flex justify-content-left ml-4">
+                            <h5>Lorem ipsum dolor sit amet.</h5>
+                        </div>
+                        <div class="col-5 d-flex justify-content-end mr-4">
+                            <!-- Facebook -->
+                            <a href="#" class="SocialBtn">
+                                <i class="fab fa-facebook-f white-text mr-4"> </i>
+                            </a>
+                            <!-- Twitter -->
+                            <a href="#" class="SocialBtn">
+                                <i class="fab fa-twitter white-text mr-4"> </i>
+                            </a>
+                            <!-- Google +-->
+                            <a href="#" class="SocialBtn">
+                                <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                            </a>
+                            <!--Linkedin -->
+                            <a href="#" class="SocialBtn">
+                                <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                            </a>
+                            <!--Instagram-->
+                            <a href="#" class="SocialBtn">
+                                <i class="fab fa-instagram white-text"> </i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Footer Links -->
+                    <div class="text-center text-md-left pt-4 d-flex justify-content-between"
+                        style="background-color: #1c2a48;">
+
+                        <!-- Grid row -->
+
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                            <!-- Content -->
+                            <h6 class="text-uppercase font-weight-bold">Company name</h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
+                                amet,
+                                consectetur
+                                adipisicing elit.</p>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <!-- Links -->
+                            <h6 class="text-uppercase font-weight-bold">Products</h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <a href="#!">MDBootstrap</a>
+                            </p>
+                            <p>
+                                <a href="#!">MDWordPress</a>
+                            </p>
+                            <p>
+                                <a href="#!">BrandFlow</a>
+                            </p>
+                            <p>
+                                <a href="#!">Bootstrap Angular</a>
+                            </p>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                            <!-- Links -->
+                            <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <a href="#!">Your Account</a>
+                            </p>
+                            <p>
+                                <a href="#!">Become an Affiliate</a>
+                            </p>
+                            <p>
+                                <a href="#!">Shipping Rates</a>
+                            </p>
+                            <p>
+                                <a href="#!">Help</a>
+                            </p>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                            <!-- Links -->
+                            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                            <p>
+                                <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                            <p>
+                                <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                            <p>
+                                <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                            <p>
+                                <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+                        </div>
+                        <!-- Grid column -->
+
+
+                        <!-- Grid row -->
+
+                    </div>
+                    <!-- Footer Links -->
+
+                    <!-- Copyright -->
+                    <div class="footer-copyright text-center py-3" style="background-color: #1c2331;">© 2020 Copyright:
+                        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+                    </div>
+                    <!-- Copyright -->
+
+                </footer>
+                <!-- Footer -->
+
+
+
+            </div>
+            <!--End of Content Area-->
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Jquery CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <!--Popper.js CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <!--Bootstrap js CDN-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+    <!--Chart.js CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!--User Js-->
+    <script src="js/Dashboard.js"></script>
+
+
+</body>
+
+
+
+</html>

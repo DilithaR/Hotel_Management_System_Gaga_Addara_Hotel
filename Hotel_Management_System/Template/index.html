@@ -1,0 +1,1094 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!--Bootstrap Core CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!--Swiper CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--Mahen CSS-->
+    <link rel="stylesheet" href="{% static 'css/Mahendra/index.css' %}">
+
+    <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png' %}">
+    <title>Gaga Addara Hotel</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg topnav">
+
+        <img src="{% static 'img/Logo.png' %}" class="navbar-brand navLogo" alt="Gaga Addara Hotel">
+        <h4 style="font-weight: bolder; font-style: italic; font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: rgb(253, 71, 108);"
+            class="mt-2 ml-0">gaga addara hotel</h4>
+        <!-- <a class="navbar-brand" href="#">GAGA ADDARA HOTEL</a> -->
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Home </a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Featurs 1</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Feature 2</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Feature 3</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+
+                <li class="nav-item dropdown active ml-2 mr-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="overflow: hidden;">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+                <li class="nav-item active ml-4 row">
+                    <a class="nav-link" href="#" title="My Profile"><i class="fas fa-user-circle fa-1x"></i></a>
+                </li>
+
+                <li class="nav-item active ml-4 mr-2 row">
+                    <a class="nav-link" href="Signup.html" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>
+                </li>
+
+                
+
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source
+                src="{% static 'img/Matara Sri Lanka in 4K _ Travel Motivation _ By Mi 4K drone, Yi 4K with Zhiyun E.mp4' %}"
+                type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3" style="font-weight: bolder;">HOTEL GAGA ADDARA</h1>
+                    <h3 class="lead mt-3">WELCOME TO GAGA ADDARA HOTEL</h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="middleArea" style="overflow-x: hidden;">
+
+        <hr class="SeperaterLine">
+        <h1 class="d-flex justify-content-center font-weight-bold">Our Popular Tours</h1>
+        <h2 class="d-flex justify-content-center subtopic">Lorem ipsum dolor sit amet consectetur adipisicing elit..
+        </h2>
+
+
+        <div class="row  d-flex justify-content-center">
+            <div class="col-11">
+                <!-- Swiper -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+
+
+
+
+                        <div class="swiper-slide m-4">
+
+                            <!-- Card -->
+                            <div class="card">
+
+                                <!-- Card image -->
+                                <img class="card-img-top" src="{% static 'img/Weherahena.jpg' %}" alt="Card image cap">
+
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title tourtitle"><a>Card title</a></h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the card's
+                                        content.</p>
+                                    <p class=" row mt-4 ml-0">From <strong class=" ml-1 mr-2 tourPrice"> 1500 Rs
+                                        </strong> /per
+                                        person</p>
+
+                                </div>
+
+                                <div class="card-footer  slideCardFooter">
+                                    <div class="row row-cols-3 d-flex justify-content-end">
+
+                                        <i class=" col-5 far fa-clock pl-2 card-text tourcardDist">
+                                            1h 30min</i>
+
+                                        <div class="col-4 ">
+                                            <div class="row d-flex justify-content-end">
+                                                <a href="#" class=" white-text text-right tourcardL1">Superb </a>
+
+                                            </div>
+                                            <div class="row d-flex justify-content-end">
+                                                <p class=" white-text text-right tourcardL2">Superb</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-3 ">
+                                            <i class="fas fa-comment-alt fa-lg pr-3 fa-3x tourcardReview"><strong
+                                                    class="percent">8.5</strong></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+                        </div>
+                        <div class="swiper-slide m-4">
+
+                            <!-- Card -->
+                            <div class="card">
+
+                                <!-- Card image -->
+                                <img class="card-img-top" src="{% static 'img/Thalpe 2.jpg' %}" alt="Card image cap">
+
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title tourtitle"><a>Card title</a></h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the card's
+                                        content.</p>
+                                    <p class=" row mt-4 ml-0">From <strong class=" ml-1 mr-2 tourPrice"> 1500 Rs
+                                        </strong> /per
+                                        person</p>
+
+                                </div>
+
+                                <div class="card-footer  slideCardFooter">
+                                    <div class="row row-cols-3 d-flex justify-content-end">
+
+                                        <i class=" col-5 far fa-clock pl-2 card-text tourcardDist">
+                                            1h 30min</i>
+
+                                        <div class="col-4 ">
+                                            <div class="row d-flex justify-content-end">
+                                                <a href="#" class=" white-text text-right tourcardL1">Superb </a>
+
+                                            </div>
+                                            <div class="row d-flex justify-content-end">
+                                                <p class=" white-text text-right tourcardL2">Superb</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-3 ">
+                                            <i class="fas fa-comment-alt fa-lg pr-3 fa-3x tourcardReview"><strong
+                                                    class="percent">8.5</strong></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+                        </div>
+                        <div class="swiper-slide m-4">
+
+                            <!-- Card -->
+                            <div class="card">
+
+                                <!-- Card image -->
+
+                                <img class="card-img-top animated fadeIn" src="{% static 'img/LightHouse.jpg' %}">
+
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title tourtitle"><a>Card title</a></h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the card's
+                                        content.</p>
+                                    <p class=" row mt-4 ml-0">From <strong class=" ml-1 mr-2 tourPrice"> 1500 Rs
+                                        </strong> /per
+                                        person</p>
+
+                                </div>
+
+                                <div class="card-footer  slideCardFooter">
+                                    <div class="row row-cols-3 d-flex justify-content-end">
+
+                                        <i class=" col-5 far fa-clock pl-2 card-text tourcardDist">
+                                            1h 30min</i>
+
+                                        <div class="col-4 ">
+                                            <div class="row d-flex justify-content-end">
+                                                <a href="#" class=" white-text text-right tourcardL1">Superb </a>
+
+                                            </div>
+                                            <div class="row d-flex justify-content-end">
+                                                <p class=" white-text text-right tourcardL2">Superb</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-3 ">
+                                            <i class="fas fa-comment-alt fa-lg pr-3 fa-3x tourcardReview"><strong
+                                                    class="percent">8.5</strong></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+                        </div>
+
+
+                        <div class="swiper-slide m-4">
+
+                            <!-- Card -->
+                            <div class="card">
+
+                                <!-- Card image -->
+                                <img class="card-img-top" src="{% static 'img/Old-Dutch-Trade-Centre-PlacesMatarepb0310.jpg' %}"
+                                    alt="Card image cap">
+
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title tourtitle"><a>Card title</a></h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the card's
+                                        content.</p>
+                                    <p class=" row mt-4 ml-0">From <strong class=" ml-1 mr-2 tourPrice"> 1500 Rs
+                                        </strong> /per
+                                        person</p>
+
+                                </div>
+
+                                <div class="card-footer  slideCardFooter">
+                                    <div class="row row-cols-3 d-flex justify-content-end">
+
+                                        <i class=" col-5 far fa-clock pl-2 card-text tourcardDist">
+                                            1h 30min</i>
+
+                                        <div class="col-4 ">
+                                            <div class="row d-flex justify-content-end">
+                                                <a href="#" class=" white-text text-right tourcardL1">Superb </a>
+
+                                            </div>
+                                            <div class="row d-flex justify-content-end">
+                                                <p class=" white-text text-right tourcardL2">Superb</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-3 ">
+                                            <i class="fas fa-comment-alt fa-lg pr-3 fa-3x tourcardReview"><strong
+                                                    class="percent">8.5</strong></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+                        </div>
+                        <div class="swiper-slide m-4">
+
+                            <!-- Card -->
+                            <div class="card">
+
+                                <!-- Card image -->
+                                <img class="card-img-top" src="{% static 'img/Pigeon_Islank.jpg' %}" alt="Card image cap">
+
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title tourtitle"><a>Card title</a></h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the card's
+                                        content.</p>
+                                    <p class=" row mt-4 ml-0">From <strong class=" ml-1 mr-2 tourPrice"> 1500 Rs
+                                        </strong> /per
+                                        person</p>
+
+                                </div>
+
+                                <div class="card-footer  slideCardFooter">
+                                    <div class="row row-cols-3 d-flex justify-content-end">
+
+                                        <i class=" col-5 far fa-clock pl-2 card-text tourcardDist">
+                                            1h 30min</i>
+
+                                        <div class="col-4 ">
+                                            <div class="row d-flex justify-content-end">
+                                                <a href="#" class=" white-text text-right tourcardL1">Superb </a>
+
+                                            </div>
+                                            <div class="row d-flex justify-content-end">
+                                                <p class=" white-text text-right tourcardL2">Superb</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-3 ">
+                                            <i class="fas fa-comment-alt fa-lg pr-3 fa-3x tourcardReview"><strong
+                                                    class="percent">8.5</strong></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+                        </div>
+                        <div class="swiper-slide m-4">
+
+                            <!-- Card -->
+                            <div class="card">
+
+                                <!-- Card image -->
+                                <img class="card-img-top" src="{% static 'img/Polhena_Beach_61.jpg' %}" alt="Card image cap">
+
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title tourtitle"><a>Card title</a></h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the card's
+                                        content.</p>
+                                    <p class=" row mt-4 ml-0">From <strong class=" ml-1 mr-2 tourPrice"> 1500 Rs
+                                        </strong> /per
+                                        person</p>
+
+                                </div>
+
+                                <div class="card-footer  slideCardFooter">
+                                    <div class="row row-cols-3 d-flex justify-content-end">
+
+                                        <i class=" col-5 far fa-clock pl-2 card-text tourcardDist">
+                                            1h 30min</i>
+
+                                        <div class="col-4 ">
+                                            <div class="row d-flex justify-content-end">
+                                                <a href="#" class=" white-text text-right tourcardL1">Superb </a>
+
+                                            </div>
+                                            <div class="row d-flex justify-content-end">
+                                                <p class=" white-text text-right tourcardL2">Superb</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-3 ">
+                                            <i class="fas fa-comment-alt fa-lg pr-3 fa-3x tourcardReview"><strong
+                                                    class="percent">8.5</strong></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+                        </div>
+                        <div class="swiper-slide m-4">
+
+                            <!-- Card -->
+                            <div class="card">
+
+                                <!-- Card image -->
+                                <img class="card-img-top" src="{% static 'img/Star-Fort-–-Matara.jpg' %}" alt="Card image cap">
+
+                                <!-- Card content -->
+                                <div class="card-body">
+
+                                    <!-- Title -->
+                                    <h4 class="card-title tourtitle"><a>Card title</a></h4>
+                                    <!-- Text -->
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the card's
+                                        content.</p>
+                                    <p class=" row mt-4 ml-0">From <strong class=" ml-1 mr-2 tourPrice"> 1500 Rs
+                                        </strong> /per
+                                        person</p>
+
+                                </div>
+
+                                <div class="card-footer  slideCardFooter">
+                                    <div class="row row-cols-3 d-flex justify-content-end">
+
+                                        <i class=" col-5 far fa-clock pl-2 card-text tourcardDist">
+                                            1h 30min</i>
+
+                                        <div class="col-4 ">
+                                            <div class="row d-flex justify-content-end">
+                                                <a href="#" class=" white-text text-right tourcardL1">Superb </a>
+
+                                            </div>
+                                            <div class="row d-flex justify-content-end">
+                                                <p class=" white-text text-right tourcardL2">Superb</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-3 ">
+                                            <i class="fas fa-comment-alt fa-lg pr-3 fa-3x tourcardReview"><strong
+                                                    class="percent">8.5</strong></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Card -->
+                        </div>
+
+                    </div>
+                    <!-- Add Pagination -->
+                </div>
+                <!--End of Swiper-->
+
+            </div>
+            <a class="btn pl-2 pr-2 ml-auto mr-5 mt-0 mb-4 text-light HomeCommonBtn">View all Tours</a>
+        </div>
+
+
+
+
+
+        <hr style="height: 3px; background-color: rgb(228, 228, 228); border-radius: 5px;" class="ml-5 mr-4">
+
+        <hr class="SeperaterLine ml-5" class="d-flex justify-content-start">
+        <h2 class="d-flex justify-content-start font-weight-bold ml-5">Our Popular Food</h2>
+        <h3 class="d-flex justify-content-start  ml-5 subtopic">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit..</h3>
+
+        <div class="row m-5">
+
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url('static/img/strawberry.jpg');">
+
+                <!-- Content -->
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-utensils"></i> Marketing</h5>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url('static/img/food\ 1.jpg');">
+
+                <!-- Content -->
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-utensils"></i> Marketing</h5>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url('static/img/food\ 2.jpg');">
+
+                <!-- Content -->
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-utensils"></i> Marketing</h5>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url('static/img/food\ 3.jpg');">
+
+                <!-- Content -->
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-utensils"></i> Marketing</h5>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+
+        </div>
+
+        <a class="ml-5 viewAllLink" href="#">View all(157) ></a>
+
+
+
+
+
+        <hr class="SeperaterLine ml-5" class="d-flex justify-content-start">
+        <h2 class="d-flex justify-content-start ml-5 font-weight-bold">Our Popular Rooms</h2>
+        <h3 class="d-flex justify-content-start  ml-5 subtopic">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit..</h3>
+
+        <div class="row m-5 testanimCX">
+
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard d-flex flex-row-reverse justify-content-between promoCardAct"
+                style="background-image: url('static/img/room\ 1.jpg');" onmouseover="zoomfun(this)" onmouseup="zoomfun(this)">
+
+                <!-- Content -->
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-bed"></i> Marketing</h5>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url('static/img/room\ 3.jpg');">
+
+                <!-- Content -->
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-bed"></i> Marketing</h5>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url('static/img/room\ 4.jpg');">
+
+                <!-- Content -->
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-bed"></i> Marketing</h5>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+
+            <!-- Card -->
+            <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
+                style="background-image: url('static/img/Room\ 5.jpg');">
+
+                <!-- Content -->
+                <div class="d-flex flex-row-reverse">
+
+                    <i class="fas fa-comment-alt fa-3x mt-3"
+                        style="position: relative; color: rgb(0, 79, 153); left: 20px;"><strong
+                            class="percent">8.5</strong></i>
+
+                </div>
+
+                <div class="text-white  align-self-end">
+                    <h5 class="white-text" style="font-weight: bold;"><i class="fas fa-bed"></i> Marketing</h5>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+
+        </div>
+
+        <a class="ml-5 viewAllLink" href="#">View all(157) ></a>
+
+        <div class="m-5 BannerWrap">
+            <img src="{% static 'img/MatharaBanner.jpg' %}" class="MidBanner">
+        </div>
+
+
+
+        <hr class="SeperaterLine">
+        <h2 class="d-flex justify-content-center font-weight-bold">News And Events</h2>
+        <h3 class="d-flex justify-content-center subtopic">Lorem ipsum dolor sit amet consectetur adipisicing
+            elit..</h3>
+
+
+
+        <div class="row row-cols-2 justify-content-center mt-4">
+            <div class="col-md-5">
+                <!-- News jumbotron -->
+                <div class="jumbotron text-center hoverable p-2 ">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
+
+                            <!-- Featured image -->
+                            <div class="view overlay">
+                                <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
+                                    alt="Sample image for first version of blog listing">
+                                
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                            <!-- Excerpt -->
+                            
+                                <h6 class="h6 pb-1 newsHead"><i class="fas fa-desktop pr-1"></i> Hot Deal</h6>
+                            
+
+                            <h4 class="h4 mb-4">This is title of the news</h4>
+
+                            <p class="font-weight-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque, totam</p>
+
+
+                            <a class="btn btn-success">Read more</a>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- News jumbotron -->
+            </div>
+            <div class="col-md-5">
+
+                <!-- News jumbotron -->
+                <div class="jumbotron text-center hoverable p-2">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
+
+                            <!-- Featured image -->
+                            <div class="view overlay">
+                                <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
+                                    alt="Sample image for first version of blog listing">
+                                
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                            <!-- Excerpt -->
+                            
+                                <h6 class="h6 pb-1 newsHead"><i class="fas fa-desktop pr-1"></i> Hot Deal</h6>
+                            
+
+                            <h4 class="h4 mb-4">This is title of the news</h4>
+
+                            <p class="font-weight-normal">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                                accusantium doloremque, totam</p>
+
+
+                            <a class="btn btn-success">Read more</a>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- News jumbotron -->
+
+            </div>
+
+            <div class="col-md-5">
+
+                <!-- News jumbotron -->
+                <div class="jumbotron text-center hoverable p-2">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
+
+                            <!-- Featured image -->
+                            <div class="view overlay">
+                                <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
+                                    alt="Sample image for first version of blog listing">
+                                
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                            <!-- Excerpt -->
+                        
+                                <h6 class="h6 pb-1 newsHead"><i class="fas fa-desktop pr-1"></i> Hot Deal</h6>
+                        
+
+                            <h4 class="h4 mb-4">This is title of the news</h4>
+
+                            <p class="font-weight-normal">Sed ut perspiciatis unde omnis iste natus error sit
+                                voluptatem
+                                accusantium doloremque, totam</p>
+
+
+                            <a class="btn btn-success">Read more</a>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- News jumbotron -->
+
+            </div>
+
+            <div class="col-md-5">
+
+                <!-- News jumbotron -->
+                <div class="jumbotron text-center hoverable p-2">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 offset-md-1 mx-3 my-3 d-flex align-items-center">
+
+                            <!-- Featured image -->
+                            <div class="view overlay">
+                                <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
+                                    alt="Sample image for first version of blog listing">
+                                
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-7 text-md-left ml-3 mt-3">
+
+                            <!-- Excerpt -->
+                            
+                                <h6 class="h6 pb-1 newsHead"><i class="fas fa-desktop pr-1"></i> Hot Deal</h6>
+                           
+
+                            <h4 class="h4 mb-4">This is title of the news</h4>
+
+                            <p class="font-weight-normal">Sed ut perspiciatis unde omnis iste natus error sit
+                                voluptatem
+                                accusantium doloremque, totam</p>
+
+
+                            <a class="btn btn-success">Read more</a>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- News jumbotron -->
+
+            </div>
+        </div>
+
+        <!--End of News Area-->
+
+        <div class="bottom_section ">
+
+            <!-- Card Dark -->
+            <div class="card col-md-4 isolateAd">
+
+                <!-- Card content -->
+                <div class="card-body white-text rounded-bottom">
+
+
+                    <!-- Title -->
+                    <h4 class="card-title text-light mt-3">Card title</h4>
+                    <hr class="hr-light">
+                    <!-- Text -->
+                    <p class="card-text text-light mb-4">Some quick example text to build on the card title and make up
+                        the bulk
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, accusantium?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatibus culpa commodi
+                        soluta facere nihil quod animi suscipit. Doloremque, officiis?
+                        of the card's content.</p>
+                    <button class="btn mt-3 mb-3 text-light HomeCommonBtn">Read more</button>
+
+                </div>
+
+            </div>
+            <!-- Card Dark -->
+
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer font-small text-light">
+
+
+            <div class="footertop d-flex align-items-center">
+                <div class="col-5 d-flex justify-content-left ml-4">
+                    <h5>Lorem ipsum dolor sit amet.</h5>
+                </div>
+                <div class="col-5 d-flex justify-content-end mr-4">
+                    <!-- Facebook -->
+                    <a href="#" class="SocialBtn">
+                        <i class="fab fa-facebook-f white-text mr-4"> </i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" class="SocialBtn">
+                        <i class="fab fa-twitter white-text mr-4"> </i>
+                    </a>
+                    <!-- Google +-->
+                    <a href="#" class="SocialBtn">
+                        <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                    </a>
+                    <!--Linkedin -->
+                    <a href="#" class="SocialBtn">
+                        <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                    </a>
+                    <!--Instagram-->
+                    <a href="#" class="SocialBtn">
+                        <i class="fab fa-instagram white-text"> </i>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Footer Links -->
+            <div class="text-center text-md-left pt-4" style="background-color: #1c2a48;">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                        <!-- Content -->
+                        <h6 class="text-uppercase font-weight-bold">Company name</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
+                            amet,
+                            consectetur
+                            adipisicing elit.</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Products</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">MDBootstrap</a>
+                        </p>
+                        <p>
+                            <a href="#!">MDWordPress</a>
+                        </p>
+                        <p>
+                            <a href="#!">BrandFlow</a>
+                        </p>
+                        <p>
+                            <a href="#!">Bootstrap Angular</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <a href="#!">Your Account</a>
+                        </p>
+                        <p>
+                            <a href="#!">Become an Affiliate</a>
+                        </p>
+                        <p>
+                            <a href="#!">Shipping Rates</a>
+                        </p>
+                        <p>
+                            <a href="#!">Help</a>
+                        </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                        <!-- Links -->
+                        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                        <p>
+                            <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                        <p>
+                            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3" style="background-color: #1c2331;">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+
+
+
+
+
+    </div>
+
+    <!--Jquery CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <!--Popper.js CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <!--Bootstrap js CDN-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
+    <!--Swiper.js CDN-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--User Js-->
+    <script src="{% static 'js/HomePage.js' %}"></script>
+
+
+
+</body>
+
+</html>

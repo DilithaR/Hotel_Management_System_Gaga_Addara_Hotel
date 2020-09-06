@@ -1,0 +1,85 @@
+.viewEmp_left{
+    border-top-style: solid;
+    border-top-color: crimson;
+    border-top-width: 5px;
+    background-color: white;
+    box-shadow: 0 10px 15px #5e5e5e;
+
+}
+
+.viewEmpRightCont{
+    height: 750px;
+    box-shadow: 0 10px 15px #5e5e5e;
+}
+.empImg{
+    width: 261px;
+    height: 706px;
+}
+
+.sepLine{
+    margin-top: 5px;
+    border-width: 5px;
+    border-color: crimson;
+    width: 300px;
+    border-radius: 15px;
+
+}
+
+.empEdiFrmUnderline{
+    border-width: 5px;
+    border-color: crimson;
+    width: 80px;
+    border-radius: 15px;
+    justify-self: flex-start;
+    position: relative;
+    left: -440px;
+}
+
+.detailsIcon{
+    /* color: burlywood; */
+    color: rgb(121, 1, 61)
+}
+.rateStarLeft{
+    color: rgb(255, 210, 11);
+    
+}
+.tab2_img{
+    width: 150px;
+    height: 150px;
+}
+.tabe_topCards{
+    background-color: #b1bace;
+     box-shadow: 0 5px 10px #5e5e5e;
+}
+
+.repoDiv{
+    box-shadow: 0 5px 10px #5e5e5e;
+}
+.smallNav{
+    background-color: rgb(219, 38, 74);
+
+}
+.smallNav ul{
+    border-style: solid;
+    border-radius: 120px;
+}
+
+.smallNav li{
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: rgb(85, 85, 85);
+    border-radius: 0px;
+}
+.smallNav li a{
+    color: white;
+    font-weight: bold;
+}
+.smallNav li a[aria-selected="true"] {
+    border-radius: 0px;
+}
+
+.EmpEditLabText{
+}
+.edit_sec_Icon{
+    color: #525252;
+}

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    <!-- MDBootstrap Datatables  -->
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+    <!--Swiper CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--Mahen CSS-->
+    <link rel="stylesheet" href="css/Mahendra/UserProfile.css">
+
+    <link rel="icon" type="image/gif/png" href="img/Logo.png">
+    <title>Gaga Addara Hotel</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg topnav">
+
+        <img src="img/Logo.png" class="navbar-brand navLogo" alt="Gaga Addara Hotel">
+        <h4 style="font-weight: bolder; font-style: italic; font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: rgb(253, 71, 108);"
+            class="mt-2 ml-0">gaga addara hotel</h4>
+        <!-- <a class="navbar-brand" href="#">GAGA ADDARA HOTEL</a> -->
+
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Home </a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Featurs 1</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Feature 2</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Feature 3</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+
+                <li class="nav-item dropdown active ml-2 mr-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="overflow: hidden;">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+                <li class="nav-item active ml-4 row">
+                    <a class="nav-link" href="#" title="My Profile"><i class="fas fa-user-circle fa-1x"></i></a>
+                </li>
+
+                <li class="nav-item active ml-4 mr-2 row">
+                    <a class="nav-link" href="#" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>
+                </li>
+
+                
+
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+
+        <div class="overlay"></div>
+        
+        
+    </header>
+
+    <div class="d-flex justify-content-center">
+        <div class="col-10 UserProfStruct d-flex justify-content-center align-items-center">
+            <div class="col-4 d-flex justify-content-center align-items-center">
+                <img src="img/sample_profPic.jpg" class="img-fluid z-depth-1">
+            </div>
+            <div class="col-7 ml-3">
+                <div class="row ml-1 mt-4">
+                    <h2 class="text-muted pink-text">I'm </h2>
+                    <h2 class="ml-2 profHead"> Customer name</h2>
+                </div>
+                <h4 class="ml-1 profHead">Reg Number</h4>
+                <hr class="sepLine">
+                <div class="row">
+                    <div class="col-2">
+                        <h6 class="details_right">NIC</h6>
+                    </div>
+                    <div class="col-4">
+                        <p>980625125V</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <h6 class="details_right">NAME</h6>
+                    </div>
+                    <div class="col-4">
+                        <p>Lorem, ipsum.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <h6 class="details_right">E-MAIL</h6>
+                    </div>
+                    <div class="col-4">
+                        <p>exampleemail@gmail.com</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <h6 class="details_right">ADDRESS</h6>
+                    </div>
+                    <div class="col-4">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <h6 class="details_right">GENDER</h6>
+                    </div>
+                    <div class="col-4">
+                        <p>Male</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <h6 class="details_right">PHONE</h6>
+                    </div>
+                    <div class="col-4">
+                        <p>+94 17 6 458 125</p>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <button class="btn btn-pink btn-rounded" data-toggle="modal" data-target="#Edit_UserModel">EDIT</button>
+                    </div>
+                </div>
+                <!-- <div class="row mb-3">
+                    <div class="col-2">
+                        <button class="btn">PHONE</button>
+                    </div>
+                </div> -->
+                
+
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="middleArea d-flex justify-content-center align-items-center mb-0" style="overflow-x: hidden;">
+        
+        
+        
+        <div class="col-10 white p-5 mb-5 profContArea">
+
+            
+            <div class="row topicArea mb-3 pt-2">
+                <h2 class="pl-3" style="font-weight: bold; color: white;">PROFILE SUMMARY</h2>
+            </div>
+            
+            <div class="row row-cols-4 d-flex justify-content-between align-items-center">
+                <div class="card mb-4 col-2">
+
+                    <!--Card image-->
+                    <div class="view overlay ">
+                        <img class="card-img-top img_top" src="img/hotelRoom.gif" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <!--Title-->
+                        <h4 class="card-title">Total Room Bookings</h4>
+                        <h1 class="d-flex justify-content-center sum_val">0</h1>
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="card mb-4 col-2">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top img_top" src="img/liveRoom.gif" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <!--Title-->
+                        <h4 class="card-title">Total Hall Bookings</h4>
+                        <h1 class="d-flex justify-content-center sum_val">0</h1>
+
+
+                    </div>
+
+                </div>
+
+                <div class="card mb-4 col-2">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top img_top" src="img/food7.gif">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <!--Title-->
+                        <h4 class="card-title">Total Food Purchases</h4>
+                        <h1 class="d-flex justify-content-center sum_val">0</h1>
+
+                    </div>
+
+                </div>
+
+                <div class="card mb-4 col-2">
+
+                    <!--Card image-->
+                    <div class="view overlay">
+                        <img class="card-img-top img_top" src="img/tourVecGif.gif" alt="Card image cap">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <!--Title-->
+                        <h4 class="card-title">Total Packages</h4>
+                        <h1 class="d-flex justify-content-center sum_val">0</h1>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row topicArea mt-4 mb-3 pt-2">
+                <h2 class="pl-3" style="font-weight: bold; color: white;">NOTIFICATIONS</h2>
+            </div>
+
+            
+                <!-- News jumbotron -->
+                <div class="jumbotron text-center hoverable p-0" style="width: 100%;">
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 offset-md-1 mx-3 my-3">
+
+                            <!-- Featured image -->
+                            <div class="view overlay">
+                                <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
+                                    alt="Sample image for first version of blog listing" style="width: 100%; height: 100%px;">
+                                <a>
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-7 text-md-left mt-3">
+
+                            <!-- Excerpt -->
+                            <a href="#!" class="pink-text">
+                                <h6 class="h6 pb-1"><i class="fas fa-bed"></i> Room</h6>
+                            </a>
+
+                            <h4 class="h4 mb-0">Room Reservation : Reservation Id : REV4588</h4>
+                            <p class="font-weight-normal"><a><strong>Room No : </strong></a> R524</p>
+                            <div class="row ml-0 justify-content-between">
+                                <p class="font-weight-normal"><a><strong>Date : </strong></a> 19/08/2020</p>
+                                <p class="font-weight-normal"><a><strong>Price : </strong></a> 8 000.00 Rs</p>
+                                <a href="" class="font-weight-bold pink-text"><i class="fas fa-info-circle"></i> More
+                                    info..</a>
+                            </div>
+                            
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- News jumbotron -->
+            
+
+            <div class="jumbotron text-center hoverable p-0" style="width: 100%;">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 offset-md-1 mx-3 my-3">
+
+                        <!-- Featured image -->
+                        <div class="view overlay">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
+                                alt="Sample image for first version of blog listing"
+                                style="width: 100%; height: 100%px;">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left mt-3">
+
+                        <!-- Excerpt -->
+                        <a href="#!" class="pink-text">
+                            <h6 class="h6 pb-1"><i class="fas fa-hotel"></i> Reception Hall</h6>
+                        </a>
+
+                        <h4 class="h4 mb-0">Reception Hall Reservation : Reservation Id : REV4588</h4>
+                        <p class="font-weight-normal"><a><strong>Reception Hall No : </strong></a> H004</p>
+                        <div class="row ml-0 justify-content-between">
+                            <p class="font-weight-normal"><a><strong>Date : </strong></a> 19/08/2020</p>
+                            <p class="font-weight-normal"><a><strong>Price : </strong></a> 358 000.00 Rs</p>
+                            <a href="" class="font-weight-bold pink-text"><i class="fas fa-info-circle"></i> More
+                                info..</a>
+                        </div>
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+
+            <div class="jumbotron text-center hoverable p-0" style="width: 100%;">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 offset-md-1 mx-3 my-3">
+
+                        <!-- Featured image -->
+                        <div class="view overlay">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
+                                alt="Sample image for first version of blog listing"
+                                style="width: 100%; height: 100%px;">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left mt-3">
+
+                        <!-- Excerpt -->
+                        <a href="#!" class="pink-text">
+                            <h6 class="h6 pb-1"><i class="fas fa-box"></i> Package</h6>
+                        </a>
+
+                        <h4 class="h4 mb-0">Package Booking : Booking Id : REV4588</h4>
+                        <p class="font-weight-normal"><a><strong>Package No : </strong></a> PM2</p>
+                        <div class="row ml-0 justify-content-between">
+                            <p class="font-weight-normal"><a><strong>Date : </strong></a> 19/08/2020</p>
+                            <p class="font-weight-normal"><a><strong>Price : </strong></a> 12 000.00 Rs</p>
+                            <a href="" class="font-weight-bold pink-text"><i class="fas fa-info-circle"></i> More
+                                info..</a>
+                        </div>
+
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+
+            <div class="row topicArea mt-5 mb-3 pt-2">
+                <h2 class="pl-3" style="font-weight: bold; color: white;">PURCHASE HISTORY</h2>
+            </div>
+
+
+            <table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th class="th-sm">Order No
+                        </th>
+                        <th class="th-sm">Items
+                        </th>
+                        <th class="th-sm">No if Items
+                        </th>
+                        <th class="th-sm">Total Price
+                        </th>
+                        <th class="th-sm">Date
+                        </th>
+                        <th class="th-sm">Time
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>61</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Garrett Winters</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>63</td>
+                        <td>2011/07/25</td>
+                        <td>$170,750</td>
+                    </tr>
+                    <tr>
+                        <td>Ashton Cox</td>
+                        <td>Junior Technical Author</td>
+                        <td>San Francisco</td>
+                        <td>66</td>
+                        <td>2009/01/12</td>
+                        <td>$86,000</td>
+                    </tr>
+                    <tr>
+                        <td>Cedric Kelly</td>
+                        <td>Senior Javascript Developer</td>
+                        <td>Edinburgh</td>
+                        <td>22</td>
+                        <td>2012/03/29</td>
+                        <td>$433,060</td>
+                    </tr>
+                    <tr>
+                        <td>Airi Satou</td>
+                        <td>Accountant</td>
+                        <td>Tokyo</td>
+                        <td>33</td>
+                        <td>2008/11/28</td>
+                        <td>$162,700</td>
+                    </tr>
+                    <tr>
+                        <td>Brielle Williamson</td>
+                        <td>Integration Specialist</td>
+                        <td>New York</td>
+                        <td>61</td>
+                        <td>2012/12/02</td>
+                        <td>$372,000</td>
+                    </tr>
+                    <tr>
+                        <td>Herrod Chandler</td>
+                        <td>Sales Assistant</td>
+                        <td>San Francisco</td>
+                        <td>59</td>
+                        <td>2012/08/06</td>
+                        <td>$137,500</td>
+                    </tr>
+                    
+                </tbody>
+                
+            </table>
+
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small text-light mt-2" style="position: relative; overflow-x: hidden; top: 195px;">
+
+
+        <div class="footertop d-flex align-items-center">
+            <div class="col-5 d-flex justify-content-left ml-4">
+                <h5>Lorem ipsum dolor sit amet.</h5>
+            </div>
+            <div class="col-5 d-flex justify-content-end mr-4">
+                <!-- Facebook -->
+                <a href="#" class="SocialBtn">
+                    <i class="fab fa-facebook-f white-text mr-4"> </i>
+                </a>
+                <!-- Twitter -->
+                <a href="#" class="SocialBtn">
+                    <i class="fab fa-twitter white-text mr-4"> </i>
+                </a>
+                <!-- Google +-->
+                <a href="#" class="SocialBtn">
+                    <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                </a>
+                <!--Linkedin -->
+                <a href="#" class="SocialBtn">
+                    <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                </a>
+                <!--Instagram-->
+                <a href="#" class="SocialBtn">
+                    <i class="fab fa-instagram white-text"> </i>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Footer Links -->
+        <div class="text-center text-md-left pt-4" style="background-color: #1c2a48;">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+                    <!-- Content -->
+                    <h6 class="text-uppercase font-weight-bold">Company name</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
+                        amet,
+                        consectetur
+                        adipisicing elit.</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Products</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">MDBootstrap</a>
+                    </p>
+                    <p>
+                        <a href="#!">MDWordPress</a>
+                    </p>
+                    <p>
+                        <a href="#!">BrandFlow</a>
+                    </p>
+                    <p>
+                        <a href="#!">Bootstrap Angular</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Your Account</a>
+                    </p>
+                    <p>
+                        <a href="#!">Become an Affiliate</a>
+                    </p>
+                    <p>
+                        <a href="#!">Shipping Rates</a>
+                    </p>
+                    <p>
+                        <a href="#!">Help</a>
+                    </p>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <!-- Links -->
+                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3" style="background-color: #1c2331;">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+    <!--Edit User Model-->
+    <div class="modal fade" id="Edit_UserModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+
+        <div class="modal-dialog modal-lg " role="document">
+
+
+            <div class="modal-content">
+                <div class="modal-header ripe-malinka-gradient">
+                    <h2 class="modal-title w-100 font-weight-bold" id="myModalLabel"><i
+                            class="fas fa-user-edit mr-3"></i>Edit User</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row row-cols-3">
+                        <div class="col-xl-5 col-md-5 ml-4 mb-0 text-center">
+
+                            <img src="img/sample_profPic.jpg"
+                                class="img-fluid rounded ">
+                                <input type="image" class="btn btn-warning rounded btn-sm" value="Upload Image">
+
+                        </div>
+
+                        <div class="col-3 mt-4 pt-4">
+                            <h5 class="ml-4"> <i class="fas fa-envelope-open-text"></i> <strong> User Id : </strong>
+                            </h5>
+                            <h5 class="ml-4"> <i class="fas fa-user-alt"></i> <strong> User name : </strong> </h4>
+                            <h5 class="ml-4"> <i class="fas fa-car"></i> <strong> User NIC : </strong> </h4>
+
+                        </div>
+                        <div class="col-3 mt-4 pt-4 pr-0 mr-0">
+                                <h5 class="text-right">Reg No</h5>
+
+                                <h5 class="text-right">Customer Name</h5>
+
+                                <h5 class="text-right">+94 17 6 458 125</h5>
+                        </div>
+                    </div>
+
+                    <hr style="border-width: 3px; border-color: crimson;">
+
+
+
+                    <form action="" method="get">
+                        <input type="hidden" name="CurrentAppID" value="<%=Appointment.getAppId()%>">
+                        <input type="hidden" name="CurrentVehiId" value="<%=Vehicle.getVehicleId() %>">
+
+                        <h3 style="color: #577a1f ;font-weight: bold;" class="mb-4"> User Information</h3>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-5 ml-4">
+                                <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i> First
+                                    Name</label>
+                                <input id="inputState" class="form-control ml-3" name="Edit_Fname"
+                                    placeholder="First Name"
+                                    value="Current First Name">
+                            </div>
+
+                            <div class="form-group col-md-5 ml-4">
+                                <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last Name</label>
+                                <input id="inputState" class="form-control ml-3" name="Edit_Lname"
+                                    placeholder="Last Name"
+                                    value="Current Last Name">
+
+                            </div>
+
+                        </div>
+                        
+                        <div class="row">
+
+                            <div class="form-group col-md-6 ml-4">
+                                <label for="inputState"><i class="fas fa-envelope-open grey-text fa-2x"></i>
+                                    Email</label>
+                                <input id="inputState" class="form-control ml-3" type="email" name="Edit_Email"
+                                    placeholder="Email"
+                                    value="Current Email">
+                            </div>
+
+                            <div class="form-group col-md-4 ml-4">
+                                <label for="inputState"><i class="fas fa-phone-square grey-text fa-2x"></i> Current
+                                    Phone</label>
+                                <input id="inputState" class="form-control ml-3" type="text" name="Edit_Phone"
+                                    placeholder="Phone No"
+                                    value="Current Phone">
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-4 ml-4">
+                                <label for="inputState"><i class="fas fa-shipping-fast grey-text fa-2x"></i>
+                                    Address</label>
+                                <input id="inputState" placeholder="EditAddLine1" class="form-control ml-3" type="text" name="Edit_Email"
+                                    value="Current Address">
+                            </div>
+
+                            <div class="form-group col-md-4 ml-4 mt-5">
+                                <input id="inputState" placeholder="Line Two" class="form-control ml-3" type="text"
+                                    name="Edit_AddLine2"
+                                    value="Current Line Two">
+
+                            </div>
+
+                            <div class="form-group col-md-2 ml-4 mt-5">
+                                <input id="inputState" placeholder="Post Code" class="form-control ml-3" type="text"
+                                    name="Edit_PCode" value="">
+
+                            </div>
+
+                        </div>
+
+                        <label for="inputState" class="ml-4"><i
+                                class="fas fa-user-friends  fa-medium-m grey-text fa-2x"></i> Gender</label>
+
+                        <div class="row">
+                            
+                            <!-- Group of default radios - option 1 -->
+                            <div class="custom-radio form-group col-md-2 ml-5 mt-2 row_radio">
+                                <input type="radio" class="custom-control-input ml-5" id="defaultGroupExample1"
+                                    name="groupOfDefaultRadios">
+                                <label class="custom-control-label" for="defaultGroupExample1">Male</label>
+                            </div>
+
+                            <!-- Group of default radios - option 2 -->
+                            <div class="custom-radio form-group col-md-2 mt-2 row_radio">
+                                <input type="radio" class="custom-control-input ml-5" id="defaultGroupExample2"
+                                    name="groupOfDefaultRadios">
+                                <label class="custom-control-label" for="defaultGroupExample2">Female</label>
+                            </div>
+
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-blue-grey btn-sm" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-dark-green btn-sm">Save changes</button>
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--Edit User Model-->
+
+    
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js">
+    </script>
+    <!-- MDBootstrap Datatables  -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+    <!--Swiper.js CDN-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!--User Js-->
+    <script src="js/HomePage.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#dtBasicExample').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+        });
+    </script>
+
+
+
+</body>
+
+</html>
