@@ -25,5 +25,12 @@ label{
 }
 
 .formTop{
-    height: 430px;
+    height: 460px;
+}
+
+.selField{
+    border: none;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(228, 228, 228);
+   width: 250px;
 }
