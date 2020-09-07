@@ -104,7 +104,7 @@
                             <h1 class="text-center"><b>Welcome To</b></h1>
                             <h1 class="text-center hotel_name">Gaga Addara Hotel</h1>
 
-                            <button class="to_flip"
+                            <button class="to_flip" id="toflipbtn"
                                 onclick="flip()">SIGN IN</button>
 
 
@@ -231,10 +231,10 @@
 
     <script>
         function flip(){
-            document.getElementById("flipJumbo").style.transform = 'rotateY(180deg)';
+            document.getElementById("flipJumbo").style.transform = 'rotateY(-180deg)';
         }
         function flipBack(){
-            document.getElementById("flipJumbo").style.transform = 'rotateY(-180deg)';
+            document.getElementById("flipJumbo").style.transform = 'rotateY(0deg)';
         }
     </script>
 

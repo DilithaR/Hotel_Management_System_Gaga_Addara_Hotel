@@ -6,6 +6,7 @@
 #   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
 # Feel free to rename the models, but don't rename db_table values or field names.
 from django.db import models
+import random
 
 
 class Employee(models.Model):
@@ -106,3 +107,18 @@ class Customer(models.Model):
     #     self.gender = gender
     #     self.password = password
     #     self.phone = phone
+
+
+class generateRandomeNum:
+   
+    def fiveNums(self):
+
+        num = random.randrange(1 , (10**5)-1)
+        addZeros = '{:04}'.format(num)
+        return addZeros
+        # num = random.randint(0 , 99999)
+        # print("Randome number is" + num)
+        # return num
+    
+
+
