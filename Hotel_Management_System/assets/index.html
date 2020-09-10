@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,9 +21,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!--Mahen CSS-->
-    <link rel="stylesheet" href="css/Mahendra/index.css">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/index.css' %}">
 
-    <link rel="icon" type="image/gif/png" href="img/Logo.png">
+    <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png' %}">
     <title>Gaga Addara Hotel</title>
 </head>
 
@@ -30,7 +32,7 @@
 
     <nav class="navbar navbar-expand-lg topnav">
 
-        <img src="img/Logo.png" class="navbar-brand navLogo" alt="Gaga Addara Hotel">
+        <img src="{% static 'img/Logo.png' %}" class="navbar-brand navLogo" alt="Gaga Addara Hotel">
         <h4 style="font-weight: bolder; font-style: italic; font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: rgb(253, 71, 108);"
             class="mt-2 ml-0">gaga addara hotel</h4>
         <!-- <a class="navbar-brand" href="#">GAGA ADDARA HOTEL</a> -->
@@ -45,19 +47,19 @@
                     <a class="nav-link" href="#">Home </a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Featurs 1</a>
+                    <a class="nav-link" href="#">Rooms</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Feature 2</a>
+                    <a class="nav-link" href="#">Tours</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Feature 3</a>
+                    <a class="nav-link" href="#">Packages</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Ratings</a>
                 </li>
 
                 <li class="nav-item dropdown active ml-2 mr-1">
@@ -73,11 +75,35 @@
                 </li>
 
                 <li class="nav-item active ml-4 row">
-                    <a class="nav-link" href="#" title="My Profile"><i class="fas fa-user-circle fa-1x"></i></a>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
+                            class="img-fluid z-depth-1 rounded-circle" alt="Responsive image"
+                            style="width: 50px; height: 50px;">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-default p-0"
+                        aria-labelledby="navbarDropdownMenuLink-333" style="width: 300px;">
+                        <div class="aqua-gradient d-flex flex-row" style="height: auto;">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
+                                class="img-fluid z-depth-1 rounded m-3" alt="Responsive image"
+                                style="width: 70px; height: 70px;">
+
+                            <div class="d-flex flex-column">
+                                <p class="mt-3 p-0">{{userid}}</p>
+                                <p class="m-0 p-0">{{userEmail}}</p>
+                                
+                            </div>
+                        </div>
+                        <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="myprofile"><i class="far fa-user-circle mr-3"></i>My
+                            Profile</a>
+                        <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="customerLogout"> <i
+                                class="fas fa-sign-out-alt mr-3"></i>Log
+                            Out</a>
+                    </div>
                 </li>
 
                 <li class="nav-item active ml-4 mr-2 row">
-                    <a class="nav-link" href="#" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>
+                    <a class="nav-link" href="login" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>
                 </li>
 
                 
@@ -90,7 +116,8 @@
 
         <div class="overlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="img/Matara Sri Lanka in 4K _ Travel Motivation _ By Mi 4K drone, Yi 4K with Zhiyun E.mp4"
+            <source
+                src="{% static 'img/Matara Sri Lanka in 4K _ Travel Motivation _ By Mi 4K drone, Yi 4K with Zhiyun E.mp4' %}"
                 type="video/mp4">
         </video>
         <div class="container h-100">
@@ -106,7 +133,7 @@
     <div class="middleArea" style="overflow-x: hidden;">
 
         <hr class="SeperaterLine">
-        <h1 class="d-flex justify-content-center">Our Popular Tours</h1>
+        <h1 class="d-flex justify-content-center font-weight-bold">Our Popular Tours</h1>
         <h2 class="d-flex justify-content-center subtopic">Lorem ipsum dolor sit amet consectetur adipisicing elit..
         </h2>
 
@@ -127,7 +154,7 @@
                             <div class="card">
 
                                 <!-- Card image -->
-                                <img class="card-img-top" src="img/Weherahena.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="{% static 'img/Weherahena.jpg' %}" alt="Card image cap">
 
                                 <!-- Card content -->
                                 <div class="card-body">
@@ -178,7 +205,7 @@
                             <div class="card">
 
                                 <!-- Card image -->
-                                <img class="card-img-top" src="img/Thalpe 2.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="{% static 'img/Thalpe 2.jpg' %}" alt="Card image cap">
 
                                 <!-- Card content -->
                                 <div class="card-body">
@@ -230,7 +257,7 @@
 
                                 <!-- Card image -->
 
-                                <img class="card-img-top animated fadeIn" src="img/LightHouse.jpg">
+                                <img class="card-img-top animated fadeIn" src="{% static 'img/LightHouse.jpg' %}">
 
                                 <!-- Card content -->
                                 <div class="card-body">
@@ -283,7 +310,7 @@
                             <div class="card">
 
                                 <!-- Card image -->
-                                <img class="card-img-top" src="img/Old-Dutch-Trade-Centre-PlacesMatarepb0310.jpg"
+                                <img class="card-img-top" src="{% static 'img/Old-Dutch-Trade-Centre-PlacesMatarepb0310.jpg' %}"
                                     alt="Card image cap">
 
                                 <!-- Card content -->
@@ -335,7 +362,7 @@
                             <div class="card">
 
                                 <!-- Card image -->
-                                <img class="card-img-top" src="img/Pigeon_Islank.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="{% static 'img/Pigeon_Islank.jpg' %}" alt="Card image cap">
 
                                 <!-- Card content -->
                                 <div class="card-body">
@@ -386,7 +413,7 @@
                             <div class="card">
 
                                 <!-- Card image -->
-                                <img class="card-img-top" src="img/Polhena_Beach_61.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="{% static 'img/Polhena_Beach_61.jpg' %}" alt="Card image cap">
 
                                 <!-- Card content -->
                                 <div class="card-body">
@@ -437,7 +464,7 @@
                             <div class="card">
 
                                 <!-- Card image -->
-                                <img class="card-img-top" src="img/Star-Fort-–-Matara.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="{% static 'img/Star-Fort-–-Matara.jpg' %}" alt="Card image cap">
 
                                 <!-- Card content -->
                                 <div class="card-body">
@@ -499,7 +526,7 @@
         <hr style="height: 3px; background-color: rgb(228, 228, 228); border-radius: 5px;" class="ml-5 mr-4">
 
         <hr class="SeperaterLine ml-5" class="d-flex justify-content-start">
-        <h2 class="d-flex justify-content-start ml-5">Our Popular Food</h2>
+        <h2 class="d-flex justify-content-start font-weight-bold ml-5">Our Popular Food</h2>
         <h3 class="d-flex justify-content-start  ml-5 subtopic">Lorem ipsum dolor sit amet consectetur adipisicing
             elit..</h3>
 
@@ -507,7 +534,7 @@
 
             <!-- Card -->
             <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
-                style="background-image: url(img/strawberry.jpg);">
+                style="background-image: url('static/img/strawberry.jpg');">
 
                 <!-- Content -->
                 <div class="d-flex flex-row-reverse">
@@ -528,7 +555,7 @@
 
             <!-- Card -->
             <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
-                style="background-image: url(img/food\ 1.jpg);">
+                style="background-image: url('static/img/food\ 1.jpg');">
 
                 <!-- Content -->
                 <div class="d-flex flex-row-reverse">
@@ -549,7 +576,7 @@
 
             <!-- Card -->
             <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
-                style="background-image: url(img/food\ 2.jpg);">
+                style="background-image: url('static/img/food\ 2.jpg');">
 
                 <!-- Content -->
                 <div class="d-flex flex-row-reverse">
@@ -570,7 +597,7 @@
 
             <!-- Card -->
             <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
-                style="background-image: url(img/food\ 3.jpg);">
+                style="background-image: url('static/img/food\ 3.jpg');">
 
                 <!-- Content -->
                 <div class="d-flex flex-row-reverse">
@@ -598,7 +625,7 @@
 
 
         <hr class="SeperaterLine ml-5" class="d-flex justify-content-start">
-        <h2 class="d-flex justify-content-start ml-5">Our Popular Rooms</h2>
+        <h2 class="d-flex justify-content-start ml-5 font-weight-bold">Our Popular Rooms</h2>
         <h3 class="d-flex justify-content-start  ml-5 subtopic">Lorem ipsum dolor sit amet consectetur adipisicing
             elit..</h3>
 
@@ -606,7 +633,7 @@
 
             <!-- Card -->
             <div class="card card-image col mr-4 highlitCard d-flex flex-row-reverse justify-content-between promoCardAct"
-                style="background-image: url(img/room\ 1.jpg);" onmouseover="zoomfun(this)" onmouseup="zoomfun(this)">
+                style="background-image: url('static/img/room\ 1.jpg');" onmouseover="zoomfun(this)" onmouseup="zoomfun(this)">
 
                 <!-- Content -->
                 <div class="d-flex flex-row-reverse">
@@ -627,7 +654,7 @@
 
             <!-- Card -->
             <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
-                style="background-image: url(img/room\ 3.jpg);">
+                style="background-image: url('static/img/room\ 3.jpg');">
 
                 <!-- Content -->
                 <div class="d-flex flex-row-reverse">
@@ -648,7 +675,7 @@
 
             <!-- Card -->
             <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
-                style="background-image: url(img/room\ 4.jpg);">
+                style="background-image: url('static/img/room\ 4.jpg');">
 
                 <!-- Content -->
                 <div class="d-flex flex-row-reverse">
@@ -669,7 +696,7 @@
 
             <!-- Card -->
             <div class="card card-image col mr-4 highlitCard promoCardAct d-flex flex-row-reverse justify-content-between"
-                style="background-image: url(img/Room\ 5.jpg);">
+                style="background-image: url('static/img/Room\ 5.jpg');">
 
                 <!-- Content -->
                 <div class="d-flex flex-row-reverse">
@@ -693,13 +720,13 @@
         <a class="ml-5 viewAllLink" href="#">View all(157) ></a>
 
         <div class="m-5 BannerWrap">
-            <img src="img/MatharaBanner.jpg" class="MidBanner">
+            <img src="{% static 'img/MatharaBanner.jpg' %}" class="MidBanner">
         </div>
 
 
 
         <hr class="SeperaterLine">
-        <h2 class="d-flex justify-content-center">News And Events</h2>
+        <h2 class="d-flex justify-content-center font-weight-bold">News And Events</h2>
         <h3 class="d-flex justify-content-center subtopic">Lorem ipsum dolor sit amet consectetur adipisicing
             elit..</h3>
 
@@ -1083,7 +1110,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!--User Js-->
-    <script src="js/HomePage.js"></script>
+    <script src="{% static 'js/HomePage.js' %}"></script>
 
 
 

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +21,9 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!--Mahen CSS-->
-    <link rel="stylesheet" href="css/Mahendra/UserProfile.css">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/UserProfile.css' %}">
 
-    <link rel="icon" type="image/gif/png" href="img/Logo.png">
+    <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png' %}">
     <title>Gaga Addara Hotel</title>
 </head>
 
@@ -31,7 +32,7 @@
 
     <nav class="navbar navbar-expand-lg topnav">
 
-        <img src="img/Logo.png" class="navbar-brand navLogo" alt="Gaga Addara Hotel">
+        <img src="{% static 'img/Logo.png'%}" class="navbar-brand navLogo" alt="Gaga Addara Hotel">
         <h4 style="font-weight: bolder; font-style: italic; font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: rgb(253, 71, 108);"
             class="mt-2 ml-0">gaga addara hotel</h4>
         <!-- <a class="navbar-brand" href="#">GAGA ADDARA HOTEL</a> -->
@@ -97,21 +98,25 @@
     <div class="d-flex justify-content-center">
         <div class="col-10 UserProfStruct d-flex justify-content-center align-items-center">
             <div class="col-4 d-flex justify-content-center align-items-center">
-                <img src="img/sample_profPic.jpg" class="img-fluid z-depth-1">
+                <img src="{% static 'img/sample_profPic.jpg' %}" class="img-fluid z-depth-1">
             </div>
             <div class="col-7 ml-3">
                 <div class="row ml-1 mt-4">
                     <h2 class="text-muted pink-text">I'm </h2>
-                    <h2 class="ml-2 profHead"> Customer name</h2>
+                    <h2 class="ml-2 profHead">{{customer.f_name}} {{customer.l_name}}</h2>
                 </div>
-                <h4 class="ml-1 profHead">Reg Number</h4>
+                <h4 class="ml-1 profHead">{{customer.cusid}}</h4>
                 <hr class="sepLine">
                 <div class="row">
                     <div class="col-2">
                         <h6 class="details_right">NIC</h6>
                     </div>
                     <div class="col-4">
-                        <p>980625125V</p>
+                        {% if customer.cusnic == None %}
+                        <p>Not Specified</p>
+                        {% else %}
+                        <p>{{customer.cusnic}}</p>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="row">
@@ -119,7 +124,7 @@
                         <h6 class="details_right">NAME</h6>
                     </div>
                     <div class="col-4">
-                        <p>Lorem, ipsum.</p>
+                        <p>{{customer.f_name}} {{customer.l_name}}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -127,7 +132,7 @@
                         <h6 class="details_right">E-MAIL</h6>
                     </div>
                     <div class="col-4">
-                        <p>exampleemail@gmail.com</p>
+                        <p>{{customer.email}}</p>
                     </div>
                 </div>
                 <div class="row">
@@ -135,7 +140,12 @@
                         <h6 class="details_right">ADDRESS</h6>
                     </div>
                     <div class="col-4">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        {% if customer.address_l1 == None %}
+                        <p>Not Specified</p>
+                        {% else %}
+                        <p>{{customer.address_l1}} {{customer.address_l2}}</p>
+                        {% endif %}
+                        
                     </div>
                 </div>
                 <div class="row">
@@ -143,7 +153,11 @@
                         <h6 class="details_right">GENDER</h6>
                     </div>
                     <div class="col-4">
-                        <p>Male</p>
+                        {% if customer.gender == None %}
+                        <p>Not Specified</p>
+                        {% else %}
+                        <p>{{customer.gender}}</p>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="row">
@@ -151,7 +165,11 @@
                         <h6 class="details_right">PHONE</h6>
                     </div>
                     <div class="col-4">
-                        <p>+94 17 6 458 125</p>
+                        {% if customer.gender == None %}
+                        <p>Not Specified</p>
+                        {% else %}
+                        <p>{{customer.gender}}</p>
+                        {% endif %}
                     </div>
                     <div class="col-6 d-flex justify-content-end">
                         <button class="btn btn-pink btn-rounded" data-toggle="modal" data-target="#Edit_UserModel">EDIT</button>
@@ -186,7 +204,7 @@
 
                     <!--Card image-->
                     <div class="view overlay ">
-                        <img class="card-img-top img_top" src="img/hotelRoom.gif" alt="Card image cap">
+                        <img class="card-img-top img_top" src="{% static 'img/hotelRoom.gif' %}" alt="Card image cap">
                         <a href="#!">
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -209,7 +227,7 @@
 
                     <!--Card image-->
                     <div class="view overlay">
-                        <img class="card-img-top img_top" src="img/liveRoom.gif" alt="Card image cap">
+                        <img class="card-img-top img_top" src="{% static 'img/liveRoom.gif' %}" alt="Card image cap">
                         <a href="#!">
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -231,7 +249,7 @@
 
                     <!--Card image-->
                     <div class="view overlay">
-                        <img class="card-img-top img_top" src="img/food7.gif">
+                        <img class="card-img-top img_top" src="{% static 'img/food7.gif' %}">
                         <a href="#!">
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -252,7 +270,7 @@
 
                     <!--Card image-->
                     <div class="view overlay">
-                        <img class="card-img-top img_top" src="img/tourVecGif.gif" alt="Card image cap">
+                        <img class="card-img-top img_top" src="{% static 'img/tourVecGif.gif' %}" alt="Card image cap">
                         <a href="#!">
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -417,6 +435,13 @@
 
                 </div>
                 <!-- Grid row -->
+
+            </div>
+
+            <div class="jumbotron text-center hoverable p-0"
+                style="width: 100%; background-image: url('static/img/unavailable.jpg') ; background-size: contain;">
+
+                <img src="{% static 'img/unavailable.jpg' %}" alt="">
 
             </div>
 
@@ -648,6 +673,7 @@
 
 
             <div class="modal-content">
+                
                 <div class="modal-header ripe-malinka-gradient">
                     <h2 class="modal-title w-100 font-weight-bold" id="myModalLabel"><i
                             class="fas fa-user-edit mr-3"></i>Edit User</h2>
@@ -661,23 +687,29 @@
 
                             <img src="img/sample_profPic.jpg"
                                 class="img-fluid rounded ">
-                                <input type="image" class="btn btn-warning rounded btn-sm" value="Upload Image">
+                                <input type="file" id="cusImg" name="cusImg" class="btn btn-warning rounded btn-sm" value="Upload Image">
 
                         </div>
 
                         <div class="col-3 mt-4 pt-4">
-                            <h5 class="ml-4"> <i class="fas fa-envelope-open-text"></i> <strong> User Id : </strong>
+                            <h5 class="ml-4"> <i class="fas fa-envelope-open-text"></i> <strong> User Id :
+                                    </strong>
                             </h5>
-                            <h5 class="ml-4"> <i class="fas fa-user-alt"></i> <strong> User name : </strong> </h4>
+                            <h5 class="ml-4"> <i class="fas fa-user-alt"></i> <strong> User name :
+                                     </strong> </h4>
                             <h5 class="ml-4"> <i class="fas fa-car"></i> <strong> User NIC : </strong> </h4>
 
                         </div>
                         <div class="col-3 mt-4 pt-4 pr-0 mr-0">
-                                <h5 class="text-right">Reg No</h5>
+                                <h5 class="text-right">{{customer.cusid}}</h5>
 
-                                <h5 class="text-right">Customer Name</h5>
+                                <h5 class="text-right">{{customer.f_name}} {{customer.l_name}}</h5>
 
-                                <h5 class="text-right">+94 17 6 458 125</h5>
+                                <h5 class="text-right">{% if customer.cusnic == None %}
+                                    Not Specified
+                                    {% else %}
+                                    {{customer.cusnic}}
+                                    {% endif %}</h5>
                         </div>
                     </div>
 
@@ -685,9 +717,11 @@
 
 
 
-                    <form action="" method="get">
-                        <input type="hidden" name="CurrentAppID" value="<%=Appointment.getAppId()%>">
-                        <input type="hidden" name="CurrentVehiId" value="<%=Vehicle.getVehicleId() %>">
+                    <form action="updateCus/{{customer.cus_index}}" method="POST">
+                         {% csrf_token %}
+
+                        <input type="hidden" name="CurrentAppID" value="">
+                        <input type="hidden" name="CurrentVehiId" value="">
 
                         <h3 style="color: #577a1f ;font-weight: bold;" class="mb-4"> User Information</h3>
 
@@ -696,16 +730,17 @@
                             <div class="form-group col-md-5 ml-4">
                                 <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i> First
                                     Name</label>
+                                
                                 <input id="inputState" class="form-control ml-3" name="Edit_Fname"
                                     placeholder="First Name"
-                                    value="Current First Name">
+                                    value="{{customer.f_name}}">
                             </div>
 
                             <div class="form-group col-md-5 ml-4">
                                 <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last Name</label>
                                 <input id="inputState" class="form-control ml-3" name="Edit_Lname"
                                     placeholder="Last Name"
-                                    value="Current Last Name">
+                                    value="{{customer.l_name}}">
 
                             </div>
 
@@ -716,17 +751,15 @@
                             <div class="form-group col-md-6 ml-4">
                                 <label for="inputState"><i class="fas fa-envelope-open grey-text fa-2x"></i>
                                     Email</label>
-                                <input id="inputState" class="form-control ml-3" type="email" name="Edit_Email"
+                                <input id="inputemail" class="form-control ml-3" type="email" name="Edit_Email"
                                     placeholder="Email"
-                                    value="Current Email">
+                                    value="{{customer.email}}">
                             </div>
 
                             <div class="form-group col-md-4 ml-4">
-                                <label for="inputState"><i class="fas fa-phone-square grey-text fa-2x"></i> Current
-                                    Phone</label>
-                                <input id="inputState" class="form-control ml-3" type="text" name="Edit_Phone"
-                                    placeholder="Phone No"
-                                    value="Current Phone">
+                                <label for="inputState"><i class="fas fa-id-badge grey-text fa-2x"></i> NIC</label>
+                                <input id="Edit_Nic" class="form-control ml-3" type="text" name="Edit_Nic"
+                                    placeholder="NIC">
 
                             </div>
 
@@ -737,14 +770,14 @@
                             <div class="form-group col-md-4 ml-4">
                                 <label for="inputState"><i class="fas fa-shipping-fast grey-text fa-2x"></i>
                                     Address</label>
-                                <input id="inputState" placeholder="EditAddLine1" class="form-control ml-3" type="text" name="Edit_Email"
-                                    value="Current Address">
+                                <input id="inputState" placeholder="Address Line One" class="form-control ml-3"
+                                    type="text" name="AddressLineOne"
+                                    >
                             </div>
 
                             <div class="form-group col-md-4 ml-4 mt-5">
-                                <input id="inputState" placeholder="Line Two" class="form-control ml-3" type="text"
-                                    name="Edit_AddLine2"
-                                    value="Current Line Two">
+                                <input id="inputState" placeholder="Address Line Two" class="form-control ml-3" type="text"
+                                    name="Edit_AddLine2">
 
                             </div>
 
@@ -814,7 +847,7 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     
     <!--User Js-->
-    <script src="js/HomePage.js"></script>
+    <script src="{% static 'js/HomePage.js' %}"></script>
 
 
     <script>

@@ -1,3 +1,5 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,10 +21,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!--Mahen CSS-->
-    <link rel="stylesheet" href="css/Mahendra/Dashboard.css">
-    <link rel="stylesheet" href="css/Mahendra/index.css">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/Dashboard.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/index.css'%}">
 
-    <link rel="icon" type="image/gif/png" href="img/Logo.png">
+    <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png'%}">
     <title>Dashboard</title>
 </head>
 
@@ -37,7 +39,7 @@
                     <div class="sideback">
                     <div class="sidebarTop d-flex flex-row pt-4">
                         <div class="ml-2">
-                            <img src="img/Logo.png" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
+                            <img src="{% static 'img/Logo.png'%}" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
                         </div>
 
                         <div class="d-flex flex-column ml-2">
@@ -91,7 +93,7 @@
                                     class="fas fa-sort-down first-sp"></span></a>
                             <ul class="dropCont1">
                                 <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
+                                <li><a href="addEmployees">Add Employee</a></li>
                             </ul>
                         </li>
 
@@ -153,8 +155,7 @@
                                             style="width: 70px; height: 70px;">
 
                                             <div class="d-flex flex-column">
-                                                <p class="m-0 p-0">Name</p>
-                                                mane15488@gmail.com
+                                                <p class="m-0 p-0">{{userid}}</p>
                                             </div>
                                     </div>
                                     <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"><i class="far fa-user-circle mr-3"></i>My Profile</a>
@@ -843,7 +844,7 @@
     <!--Chart.js CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!--User Js-->
-    <script src="js/Dashboard.js"></script>
+    <script src="{% static 'js/Dashboard.js'%}"></script>
 
     <script>
         var ctx = document.getElementById('myChart');

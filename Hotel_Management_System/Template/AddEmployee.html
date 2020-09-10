@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,11 +20,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!--Mahen CSS-->
-    <link rel="stylesheet" href="css/Mahendra/Dashboard.css">
-    <link rel="stylesheet" href="css/Mahendra/index.css">
-    <link rel="stylesheet" href="css/Mahendra/addEmployee.css">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/Dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/addEmployee.css' %}">
 
-    <link rel="icon" type="image/gif/png" href="img/Logo.png">
+    <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png' %}">
     <title>Dashboard</title>
 </head>
 
@@ -38,7 +39,7 @@
                     <div class="sideback">
                     <div class="sidebarTop d-flex flex-row pt-4">
                         <div class="ml-2">
-                            <img src="img/Logo.png" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
+                            <img src="{% static 'img/Logo.png' %}" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
                         </div>
 
                         <div class="d-flex flex-column ml-2">
@@ -172,7 +173,7 @@
 
             <!--Middle part-->
 
-            <form action="">
+            <form action="adduser" method="GET">
                 <div class="row m-4">
                     <div class="col-6 p-3 ">
                         <div class="col-12 white p-2 formTop">
@@ -181,7 +182,7 @@
 
                             <h5 class="font-weight-bold ml-2">Employee Image</h5>
                             <div class="row ml-2 mr-2 mt-4">
-                                <img src="img/sample-profile.png" alt="" style="width: 100px; height: 100px;">
+                                <img src="{% static 'img/sample-profile.png' %}" alt="" style="width: 100px; height: 100px;">
                                 <div class="col-8 pt-4">
                                     <input class="btn btn-dark w-50 btn-sm" value="Upload Photo" type="button">
                                     <input class="btn btn-dark w-50 btn-sm" value="Take Photo" type="button" />
@@ -216,13 +217,13 @@
 
                             <div class="custom-control custom-radio custom-control-inline ml-4">
                                 <input type="radio" class="custom-control-input" id="addEmpMale"
-                                    name="addEmpMale">
+                                    name="addEmpMale" value="Male">
                                 <label class="custom-control-label" for="defaultInline1">Male</label>
                             </div>
 
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="addEmpFemale"
-                                    name="addEmpFemale">
+                                <input type="radio" class="custom-control-input" id="addEmpMale"
+                                    name="addEmpMale" value="Feale">
                                 <label class="custom-control-label" for="defaultInline2">Female</label>
                             </div>
                             
@@ -264,9 +265,9 @@
                                 </div>
 
                                 <div class="md-form ml-5  mt-2 mb-0" editEmpFormRow>
-                                    <input type="text" id="addEpLineOne" name="addEpLineOne"
+                                    <input type="text" id="addEpLineTwo" name="addEpLineTwo"
                                         class="form-control addempForm" required>
-                                    <label for="addEpLineOne"><i class="fas fa-sign mr-2"></i>Line Two</label>
+                                    <label for="addEpLineTwo"><i class="fas fa-sign mr-2"></i>Line Two</label>
                                 </div>
 
                             </div>
@@ -305,7 +306,7 @@
                             <div class="md-form mr-2 mt-2 mb-0 w-25">
                                 
                                 <input type="text" name="addEmpEID" id="addEmpEID" class="form-control addempForm"
-                                    required>
+                                    required disabled>
                                 <label for="addEmpEID"><i class="fas fa-id-card-alt mr-2"></i>Eployee ID</label>
                             </div>
 
@@ -556,7 +557,7 @@
     <!--Chart.js CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!--User Js-->
-    <script src="js/Dashboard.js"></script>
+    <script src="{% static 'js/Dashboard.js' %}"></script>
 
 
 </body>

@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,19 +47,19 @@
                     <a class="nav-link" href="#">Home </a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Featurs 1</a>
+                    <a class="nav-link" href="#">Rooms</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Feature 2</a>
+                    <a class="nav-link" href="#">Tours</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Feature 3</a>
+                    <a class="nav-link" href="#">Packages</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">Ratings</a>
                 </li>
 
                 <li class="nav-item dropdown active ml-2 mr-1">
@@ -73,9 +74,39 @@
                     </div>
                 </li>
 
-                <li class="nav-item active ml-4 row">
-                    <a class="nav-link" href="#" title="My Profile"><i class="fas fa-user-circle fa-1x"></i></a>
+                {% if userid == None %}
+                <li class="nav-item active ml-4 mr-2 row">
+                    <a class="nav-link" href="login" title="Sign in"><i class="fas fa-user-cricle fa-1x"></i></a>
                 </li>
+                {% else %}
+                <li class="nav-item active ml-4 row">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
+                            class="img-fluid z-depth-1 rounded-circle" alt="Responsive image"
+                            style="width: 50px; height: 50px;">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-default p-0"
+                        aria-labelledby="navbarDropdownMenuLink-333" style="width: 300px;">
+                        <div class="aqua-gradient d-flex flex-row" style="height: auto;">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
+                                class="img-fluid z-depth-1 rounded m-3" alt="Responsive image"
+                                style="width: 70px; height: 70px;">
+
+                            <div class="d-flex flex-column">
+                                <p class="mt-3 p-0">{{userid}}</p>
+                                <p class="m-0 p-0">{{userEmail}}</p>
+                                
+                            </div>
+                        </div>
+                        <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="myprofile"><i class="far fa-user-circle mr-3"></i>My
+                            Profile</a>
+                        <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="customerLogout"> <i
+                                class="fas fa-sign-out-alt mr-3"></i>Log
+                            Out</a>
+                    </div>
+                </li>
+                {% endif %}
 
                 <li class="nav-item active ml-4 mr-2 row">
                     <a class="nav-link" href="login" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>
