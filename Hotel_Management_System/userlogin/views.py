@@ -63,37 +63,11 @@ def vertifyLogin(request):
 
     print(Password)
 
-    # admin = Admin.objects.get(adminid=Email)
-    # if admin is not None:
-    #     #auth.login(request, customer)
-    #     if admin.password == Password:
-    #         request.session['userid'] = admin.adminid
-    #         print("Customer valid")
-    #         return render(request, 'Dashboard.html', {'userid': admin.adminid})
-    #     else:
-    #         request.session['userid'] = None
-    #         return render(request, 'Dashboard.html')
-    # else:
-    #     customer = Customer.objects.get(email=Email)
-    #     if customer is not None:
-    #         if customer.password == Password:
-    #             request.session['eid'] = customer.adminid
-    #             print("customer valid")
-    #             return render(request, 'index.html', {'userid': customer.cusid, 'userEmail': customer.email})
-    #     else:
-    #         request.session['userid'] = None
-    #         return redirect('login')
+    cusExist = Customer.objects.filter(email=Email).exists()
 
-
-
-    #-----------------------------------------------
-
-    
-    customer = Customer.objects.get(email=Email)
-
-
-    if customer is not None:
+    if cusExist == True:
         #auth.login(request, customer)
+        customer = Customer.objects.get(email=Email)
         if customer.password == Password:
             request.session['userid'] = customer.cusid
             print("Customer valid")
@@ -102,15 +76,16 @@ def vertifyLogin(request):
             request.session['userid'] = None
             return redirect('login')
     else:
-        admin = Admin.objects.get(adminid=Email)
-        if admin is not None:
+        adminExist = Admin.objects.filter(adminid=Email).exists()
+        if adminExist == True:
+            admin = Admin.objects.get(adminid=Email)
             if admin.password == Password:
                 request.session['eid'] = admin.adminid
                 print("admin valid")
                 return render(request, 'Dashboard.html')
-        else:
-            request.session['userid'] = None
-            return redirect('login')
+            else:
+                request.session['userid'] = None
+                return redirect('login')
     
 
 
