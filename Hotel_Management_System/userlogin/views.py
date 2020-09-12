@@ -5,6 +5,7 @@ from .models import generateRandomeNum
 from django.contrib.auth.models import auth
 from django.shortcuts import redirect
 from .forms import custmoneForm
+from django.conf import settings
 
 # Create your views here.
 
@@ -134,28 +135,32 @@ def signUpVer(request):
         return render(request, 'index.html')
 
 
+
+
 def updateCus(request , id_cus):
     cus = Customer.objects.get(cus_index = id_cus)
     print(id_cus)
-    Email = request.POST['Edit_Email']
-    Nic = request.POST['Edit_Nic']
-    line1 = request.POST['AddressLineOne']
-    line2 = request.POST['Edit_AddLine2']
-    pCode = request.POST['Edit_PCode']
-    fname = request.POST['Edit_Fname']
-    lname = request.POST['Edit_Lname']
-    print("cusname " + lname)
+    cus.email = request.POST['Edit_Email']
+    cus.cusnic = request.POST['Edit_Nic']
+    cus.address_l1 = request.POST['AddressLineOne']
+    cus.address_l2 = request.POST['Edit_AddLine2']
+    cus.postcode = request.POST['Edit_PCode']
+    cus.f_name = request.POST['Edit_Fname']
+    cus.l_name = request.POST['Edit_Lname']
+    cus.img = request.POST['cusImg']
+
     
-    cus2 = Customer(cus_index=id_cus , f_name=fname, l_name=lname,  email=Email,
-        address_l1=line1, address_l2=line2, postcode=pCode, cusnic=Nic , )
+    print("cusname " + cus.l_name)
+    print("cusname " + cus.cusnic)
+    print("cusname " + cus.address_l1)
+    print("cusname " + cus.address_l2)
+    #print("cusname " + cus.img)
+
+
     cus.save()
-    cus1 = Customer.objects.get(cusid=request.session['userid'])
-    return render(request, 'User_profile.html', {'customer': cus2})
-    # form = custmoneForm(request.POST , instance = cus)
-    # if form.is_valid:
-    #     form.save()
-    #     cus1 = Customer.objects.get(cusid=request.session['userid'])
-    #     return render(request, 'User_profile.html', {'customer': cus1})
+    cus = Customer.objects.get(cusid=request.session['userid'])
+    return render(request, 'User_profile.html', {'customer': cus, 'media_url': settings.MEDIA_URL})
+
 
 
 def adduser(request):

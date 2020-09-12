@@ -106,7 +106,6 @@ class Customer(models.Model):
 class generateRandomeNum:
    
     def fiveNums(self):
-
         num = random.randrange(1 , (10**5)-1)
         addZeros = '{:04}'.format(num)
         return addZeros
