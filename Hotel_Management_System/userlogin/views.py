@@ -138,6 +138,7 @@ def signUpVer(request):
 
 
 def updateCus(request , id_cus):
+    
     cus = Customer.objects.get(cus_index = id_cus)
     print(id_cus)
     cus.email = request.POST['Edit_Email']
@@ -147,14 +148,8 @@ def updateCus(request , id_cus):
     cus.postcode = request.POST['Edit_PCode']
     cus.f_name = request.POST['Edit_Fname']
     cus.l_name = request.POST['Edit_Lname']
-    cus.img = request.POST['cusImg']
+    cus.img = request.POST.get('cusImg' , None)
 
-    
-    print("cusname " + cus.l_name)
-    print("cusname " + cus.cusnic)
-    print("cusname " + cus.address_l1)
-    print("cusname " + cus.address_l2)
-    #print("cusname " + cus.img)
 
 
     cus.save()

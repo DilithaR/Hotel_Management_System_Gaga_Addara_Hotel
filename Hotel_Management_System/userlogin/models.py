@@ -90,7 +90,7 @@ class Customer(models.Model):
     address_l2 = models.CharField(
         db_column='address_L2', max_length=30, blank=True, null=True)
     postcode = models.IntegerField(blank=True, null=True)
-    img = models.ImageField(null = True , blank = True)
+    img = models.ImageField(default = 'python.png' , null = True , blank = True)
     # Field name made lowercase.
     email = models.CharField(
         db_column='Email', max_length=150, blank=True, null=True)
