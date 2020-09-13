@@ -6,6 +6,7 @@ from django.contrib.auth.models import auth
 from django.shortcuts import redirect
 from .forms import custmoneForm
 from django.conf import settings
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
@@ -148,7 +149,12 @@ def updateCus(request , id_cus):
     cus.postcode = request.POST['Edit_PCode']
     cus.f_name = request.POST['Edit_Fname']
     cus.l_name = request.POST['Edit_Lname']
-    cus.img = request.POST.get('cusImg' , None)
+    uploaded_File = request.FILES['cusImg']
+    cus.img = uploaded_File.name
+    print(uploaded_File.name)
+    print(uploaded_File.size)
+    fs = FileSystemStorage()
+    fs.save(uploaded_File.name , uploaded_File)
 
 
 
