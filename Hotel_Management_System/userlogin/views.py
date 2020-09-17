@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Customer , Admin , Employee
+from .models import Customer, Admin, Employee
 from .models import generateRandomeNum
 from django.contrib.auth.models import auth
 from django.shortcuts import redirect
@@ -10,13 +10,14 @@ from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
+
 def home(request):
     return render(request, 'index.html')
 
 
 def login(request):
     return render(request, 'login.html')
-    
+
 
 def signUp(request):
     return render(request, 'Signup.html')
@@ -49,17 +50,21 @@ def addEmployees(request):
 def employeerepo(request):
     return render(request, 'AttendenceReport.html')
 
-    
+
+def employeeList(request):
+    emp = Employee.objects.all()
+    return render(request, 'EmployeeList.html',  {'employees': emp})
 
 
 def myprofile(request):
     print("sesseionvalue : " + request.session['userid'])
     cus1 = Customer.objects.get(cusid=request.session['userid'])
-    return render(request, 'User_profile.html' , {'customer' : cus1} )
+    return render(request, 'User_profile.html', {'customer': cus1})
+
 
 # login function
 def vertifyLogin(request):
-    
+
     Email = request.POST['loginEmail']
     Password = request.POST['loginPw']
 
@@ -73,7 +78,7 @@ def vertifyLogin(request):
         if customer.password == Password:
             request.session['userid'] = customer.cusid
             print("Customer valid")
-            return render(request, 'index.html', {'userid': customer.cusid , 'userEmail' : customer.email})
+            return render(request, 'index.html', {'userid': customer.cusid, 'userEmail': customer.email})
         else:
             request.session['userid'] = None
             return redirect('login')
@@ -88,28 +93,21 @@ def vertifyLogin(request):
             else:
                 request.session['userid'] = None
                 return redirect('login')
-    
 
-
-
-
-   
-
-            
     #     admin = auth.authenticate(adminid=Email, password = Password)
     #     print("add checked")
     #     if admin is not None:
     #     auth.login(request, admin)
-        
 
     # print("function skiped")
     # return render(request, 'login.html')
 
 # Signup function
+
+
 def signUpVer(request):
 
-    rand = generateRandomeNum() 
-
+    rand = generateRandomeNum()
 
     custId = "CUS" + rand.fiveNums()
     print("custId" + custId)
@@ -136,11 +134,9 @@ def signUpVer(request):
         return render(request, 'index.html')
 
 
+def updateCus(request, id_cus):
 
-
-def updateCus(request , id_cus):
-    
-    cus = Customer.objects.get(cus_index = id_cus)
+    cus = Customer.objects.get(cus_index=id_cus)
     print(id_cus)
     cus.email = request.POST['Edit_Email']
     cus.cusnic = request.POST['Edit_Nic']
@@ -154,14 +150,11 @@ def updateCus(request , id_cus):
     print(uploaded_File.name)
     print(uploaded_File.size)
     fs = FileSystemStorage()
-    fs.save(uploaded_File.name , uploaded_File)
-
-
+    fs.save(uploaded_File.name, uploaded_File)
 
     cus.save()
     cus = Customer.objects.get(cusid=request.session['userid'])
     return render(request, 'User_profile.html', {'customer': cus, 'media_url': settings.MEDIA_URL})
-
 
 
 def adduser(request):
@@ -196,9 +189,6 @@ def adduser(request):
     return render(request, 'EmployeeList.html', {'employees': emp})
 
 
-
-
-
 def fullemployee(request, id_emp):
     emp = Employee.objects.get(emp_index=id_emp)
     return render(request, 'ViewEmployee.html', {'employee': emp})
@@ -228,3 +218,47 @@ def editemp(request):
                         ot_rate=addempOTRate)
 
     return render(request, 'ViewEmployee.html', {'employee': employee})
+
+
+def filterEmployees(request):
+    srchByEid = request.GET.get('srchByEid', None)
+    srchByName = request.GET.get('srchByName', None)
+    srchByOccu = request.GET.get('srchByOccu', None)
+    srchByGender = request.GET.get('srchByGender', None)
+    srchBySal = request.GET.get('srchBySal', None)
+    
+
+    queryArray = {}
+    if(srchByEid != ""):
+        queryArray['empid'] = srchByEid.strip()
+    if(srchByName != ""):
+        queryArray['f_name'] = srchByName.strip()
+    if(srchByGender != None):
+        queryArray['gender'] = srchByGender.strip()
+    if(srchBySal != ""):
+        queryArray['basic_sal'] = srchBySal.strip()
+
+    # print(**queryArray)
+
+
+    
+
+    # query = []
+    # if(srchByEid != ""):
+    #     query = query + "empid = " + srchByEid.strip() + " ,"
+    # if(srchByName != ""):
+    #     query = query + "f_name = " + srchByName.strip() + " ,"
+    # if(srchByGender != None):
+    #     query = query + "gender = " + srchByGender.strip() + " ,"
+    # if(srchBySal != ""):
+    #     query = query + "basic_sal = " + srchBySal.strip()
+    
+    # print(query)
+
+    filteedSet = Employee.objects.filter(**queryArray)
+    print(filteedSet)
+
+    print("Recieved Details : " + srchBySal,
+          srchByName, srchByGender, srchByEid, srchByOccu)
+
+    return employeeList(request)

@@ -177,17 +177,17 @@
                 <!--Middle Part-->
 
                 <div class="row white mt-4 ml-4 mr-4 p-4 appFIltersSec">
-                    <form action="" class="w-100">
+                    <form action="filterEmployees" class="w-100" method="GET">
                         <h3 class="ml-2 mb-3 font-weight-bold">Apply Filters</h3>
 
                         <div class="row row-cols-4 d-flex justify-content-between mb-4 pl-5 ml-3 pr-5">
-                            <input id="inputState" class="form-control ml-3" name="srchEid"
+                            <input id="SearchByID" class="form-control ml-3" name="srchByEid"
                                 placeholder="Employee ID" style="height: 50px;">
 
-                            <input id="inputState" class="form-control ml-3" name="srchName"
-                                placeholder="Name" value="Current First Name" style="height: 50px;">
+                            <input id="inputState" class="form-control ml-3" name="srchByName"
+                                placeholder="Name" value="First Name" style="height: 50px;">
 
-                            <select class="form-control ml-3" name="srchOccu" style="height: 50px;">
+                            <select class="form-control ml-3" name="srchByOccu" style="height: 50px;">
                                 <option value="" disabled selected>Occupation</option>
                                 <option value="Admin">Admin</option>
                                 <option value="Cashier">Cashier</option>
@@ -198,13 +198,13 @@
 
                         <div class="row row-cols-4 d-flex justify-content-between pl-5 ml-3 pr-5">
                             
-                            <select class="form-control ml-3" name="srchOccu" style="height: 50px;">
+                            <select class="form-control ml-3" name="srchByGender" style="height: 50px;">
                                 <option value="" disabled selected>Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
 
-                            <input id="inputState" class="form-control ml-3" name="srchSal"
+                            <input id="srchBySal" class="form-control ml-3" name="srchBySal"
                                 placeholder="Salary" style="height: 50px;">
 
                             <button class="btn btn-pink font-weight-bold mt-5 w-50" style="border-radius: 30px;">SEARCH</button>

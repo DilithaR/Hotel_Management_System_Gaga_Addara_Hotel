@@ -19,6 +19,8 @@ urlpatterns = [
     path("adduser", views.adduser, name="adduser"),
     path("fullemployee/<int:id_emp>", views.fullemployee, name="fullemployee"),
     path("fullemployee/editemp", views.editemp, name="editemp"),
-    path("fullemployee/employeerepo", views.employeerepo, name="employeerepo")
+    path("fullemployee/employeerepo", views.employeerepo, name="employeerepo"),
+    path("employeeList", views.employeeList, name="employeeList"),
+    path("filterEmployees", views.filterEmployees , name="filterEmployees")
     
 ]
