@@ -21,6 +21,6 @@ urlpatterns = [
     path("fullemployee/editemp", views.editemp, name="editemp"),
     path("fullemployee/employeerepo", views.employeerepo, name="employeerepo"),
     path("employeeList", views.employeeList, name="employeeList"),
-    path("filterEmployees", views.filterEmployees , name="filterEmployees")
+    path("filterEmployees", views.filterEmployees , name="filterEmployees"),
     
 ]
