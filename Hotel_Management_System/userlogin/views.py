@@ -163,27 +163,31 @@ def adduser(request):
     rand = generateRandomeNum()
 
     addEmpEID = "EMP" + rand.fiveNums()
-    print("custId" + addEmpEID)
-
     addEmpFname = request.GET['addEmpFname']
     addEmpLname = request.GET['addEmpLname']
     addEmpNIC = request.GET['addEmpNIC']
     addEmpGender = request.GET['addEmpGender']
     addEmpEmail = request.GET['addEmpEmail']
-
+    addEmpsetOccu = request.GET['setOccu']
     addEmpPhone = request.GET['addEmpPhone']
     addEpLineOne = request.GET['addEpLineOne']
     addEpLineTwo = request.GET['addEpLineTwo']
     addEmpcity = request.GET['addEmpcity']
     addEmpPCode = request.GET['addEmpPCode']
-    addempDateOfJoin = request.GET.get('dateOfJoin' , datetime.today().strftime('%Y-%m-%d'))
+    addempDateOfJoin = request.GET.get(
+        'dateOfJoin', datetime.today().strftime('%Y-%m-%d'))
     addempSal = request.GET['addempSal']
     addempOTRate = request.GET['addempOTRate']
+    uploaded_File = request.FILES['empImgUpload']
+    print("image name = " + addEmpImg)
+    # cusImg = addCusImg.name
+    # cussize = addCusImg.size
+
 
     employee = Employee(empid=addEmpEID, f_name=addEmpFname,
                         l_name=addEmpLname, empnic=addEmpNIC, gender=addEmpGender,    email=addEmpEmail, phone=addEmpPhone,
                         address_l1=addEpLineOne, address_l2=addEpLineTwo, postcode=addEmpPCode, reg_date=addempDateOfJoin, basic_sal=addempSal,
-                        ot_rate=addempOTRate)
+                        ot_rate=addempOTRate, occu=addEmpsetOccu, img=addEmpImg)
     employee.save()
     print("Saved Customer")
     emp = Employee.objects.all()
@@ -227,7 +231,6 @@ def filterEmployees(request):
     srchByOccu = request.GET.get('srchByOccu', None)
     srchByGender = request.GET.get('srchByGender', None)
     srchBySal = request.GET.get('srchBySal', None)
-    
 
     queryArray = {}
     if(srchByEid != ""):
@@ -241,9 +244,6 @@ def filterEmployees(request):
 
     # print(**queryArray)
 
-
-    
-
     # query = []
     # if(srchByEid != ""):
     #     query = query + "empid = " + srchByEid.strip() + " ,"
@@ -253,7 +253,7 @@ def filterEmployees(request):
     #     query = query + "gender = " + srchByGender.strip() + " ,"
     # if(srchBySal != ""):
     #     query = query + "basic_sal = " + srchBySal.strip()
-    
+
     # print(query)
 
     filteedSet = Employee.objects.filter(**queryArray)

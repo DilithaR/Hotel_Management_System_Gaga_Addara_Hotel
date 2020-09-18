@@ -33,7 +33,7 @@ class Employee(models.Model):
     address_l2 = models.CharField(
         db_column='address_L2', max_length=30, blank=True, null=True)
     postcode = models.IntegerField(blank=True, null=True)
-    img = models.CharField(max_length=250, blank=True, null=True)
+    img = models.ImageField(default='python.png', null=True, blank=True)
     # Field name made lowercase.
     basic_sal = models.FloatField(db_column='basic_Sal', blank=True, null=True)
     # Field name made lowercase.

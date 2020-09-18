@@ -178,7 +178,8 @@
 
                 <!--Middle part-->
 
-                <form action="adduser" method="GET">
+                <form enctype="multipart/form-data" action="adduser" method="GET">
+                    {% csrf_token %}
                     <div class="row m-4">
                         <div class="col-6 p-3 ">
                             <div class="col-12 white p-2 formTop">
@@ -190,8 +191,9 @@
                                     <img src="{% static 'img/sample-profile.png' %}" alt=""
                                         style="width: 100px; height: 100px;">
                                     <div class="col-8 pt-4">
-                                        <input class="btn btn-dark w-50 btn-sm" value="Upload Photo" type="button">
-                                        <input class="btn btn-dark w-50 btn-sm" value="Take Photo" type="button" />
+                                        <input type="file" class="btn btn-dark w-50 btn-sm" value="Upload Photo"
+                                            name="empImgUpload" id="empImgUpload">
+                                        <input class="btn btn-dark w-50 btn-sm" value="Take Photo" />
                                     </div>
                                 </div>
 
@@ -323,7 +325,7 @@
 
                                 <div class="md-form ml-5  mt-2 mb-0 w-25">
                                     <select class="md-form selField" name="setOccu">
-                                        <option value="" disabled selected><i
+                                        <option disabled selected><i
                                                 class="fas fa-user-tie mr-2"></i>Occupation
                                         </option>
                                         <option value="Admin">Admin</option>
