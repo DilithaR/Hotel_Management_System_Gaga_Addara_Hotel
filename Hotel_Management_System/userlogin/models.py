@@ -48,9 +48,10 @@ class Employee(models.Model):
     rating = models.IntegerField(blank=True, null=True)
     gender = models.CharField(max_length=6, blank=True, null=True)
     last_login = models.CharField(max_length=150, blank=True, null=True)
+    occu = models.CharField(max_length=50, blank=True, null=True)
 
     class Meta:
-        managed = False
+        managed = True
         db_table = 'Employee'
 
 

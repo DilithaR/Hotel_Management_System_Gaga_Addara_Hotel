@@ -7,6 +7,7 @@ from django.shortcuts import redirect
 from .forms import custmoneForm
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
+from datetime import datetime
 
 # Create your views here.
 
@@ -167,7 +168,7 @@ def adduser(request):
     addEmpFname = request.GET['addEmpFname']
     addEmpLname = request.GET['addEmpLname']
     addEmpNIC = request.GET['addEmpNIC']
-    #addEmpMale = request.GET['addEmpMale']
+    addEmpGender = request.GET['addEmpGender']
     addEmpEmail = request.GET['addEmpEmail']
 
     addEmpPhone = request.GET['addEmpPhone']
@@ -175,12 +176,12 @@ def adduser(request):
     addEpLineTwo = request.GET['addEpLineTwo']
     addEmpcity = request.GET['addEmpcity']
     addEmpPCode = request.GET['addEmpPCode']
-    addempDateOfJoin = request.GET['addempDateOfJoin']
+    addempDateOfJoin = request.GET.get('dateOfJoin' , datetime.today().strftime('%Y-%m-%d'))
     addempSal = request.GET['addempSal']
     addempOTRate = request.GET['addempOTRate']
 
     employee = Employee(empid=addEmpEID, f_name=addEmpFname,
-                        l_name=addEmpLname, empnic=addEmpNIC, gender='Male',    email=addEmpEmail, phone=addEmpPhone,
+                        l_name=addEmpLname, empnic=addEmpNIC, gender=addEmpGender,    email=addEmpEmail, phone=addEmpPhone,
                         address_l1=addEpLineOne, address_l2=addEpLineTwo, postcode=addEmpPCode, reg_date=addempDateOfJoin, basic_sal=addempSal,
                         ot_rate=addempOTRate)
     employee.save()
