@@ -178,7 +178,7 @@
 
                 <!--Middle part-->
 
-                <form enctype="multipart/form-data" action="adduser" method="GET">
+                <form enctype="multipart/form-data" action="adduser" method="POST">
                     {% csrf_token %}
                     <div class="row m-4">
                         <div class="col-6 p-3 ">
@@ -191,9 +191,10 @@
                                     <img src="{% static 'img/sample-profile.png' %}" alt=""
                                         style="width: 100px; height: 100px;">
                                     <div class="col-8 pt-4">
-                                        <input type="file" class="btn btn-dark w-50 btn-sm" value="Upload Photo"
+                                        <input type="file" class="btn btn-dark w-50 btn-sm" value="Upload Image"
                                             name="empImgUpload" id="empImgUpload">
-                                        <input class="btn btn-dark w-50 btn-sm" value="Take Photo" />
+                                           
+                                        <!-- <input type="" class="btn btn-dark w-50 btn-sm" value="Take Photo" /> -->
                                     </div>
                                 </div>
 

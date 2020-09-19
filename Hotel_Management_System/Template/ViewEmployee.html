@@ -182,12 +182,21 @@
 
                     <div class="col-3 p-2 mt-4 mr-4 mb-5 viewEmp_left">
                         <div class="col-12">
+                            {% if employee.img %}
+                            <img src="{{employee.img.url}}" class="img-fluid rounded mt-4"
+                                style="width: inherit; height: 300px;">
+                            {% else %}
                             <img src="{% static 'img/sample_profPic.jpg'%}" class="img-fluid rounded mt-4"
                                 style="width: inherit; height: 300px;">
+                            {% endif %}
                             <h3 class="font-weight-bold mb-0">{{employee.f_name}} {{employee.l_name}}</h3>
                             <h5 class="text-muted font-weight-bold mt-0 pt-0">{{employee.empid}}</h5>
+                            {% if employee.remark %}
+                            <p class="small">{{employee.remark}}</p>
+                            {% else %}
                             <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur
                                 ducimus explicabo, cupiditate ea consequatur facere. Modi itaque quia laudantium!</p>
+                            {% endif %}
 
                             <table class="table table-striped">
 
@@ -279,14 +288,14 @@
                                                 <div class="col-6">
                                                     <h5 class="font-weight-bold"><i
                                                             class="fas fa-id-badge mr-2 detailsIcon"></i>NIC</h5>
-                                                    <h6 class="ml-5 font-weight-bold text-muted">{{employee.empid}}
+                                                    <h6 class="ml-5 font-weight-bold text-muted">{{employee.empnic}}
                                                     </h6>
                                                 </div>
                                                 <div class="col-6">
                                                     <h5 class="font-weight-bold"><i
                                                             class="fas fa-id-card-alt mr-2 detailsIcon"></i>Employee Id
                                                         </h4>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">{{employee.l_name}}
+                                                        <h6 class="ml-5 font-weight-bold text-muted">{{employee.empid}}
                                                         </h6>
                                                 </div>
                                             </div>
@@ -392,13 +401,14 @@
                                                     class="fas fa-hand-holding-usd mr-2 detailsIcon"></i>Basic
                                                 Salary
                                                 </h4>
-                                                <h6 class="ml-5 font-weight-bold text-muted">{{employee.rating}} Rs</h6>
+                                                <h6 class="ml-5 font-weight-bold text-muted">{{employee.basic_sal}}0 Rs
+                                                </h6>
                                         </div>
                                         <div class="col-4 mt-3">
                                             <h5 class="font-weight-bold"><i
                                                     class="fas fa-business-time mr-2 detailsIcon"></i>OT Rate
                                             </h5>
-                                            <h6 class="ml-5 font-weight-bold text-muted">{{employee.ot_rate}} Rs/Hr
+                                            <h6 class="ml-5 font-weight-bold text-muted">{{employee.ot_rate}}0 Rs/Hr
                                             </h6>
                                         </div>
                                     </div>

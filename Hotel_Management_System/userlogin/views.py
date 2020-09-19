@@ -1,12 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Customer, Admin, Employee
+from django.core.files.storage import FileSystemStorage
 from .models import generateRandomeNum
-from django.contrib.auth.models import auth
 from django.shortcuts import redirect
 from .forms import custmoneForm
 from django.conf import settings
-from django.core.files.storage import FileSystemStorage
 from datetime import datetime
 
 # Create your views here.
@@ -163,31 +162,36 @@ def adduser(request):
     rand = generateRandomeNum()
 
     addEmpEID = "EMP" + rand.fiveNums()
-    addEmpFname = request.GET['addEmpFname']
-    addEmpLname = request.GET['addEmpLname']
-    addEmpNIC = request.GET['addEmpNIC']
-    addEmpGender = request.GET['addEmpGender']
-    addEmpEmail = request.GET['addEmpEmail']
-    addEmpsetOccu = request.GET['setOccu']
-    addEmpPhone = request.GET['addEmpPhone']
-    addEpLineOne = request.GET['addEpLineOne']
-    addEpLineTwo = request.GET['addEpLineTwo']
-    addEmpcity = request.GET['addEmpcity']
-    addEmpPCode = request.GET['addEmpPCode']
-    addempDateOfJoin = request.GET.get(
+    addEmpFname = request.POST['addEmpFname']
+    addEmpLname = request.POST['addEmpLname']
+    addEmpNIC = request.POST['addEmpNIC']
+    addEmpGender = request.POST['addEmpGender']
+    addEmpEmail = request.POST['addEmpEmail']
+    addEmpsetOccu = request.POST['setOccu']
+    addEmpPhone = request.POST['addEmpPhone']
+    addEpLineOne = request.POST['addEpLineOne']
+    addEpLineTwo = request.POST['addEpLineTwo']
+    addEmpcity = request.POST['addEmpcity']
+    addEmpPCode = request.POST['addEmpPCode']
+    addempDateOfJoin = request.POST.get(
         'dateOfJoin', datetime.today().strftime('%Y-%m-%d'))
-    addempSal = request.GET['addempSal']
-    addempOTRate = request.GET['addempOTRate']
-    uploaded_File = request.FILES['empImgUpload']
-    print("image name = " + addEmpImg)
-    # cusImg = addCusImg.name
-    # cussize = addCusImg.size
+    addempSal = request.POST['addempSal']
+    addempOTRate = request.POST['addempOTRate']
+    addEmpImg = request.FILES['empImgUpload']
+    
+    cusImg = addEmpImg.name
+    cussize = addEmpImg.size
+
+    filesys = FileSystemStorage()
+    filesys.save(addEmpImg.name, addEmpImg)
+
+    print(cusImg)
 
 
     employee = Employee(empid=addEmpEID, f_name=addEmpFname,
                         l_name=addEmpLname, empnic=addEmpNIC, gender=addEmpGender,    email=addEmpEmail, phone=addEmpPhone,
                         address_l1=addEpLineOne, address_l2=addEpLineTwo, postcode=addEmpPCode, reg_date=addempDateOfJoin, basic_sal=addempSal,
-                        ot_rate=addempOTRate, occu=addEmpsetOccu, img=addEmpImg)
+                        ot_rate=addempOTRate, occu=addEmpsetOccu, img=cusImg)
     employee.save()
     print("Saved Customer")
     emp = Employee.objects.all()

@@ -38,7 +38,8 @@
                     <div class="sideback">
                         <div class="sidebarTop d-flex flex-row pt-4">
                             <div class="ml-2">
-                                <img src="{% static 'img/Logo.png' %}" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
+                                <img src="{% static 'img/Logo.png' %}" alt="Gaga Addara Hotel"
+                                    style="width: 80px; height: 90px;">
                             </div>
 
                             <div class="d-flex flex-column ml-2">
@@ -181,11 +182,11 @@
                         <h3 class="ml-2 mb-3 font-weight-bold">Apply Filters</h3>
 
                         <div class="row row-cols-4 d-flex justify-content-between mb-4 pl-5 ml-3 pr-5">
-                            <input id="SearchByID" class="form-control ml-3" name="srchByEid"
-                                placeholder="Employee ID" style="height: 50px;">
+                            <input id="SearchByID" class="form-control ml-3" name="srchByEid" placeholder="Employee ID"
+                                style="height: 50px;">
 
-                            <input id="inputState" class="form-control ml-3" name="srchByName"
-                                placeholder="First Name" style="height: 50px;">
+                            <input id="inputState" class="form-control ml-3" name="srchByName" placeholder="First Name"
+                                style="height: 50px;">
 
                             <select class="form-control ml-3" name="srchByOccu" style="height: 50px;">
                                 <option value="" disabled selected>Occupation</option>
@@ -197,17 +198,18 @@
                         </div>
 
                         <div class="row row-cols-4 d-flex justify-content-between pl-5 ml-3 pr-5">
-                            
+
                             <select class="form-control ml-3" name="srchByGender" style="height: 50px;">
                                 <option value="" disabled selected>Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
 
-                            <input id="srchBySal" class="form-control ml-3" name="srchBySal"
-                                placeholder="Salary" style="height: 50px;">
+                            <input id="srchBySal" class="form-control ml-3" name="srchBySal" placeholder="Salary"
+                                style="height: 50px;">
 
-                            <button class="btn btn-pink font-weight-bold mt-5 w-50" style="border-radius: 30px;">SEARCH</button>
+                            <button class="btn btn-pink font-weight-bold mt-5 w-50"
+                                style="border-radius: 30px;">SEARCH</button>
                         </div>
                     </form>
                 </div>
@@ -225,10 +227,16 @@
                             <div class="card-body">
 
                                 <div class="d-flex flex-row mb-2">
+                                    {% if employee.img %}
+                                    <img src="{{employee.img.url}}" class="rounded"
+                                        style="width: 60px; height: 60px;">
+                                    {% else %}
                                     <img src="{% static 'img/sample_profPic.jpg' %}" class="rounded"
                                         style="width: 60px; height: 60px;">
+                                    {% endif %}
                                     <div class="ml-3">
-                                        <h4 class="card-title font-weight-bold mb-0"><a>{{employee.f_name}} {{employee.l_name}}</a>
+                                        <h4 class="card-title font-weight-bold mb-0"><a>{{employee.f_name}}
+                                                {{employee.l_name}}</a>
                                         </h4>
                                         <h5 class="font-weight-bold text-muted">Waiter</h5>
                                     </div>
@@ -282,12 +290,12 @@
 
                     </div>
                     {% endfor %}
-                        
-                    
 
-                    
 
-                    
+
+
+
+
 
                 </div>
 
