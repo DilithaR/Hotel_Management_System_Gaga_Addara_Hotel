@@ -56,7 +56,7 @@ ROOT_URLCONF = 'Hotel_Management_System.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR , 'Template')],
+        'DIRS': [os.path.join(BASE_DIR, 'Template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,10 +126,21 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR , 'Template')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'Template')
 ]
-STATIC_ROOT = os.path.join(BASE_DIR , 'assets')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# xhdaldblydrjfcnk
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'testprojectsmahen@gmail.com'
+EMAIL_HOST_PASSWORD = 'xhdaldblydrjfcnk'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'testprojectsmahen@gmail.com'

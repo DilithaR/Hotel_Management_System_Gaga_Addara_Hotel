@@ -5,12 +5,16 @@ from django.core.files.storage import FileSystemStorage
 from .models import generateRandomeNum
 from django.shortcuts import redirect
 from .forms import custmoneForm
+from .email import Mailing
 from django.conf import settings
 from datetime import datetime
 import string
 from secrets import choice
+from django.core.mail import send_mail
 
 # Create your views here.
+
+myemail = 'testprojectsmahen@gmail.com'
 
 
 def home(request):
@@ -41,7 +45,12 @@ def forgetpw2(request):
             [choice(string.ascii_uppercase + string.digits) for _ in range(8)])
         request.session["securityCode"] = secCode
         request.session["UserEmail"] = forgetPwgetEmail
-        print("Email exist : " + secCode)
+        emailBody = "Use The Security Code Below to Reset The Password \n \n" + secCode
+        recipient = [forgetPwgetEmail]
+        send_mail("Security Code", emailBody, myemail,
+                  recipient, fail_silently=True)
+        # sendSecretMAil = Mailing("Security Code" , secCode , myemail , recipient)
+
         return render(request, 'Forgot_password_2.html')
 
     else:
@@ -51,10 +60,9 @@ def forgetpw2(request):
 def fogetPw3(request):
     submitSecCode = request.POST.get('submitSecCode', None)
     checkSession = request.session['securityCode']
-    print("Recieved session is : " + checkSession)
-    print("Typed sec code : " + submitSecCode)
+    
+    
     if checkSession == submitSecCode:
-        print("Security Codes matched")
         del request.session['securityCode']
         return render(request, 'Forgot_password_3.html')
     else:
@@ -184,7 +192,7 @@ def updateCus(request, id_cus):
     cus.postcode = request.POST['Edit_PCode']
     cus.f_name = request.POST['Edit_Fname']
     cus.l_name = request.POST['Edit_Lname']
-    uploaded_File = request.FILES.get('cusImg' , None)
+    uploaded_File = request.FILES.get('cusImg', None)
 
     if uploaded_File != None:
         cus.img = uploaded_File.name
@@ -195,7 +203,7 @@ def updateCus(request, id_cus):
         cus.save()
     else:
         cus.save()
-        
+
     cus = Customer.objects.get(cusid=request.session['userid'])
     return render(request, 'User_profile.html', {'customer': cus, 'media_url': settings.MEDIA_URL})
 
