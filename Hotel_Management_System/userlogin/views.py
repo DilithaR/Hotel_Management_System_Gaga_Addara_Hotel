@@ -7,6 +7,8 @@ from django.shortcuts import redirect
 from .forms import custmoneForm
 from django.conf import settings
 from datetime import datetime
+import string
+from secrets import choice
 
 # Create your views here.
 
@@ -32,14 +34,51 @@ def forgetpassword(request):
 
 
 def forgetpw2(request):
-    return render(request, 'Forgot_password_2.html')
+    forgetPwgetEmail = request.GET['forgetPwgetEmail']
+
+    if Customer.objects.filter(email=forgetPwgetEmail).exists():
+        secCode = ''.join(
+            [choice(string.ascii_uppercase + string.digits) for _ in range(8)])
+        request.session["securityCode"] = secCode
+        request.session["UserEmail"] = forgetPwgetEmail
+        print("Email exist : " + secCode)
+        return render(request, 'Forgot_password_2.html')
+
+    else:
+        return render(request, 'Forgot_password_1.html')
 
 
 def fogetPw3(request):
-    return render(request, 'Forgot_password_3.html')
+    submitSecCode = request.POST.get('submitSecCode', None)
+    checkSession = request.session['securityCode']
+    print("Recieved session is : " + checkSession)
+    print("Typed sec code : " + submitSecCode)
+    if checkSession == submitSecCode:
+        print("Security Codes matched")
+        del request.session['securityCode']
+        return render(request, 'Forgot_password_3.html')
+    else:
+        request.session.flush()
+        return render(request, 'Forgot_password_1.html')
+
+
+def resetPWinForgetPw(request):
+    leagalCusEmail = request.session['UserEmail']
+    leagalCus = Customer.objects.get(email=leagalCusEmail)
+
+    password = request.POST['resetPw']
+    confPassword = request.POST['resetConfPw']
+
+    if password == confPassword:
+        leagalCus.password = password
+        leagalCus.save()
+        return render(request, 'login.html')
+    else:
+        return render(request, 'Forgot_password_3.html')
 
 
 def customerLogout(request):
+    request.session.flush()
     return render(request, 'login.html')
 
 
