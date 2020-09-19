@@ -185,19 +185,22 @@
                             <input id="SearchByID" class="form-control ml-3" name="srchByEid" placeholder="Employee ID"
                                 style="height: 50px;">
 
-                            <input id="inputState" class="form-control ml-3" name="srchByName" placeholder="First Name"
-                                style="height: 50px;">
+                            <input id="inputStatefname" class="form-control ml-3" name="srchByName"
+                                placeholder="First Name" style="height: 50px;">
+
+                            <input id="inputStateLname" class="form-control ml-3" name="srchByLName"
+                                placeholder="Last Name" style="height: 50px;">
+                        </div>
+
+                        <div class="row row-cols-4 d-flex justify-content-between pl-5 ml-3 pr-5">
 
                             <select class="form-control ml-3" name="srchByOccu" style="height: 50px;">
                                 <option value="" disabled selected>Occupation</option>
                                 <option value="Admin">Admin</option>
                                 <option value="Cashier">Cashier</option>
                                 <option value="Waiter">Waiter</option>
-                                <option value="Reciptionist">Reciptionist</option>
+                                <option value="Receptionist">Receptionist</option>
                             </select>
-                        </div>
-
-                        <div class="row row-cols-4 d-flex justify-content-between pl-5 ml-3 pr-5">
 
                             <select class="form-control ml-3" name="srchByGender" style="height: 50px;">
                                 <option value="" disabled selected>Gender</option>
@@ -207,9 +210,10 @@
 
                             <input id="srchBySal" class="form-control ml-3" name="srchBySal" placeholder="Salary"
                                 style="height: 50px;">
-
-                            <button class="btn btn-pink font-weight-bold mt-5 w-50"
-                                style="border-radius: 30px;">SEARCH</button>
+                        </div>
+                        <div class="row row-cols-4 d-flex justify-content-end pl-5 ml-3 pr-3">
+                            <button class="btn btn-pink font-weight-bold mt-3 w-50"
+                                style="border-radius: 30px;">SEARCH<i class="fas fa-search ml-5"></i></button>
                         </div>
                     </form>
                 </div>
@@ -228,8 +232,7 @@
 
                                 <div class="d-flex flex-row mb-2">
                                     {% if employee.img %}
-                                    <img src="{{employee.img.url}}" class="rounded"
-                                        style="width: 60px; height: 60px;">
+                                    <img src="{{employee.img.url}}" class="rounded" style="width: 60px; height: 60px;">
                                     {% else %}
                                     <img src="{% static 'img/sample_profPic.jpg' %}" class="rounded"
                                         style="width: 60px; height: 60px;">

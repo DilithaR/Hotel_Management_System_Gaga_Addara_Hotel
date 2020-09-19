@@ -178,7 +178,7 @@ def adduser(request):
     addempSal = request.POST['addempSal']
     addempOTRate = request.POST['addempOTRate']
     addEmpImg = request.FILES['empImgUpload']
-    
+
     cusImg = addEmpImg.name
     cussize = addEmpImg.size
 
@@ -186,7 +186,6 @@ def adduser(request):
     filesys.save(addEmpImg.name, addEmpImg)
 
     print(cusImg)
-
 
     employee = Employee(empid=addEmpEID, f_name=addEmpFname,
                         l_name=addEmpLname, empnic=addEmpNIC, gender=addEmpGender,    email=addEmpEmail, phone=addEmpPhone,
@@ -232,19 +231,25 @@ def editemp(request):
 def filterEmployees(request):
     srchByEid = request.GET.get('srchByEid', None)
     srchByName = request.GET.get('srchByName', None)
+    srchByLName = request.GET.get('srchByLName', None)
     srchByOccu = request.GET.get('srchByOccu', None)
     srchByGender = request.GET.get('srchByGender', None)
     srchBySal = request.GET.get('srchBySal', None)
 
     queryArray = {}
+
     if(srchByEid != ""):
         queryArray['empid'] = srchByEid.strip()
     if(srchByName != ""):
         queryArray['f_name'] = srchByName.strip()
+    if(srchByLName != ""):
+        queryArray['l_name'] = srchByLName.strip()
     if(srchByGender != None):
         queryArray['gender'] = srchByGender.strip()
     if(srchBySal != ""):
         queryArray['basic_sal'] = srchBySal.strip()
+    if(srchByOccu != None):
+        queryArray['occu'] = srchByOccu.strip()
 
     # print(**queryArray)
 
@@ -261,9 +266,13 @@ def filterEmployees(request):
     # print(query)
 
     filteedSet = Employee.objects.filter(**queryArray)
-    print(filteedSet)
 
-    print("Recieved Details : " + srchBySal,
+    print("filtered data : ")
+    print(filteedSet)
+    print("filtered data end")
+
+    print("Recieved Details : Salary -" + srchBySal,
           srchByName, srchByGender, srchByEid, srchByOccu)
 
-    return employeeList(request)
+    # return employeeList(request)
+    return render(request, 'EmployeeList.html',  {'employees': filteedSet})

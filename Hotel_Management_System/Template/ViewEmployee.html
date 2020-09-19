@@ -39,7 +39,8 @@
                     <div class="sideback">
                         <div class="sidebarTop d-flex flex-row pt-4">
                             <div class="ml-2">
-                                <img src="{% static 'img/Logo.png'%}" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
+                                <img src="{% static 'img/Logo.png'%}" alt="Gaga Addara Hotel"
+                                    style="width: 80px; height: 90px;">
                             </div>
 
                             <div class="d-flex flex-column ml-2">
@@ -95,7 +96,7 @@
                                 <ul class="dropCont1">
                                     <li><a href="employeerepo">Attendence Report</a></li>
                                     <li><a href="">Add Employee</a></li>
-                                    
+
                                 </ul>
                             </li>
 
@@ -194,8 +195,7 @@
                             {% if employee.remark %}
                             <p class="small">{{employee.remark}}</p>
                             {% else %}
-                            <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur
-                                ducimus explicabo, cupiditate ea consequatur facere. Modi itaque quia laudantium!</p>
+                            <p class="small">No any remars added yet</p>
                             {% endif %}
 
                             <table class="table table-striped">
@@ -362,7 +362,8 @@
                                         <div class="col-5 tabe_topCards mr-3 p-0">
                                             <div class="row ml-0 p-0">
                                                 <div class="col-5 ml-0 p-0">
-                                                    <img src="{% static 'img/Working-crop.gif '%}" alt="" class="tab2_img">
+                                                    <img src="{% static 'img/Working-crop.gif '%}" alt=""
+                                                        class="tab2_img">
                                                 </div>
                                                 <div class="col-6">
                                                     <h3 class="font-weight-bold mt-2 mb-0">OT Hours</h3>
@@ -376,7 +377,8 @@
                                         <div class="col-5 tabe_topCards  p-0">
                                             <div class="row ml-0 pl-0">
                                                 <div class="col-5 ml-0 pl-0">
-                                                    <img src="{% static 'img/leaves-crop.gif ' %}'" alt="" class="tab2_img">
+                                                    <img src="{% static 'img/leaves-crop.gif ' %}'" alt=""
+                                                        class="tab2_img">
                                                 </div>
                                                 <div class="col-6">
                                                     <h3 class="font-weight-bold mt-2 mb-0">Leaves</h3>
@@ -442,21 +444,21 @@
                                         <h2 class="text-center font-weight-bold mt-3 mb-0 ml-2">Monthly OT Report</h2>
 
                                         <div class="col-11 ml-5 mr-5">
-                                            <canvas  id="OTReport" width="120px"
-                                                height="40px"></canvas>
+                                            <canvas id="OTReport" width="120px" height="40px"></canvas>
                                         </div>
 
-                                        
+
 
                                     </div>
                                     <div class="row white mr-5 ml-3 repoDiv">
-                                         <h2 class="text-center font-weight-bold mt-3 mb-0 ml-2">Monthly Attendence Report</h2>
+                                        <h2 class="text-center font-weight-bold mt-3 mb-0 ml-2">Monthly Attendence
+                                            Report</h2>
 
-                                         <div class="col-11 ml-5 mr-5">
-                                             <canvas id="AttReport" width="120px" height="40px"></canvas>
-                                         </div>
+                                        <div class="col-11 ml-5 mr-5">
+                                            <canvas id="AttReport" width="120px" height="40px"></canvas>
+                                        </div>
                                     </div>
-                                   
+
                                 </div>
                             </div>
 
@@ -616,8 +618,8 @@
         </div>
 
         <!-- Full Height Modal Right -->
-        <div class="modal fade right" id="editEmployee" tabindex="-1" role="dialog"
-            aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade right" id="editEmployee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
 
             <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
             <div class="modal-dialog modal-full-height modal-right modal-lg " role="document">
@@ -635,7 +637,7 @@
 
                         <form action="editemp" method="GET" class="ml-2">
                             {% csrf_token %}
-                            
+
                             <h4 class="font-weight-bold">Basic Information</h4>
                             <hr class="empEdiFrmUnderline" />
                             <div class="row mt-3">
@@ -644,7 +646,8 @@
 
                                 <div class="col align-items-center">
                                     <input type="image" value="Upload Image" class="btn btn-mdb-color btn-sm mt-5">
-                                    <p class="grey-text small ml-1">Please upload a .jpg or a .png file with minimum dimesion of
+                                    <p class="grey-text small ml-1">Please upload a .jpg or a .png file with minimum
+                                        dimesion of
                                         400w x 400h, not exeeding 5MB</p>
                                 </div>
                             </div>
@@ -654,14 +657,15 @@
                                 <div class="form-group ml-5 mr-5">
                                     <label for="inputState" class="EmpEditLabText"><i
                                             class="fas fa-id-card-alt edit_sec_Icon  fa-2x"></i> Employee
-                                            Id</label>
+                                        Id</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_eid"
                                         placeholder="Last Name" value="{{employee.empid}}" disabled>
 
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-user edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-user edit_sec_Icon  fa-2x"></i>
                                         First
                                         Name</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_Fname"
@@ -669,7 +673,8 @@
                                 </div>
 
                                 <div class="form-group ml-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="far fa-user edit_sec_Icon  fa-2x"></i> Last
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="far fa-user edit_sec_Icon  fa-2x"></i> Last
                                         Name</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_Lname"
                                         placeholder="Last Name" value="{{employee.l_name}}">
@@ -690,21 +695,23 @@
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="far fa-id-badge edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="far fa-id-badge edit_sec_Icon  fa-2x"></i>
                                         NIC</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_nic"
                                         placeholder="First Name" value="{{employee.empnic}}">
                                 </div>
 
                             </div>
-                            <hr/>
+                            <hr />
                             <h4 class="font-weight-bold mt-2">Contact Information</h4>
                             <hr class="empEdiFrmUnderline" />
-                            
+
                             <div class="row row-cols-3">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-map-signs edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-map-signs edit_sec_Icon  fa-2x"></i>
                                         Address Line One</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_assL1"
                                         placeholder="Last Name" value="{{employee.address_l1}}">
@@ -724,7 +731,8 @@
                             <div class="row">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-city edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-city edit_sec_Icon  fa-2x"></i>
                                         City</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_city"
                                         placeholder="Last Name" value="Colombo">
@@ -732,7 +740,8 @@
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-sign edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-sign edit_sec_Icon  fa-2x"></i>
                                         Post Code</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_Epost_code"
                                         placeholder="First Name" value="{{employee.postcode}}">
@@ -760,13 +769,14 @@
 
                             </div>
 
-                            <hr/>
+                            <hr />
                             <h4 class="font-weight-bold mt-2">Employee Information</h4>
-                            <hr class="empEdiFrmUnderline"/>
+                            <hr class="empEdiFrmUnderline" />
                             <div class="row">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-briefcase edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-briefcase edit_sec_Icon  fa-2x"></i>
                                         Job Title / Occupation</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_Occu"
                                         placeholder="Last Name" value="Waiter">
@@ -818,10 +828,10 @@
                             </div>
 
 
-                        
 
 
-                       
+
+
                     </div>
 
                     <div class="modal-footer justify-content-end">
@@ -912,8 +922,19 @@
             options: {
                 scales: {
                     yAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        ticks: {
+                            beginAtZero: true,
                         }
                     }]
                 }
@@ -948,6 +969,26 @@
                     borderColor: [],
                     borderWidth: 0
                 }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                        }
+                    }]
+                }
             }
         });
     </script>
