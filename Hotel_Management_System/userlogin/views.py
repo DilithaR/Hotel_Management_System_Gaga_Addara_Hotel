@@ -184,14 +184,18 @@ def updateCus(request, id_cus):
     cus.postcode = request.POST['Edit_PCode']
     cus.f_name = request.POST['Edit_Fname']
     cus.l_name = request.POST['Edit_Lname']
-    uploaded_File = request.FILES['cusImg']
-    cus.img = uploaded_File.name
-    print(uploaded_File.name)
-    print(uploaded_File.size)
-    fs = FileSystemStorage()
-    fs.save(uploaded_File.name, uploaded_File)
+    uploaded_File = request.FILES.get('cusImg' , None)
 
-    cus.save()
+    if uploaded_File != None:
+        cus.img = uploaded_File.name
+        print(uploaded_File.name)
+        print(uploaded_File.size)
+        fs = FileSystemStorage()
+        fs.save(uploaded_File.name, uploaded_File)
+        cus.save()
+    else:
+        cus.save()
+        
     cus = Customer.objects.get(cusid=request.session['userid'])
     return render(request, 'User_profile.html', {'customer': cus, 'media_url': settings.MEDIA_URL})
 
