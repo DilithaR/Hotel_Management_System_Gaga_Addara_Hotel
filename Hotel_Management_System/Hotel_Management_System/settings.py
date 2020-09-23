@@ -144,3 +144,6 @@ EMAIL_HOST_PASSWORD = 'xhdaldblydrjfcnk'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'testprojectsmahen@gmail.com'
+
+
+# Testing comment line

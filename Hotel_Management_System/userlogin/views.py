@@ -278,7 +278,7 @@ def editemp(request):
 
     return render(request, 'ViewEmployee.html', {'employee': employee})
 
-
+#Adding filters app
 def filterEmployees(request):
     srchByEid = request.GET.get('srchByEid', None)
     srchByName = request.GET.get('srchByName', None)
