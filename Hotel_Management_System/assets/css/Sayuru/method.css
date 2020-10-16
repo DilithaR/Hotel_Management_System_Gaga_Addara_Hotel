@@ -1,0 +1,59 @@
+#selectCash{
+	background-color: #00BFFF;
+	border-radius: 8px; 
+	padding: 10px 25px;
+}
+
+#selectCard{
+	background-color: #00BFFF;
+	border-radius: 8px;
+	padding: 10px 25px;
+}
+
+#m1{
+	background-color: #00BFFF;
+	border-radius: 8px;
+}
+
+#m2{
+	background-color: #00BFFF;
+	border-radius: 8px;
+}
+
+#m3{
+	background-color: #00BFFF;
+	border-radius: 8px;
+}
+
+#re1{
+	background-color: yellow;
+	border-radius: 8px;
+}
+
+#re2{
+	background-color: yellow;
+	border-radius: 8px;
+}
+
+#del1{
+	background-color: red;
+	color: white;
+	border-radius: 8px;
+}
+
+#del2{
+	background-color: red;
+	color: white;
+	border-radius: 8px;
+}
+
+#revoke{
+	background-color: yellow;
+	border-radius: 8px;
+}
+
+#delete{
+	background-color: red;
+	color: white;
+	border-radius: 8px;
+}

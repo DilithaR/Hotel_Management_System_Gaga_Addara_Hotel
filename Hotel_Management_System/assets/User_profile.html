@@ -82,7 +82,7 @@
                     <a class="nav-link" href="#" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>
                 </li>
 
-                
+
 
             </ul>
         </div>
@@ -91,14 +91,18 @@
     <header>
 
         <div class="overlay"></div>
-        
-        
+
+
     </header>
 
     <div class="d-flex justify-content-center">
         <div class="col-10 UserProfStruct d-flex justify-content-center align-items-center">
             <div class="col-4 d-flex justify-content-center align-items-center">
-                <img src="{% static 'img/sample_profPic.jpg' %}" class="img-fluid z-depth-1">
+                {% if customer.img %}
+                <img src="{{customer.img.url}}" class="img-fluid z-depth-1">
+                {% else %}
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg" class="img-fluid z-depth-1">
+                {% endif %}
             </div>
             <div class="col-7 ml-3">
                 <div class="row ml-1 mt-4">
@@ -145,7 +149,7 @@
                         {% else %}
                         <p>{{customer.address_l1}} {{customer.address_l2}}</p>
                         {% endif %}
-                        
+
                     </div>
                 </div>
                 <div class="row">
@@ -172,7 +176,8 @@
                         {% endif %}
                     </div>
                     <div class="col-6 d-flex justify-content-end">
-                        <button class="btn btn-pink btn-rounded" data-toggle="modal" data-target="#Edit_UserModel">EDIT</button>
+                        <button class="btn btn-pink btn-rounded" data-toggle="modal"
+                            data-target="#Edit_UserModel">EDIT</button>
                     </div>
                 </div>
                 <!-- <div class="row mb-3">
@@ -180,25 +185,25 @@
                         <button class="btn">PHONE</button>
                     </div>
                 </div> -->
-                
+
 
             </div>
         </div>
     </div>
 
-    
+
 
     <div class="middleArea d-flex justify-content-center align-items-center mb-0" style="overflow-x: hidden;">
-        
-        
-        
+
+
+
         <div class="col-10 white p-5 mb-5 profContArea">
 
-            
+
             <div class="row topicArea mb-3 pt-2">
                 <h2 class="pl-3" style="font-weight: bold; color: white;">PROFILE SUMMARY</h2>
             </div>
-            
+
             <div class="row row-cols-4 d-flex justify-content-between align-items-center">
                 <div class="card mb-4 col-2">
 
@@ -294,55 +299,56 @@
                 <h2 class="pl-3" style="font-weight: bold; color: white;">NOTIFICATIONS</h2>
             </div>
 
-            
-                <!-- News jumbotron -->
-                <div class="jumbotron text-center hoverable p-0" style="width: 100%;">
 
-                    <!-- Grid row -->
-                    <div class="row">
+            <!-- News jumbotron -->
+            <div class="jumbotron text-center hoverable p-0" style="width: 100%;">
 
-                        <!-- Grid column -->
-                        <div class="col-md-2 offset-md-1 mx-3 my-3">
+                <!-- Grid row -->
+                <div class="row">
 
-                            <!-- Featured image -->
-                            <div class="view overlay">
-                                <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
-                                    alt="Sample image for first version of blog listing" style="width: 100%; height: 100%px;">
-                                <a>
-                                    <div class="mask rgba-white-slight"></div>
-                                </a>
-                            </div>
+                    <!-- Grid column -->
+                    <div class="col-md-2 offset-md-1 mx-3 my-3">
 
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-7 text-md-left mt-3">
-
-                            <!-- Excerpt -->
-                            <a href="#!" class="pink-text">
-                                <h6 class="h6 pb-1"><i class="fas fa-bed"></i> Room</h6>
+                        <!-- Featured image -->
+                        <div class="view overlay">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
+                                alt="Sample image for first version of blog listing"
+                                style="width: 100%; height: 100%px;">
+                            <a>
+                                <div class="mask rgba-white-slight"></div>
                             </a>
-
-                            <h4 class="h4 mb-0">Room Reservation : Reservation Id : REV4588</h4>
-                            <p class="font-weight-normal"><a><strong>Room No : </strong></a> R524</p>
-                            <div class="row ml-0 justify-content-between">
-                                <p class="font-weight-normal"><a><strong>Date : </strong></a> 19/08/2020</p>
-                                <p class="font-weight-normal"><a><strong>Price : </strong></a> 8 000.00 Rs</p>
-                                <a href="" class="font-weight-bold pink-text"><i class="fas fa-info-circle"></i> More
-                                    info..</a>
-                            </div>
-                            
-
                         </div>
-                        <!-- Grid column -->
 
                     </div>
-                    <!-- Grid row -->
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-7 text-md-left mt-3">
+
+                        <!-- Excerpt -->
+                        <a href="#!" class="pink-text">
+                            <h6 class="h6 pb-1"><i class="fas fa-bed"></i> Room</h6>
+                        </a>
+
+                        <h4 class="h4 mb-0">Room Reservation : Reservation Id : REV4588</h4>
+                        <p class="font-weight-normal"><a><strong>Room No : </strong></a> R524</p>
+                        <div class="row ml-0 justify-content-between">
+                            <p class="font-weight-normal"><a><strong>Date : </strong></a> 19/08/2020</p>
+                            <p class="font-weight-normal"><a><strong>Price : </strong></a> 8 000.00 Rs</p>
+                            <a href="" class="font-weight-bold pink-text"><i class="fas fa-info-circle"></i> More
+                                info..</a>
+                        </div>
+
+
+                    </div>
+                    <!-- Grid column -->
 
                 </div>
-                <!-- News jumbotron -->
-            
+                <!-- Grid row -->
+
+            </div>
+            <!-- News jumbotron -->
+
 
             <div class="jumbotron text-center hoverable p-0" style="width: 100%;">
 
@@ -438,50 +444,10 @@
 
             </div>
 
-            <div class="jumbotron text-center hoverable p-0" style="width: 100%; background-image: url(img/unavailable.jpg) ;">
+            <div class="jumbotron text-center hoverable p-0"
+                style="width: 100%; background-image: url('static/img/unavailable.jpg') ; background-size: contain;">
 
-                <!-- Grid row -->
-                <div class="row">
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 offset-md-1 mx-3 my-3">
-
-                        <!-- Featured image -->
-                        <div class="view overlay">
-                            <img src="https://mdbootstrap.com/img/Photos/Others/laptop-sm.jpg" class="img-fluid"
-                                alt="Sample image for first version of blog listing"
-                                style="width: 100%; height: 100%px;">
-                            <a>
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-7 text-md-left mt-3">
-
-                        <!-- Excerpt -->
-                        <a href="#!" class="pink-text">
-                            <h6 class="h6 pb-1"><i class="fas fa-hotel"></i> Reception Hall</h6>
-                        </a>
-
-                        <h4 class="h4 mb-0">Reception Hall Reservation : Reservation Id : REV4588</h4>
-                        <p class="font-weight-normal"><a><strong>Reception Hall No : </strong></a> H004</p>
-                        <div class="row ml-0 justify-content-between">
-                            <p class="font-weight-normal"><a><strong>Date : </strong></a> 19/08/2020</p>
-                            <p class="font-weight-normal"><a><strong>Price : </strong></a> 358 000.00 Rs</p>
-                            <a href="" class="font-weight-bold pink-text"><i class="fas fa-info-circle"></i> More
-                                info..</a>
-                        </div>
-
-
-                    </div>
-                    <!-- Grid column -->
-
-                </div>
-                <!-- Grid row -->
+                <img src="{% static 'img/unavailable.jpg' %}" alt="">
 
             </div>
 
@@ -564,9 +530,9 @@
                         <td>2012/08/06</td>
                         <td>$137,500</td>
                     </tr>
-                    
+
                 </tbody>
-                
+
             </table>
 
 
@@ -713,6 +679,7 @@
 
 
             <div class="modal-content">
+
                 <div class="modal-header ripe-malinka-gradient">
                     <h2 class="modal-title w-100 font-weight-bold" id="myModalLabel"><i
                             class="fas fa-user-edit mr-3"></i>Edit User</h2>
@@ -721,25 +688,33 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="row row row-cols-3">
-                        <div class="col-xl-5 col-md-5 ml-4 mb-0 text-center">
+                    <form action="updateCus/{{customer.cus_index}}" enctype="multipart/form-data" method="POST">
+                        {% csrf_token %}
+                        <div class="row row row-cols-3">
+                            <div class="col-xl-5 col-md-5 ml-4 mb-0 text-center">
 
-                            <img src="img/sample_profPic.jpg"
-                                class="img-fluid rounded ">
-                                <input type="image" class="btn btn-warning rounded btn-sm" value="Upload Image">
+                                {% if customer.img %}
+                                <img src="{{customer.img.url}}" class="img-fluid z-depth-1">
+                                {% else %}
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
+                                    class="img-fluid z-depth-1">
+                                {% endif %}
+                                
+                                <input type="file" id="cusImg" name="cusImg" class="btn btn-warning rounded btn-sm"
+                                    value="Upload Image">
 
-                        </div>
+                            </div>
 
-                        <div class="col-3 mt-4 pt-4">
-                            <h5 class="ml-4"> <i class="fas fa-envelope-open-text"></i> <strong> User Id :
+                            <div class="col-3 mt-4 pt-4">
+                                <h5 class="ml-4"> <i class="fas fa-envelope-open-text"></i> <strong> User Id :
                                     </strong>
-                            </h5>
-                            <h5 class="ml-4"> <i class="fas fa-user-alt"></i> <strong> User name :
-                                     </strong> </h4>
-                            <h5 class="ml-4"> <i class="fas fa-car"></i> <strong> User NIC : </strong> </h4>
+                                </h5>
+                                <h5 class="ml-4"> <i class="fas fa-user-alt"></i> <strong> User name :
+                                    </strong> </h4>
+                                    <h5 class="ml-4"> <i class="fas fa-car"></i> <strong> User NIC : </strong> </h4>
 
-                        </div>
-                        <div class="col-3 mt-4 pt-4 pr-0 mr-0">
+                            </div>
+                            <div class="col-3 mt-4 pt-4 pr-0 mr-0">
                                 <h5 class="text-right">{{customer.cusid}}</h5>
 
                                 <h5 class="text-right">{{customer.f_name}} {{customer.l_name}}</h5>
@@ -749,14 +724,15 @@
                                     {% else %}
                                     {{customer.cusnic}}
                                     {% endif %}</h5>
+                            </div>
                         </div>
-                    </div>
 
-                    <hr style="border-width: 3px; border-color: crimson;">
-
+                        <hr style="border-width: 3px; border-color: crimson;">
 
 
-                    <form action="" method="get">
+
+
+
                         <input type="hidden" name="CurrentAppID" value="">
                         <input type="hidden" name="CurrentVehiId" value="">
 
@@ -767,38 +743,34 @@
                             <div class="form-group col-md-5 ml-4">
                                 <label for="inputState"><i class="fas fa-user fa-medium-m grey-text fa-2x"></i> First
                                     Name</label>
-                                {{ form.Edit_Fname.customer.f_name|default_if_none:"" }}
+
                                 <input id="inputState" class="form-control ml-3" name="Edit_Fname"
-                                    placeholder="First Name"
-                                    value="Current First Name">
+                                    placeholder="First Name" value="{{customer.f_name}}">
                             </div>
 
                             <div class="form-group col-md-5 ml-4">
-                                <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last Name</label>
+                                <label for="inputState"><i class="far fa-user fa-medium-m grey-text fa-2x"></i> Last
+                                    Name</label>
                                 <input id="inputState" class="form-control ml-3" name="Edit_Lname"
-                                    placeholder="Last Name"
-                                    value="Current Last Name">
+                                    placeholder="Last Name" value="{{customer.l_name}}">
 
                             </div>
 
                         </div>
-                        
+
                         <div class="row">
 
                             <div class="form-group col-md-6 ml-4">
                                 <label for="inputState"><i class="fas fa-envelope-open grey-text fa-2x"></i>
                                     Email</label>
-                                <input id="inputState" class="form-control ml-3" type="email" name="Edit_Email"
-                                    placeholder="Email"
-                                    value="Current Email">
+                                <input id="inputemail" class="form-control ml-3" type="email" name="Edit_Email"
+                                    placeholder="Email" value="{{customer.email}}">
                             </div>
 
                             <div class="form-group col-md-4 ml-4">
-                                <label for="inputState"><i class="fas fa-phone-square grey-text fa-2x"></i> Current
-                                    Phone</label>
-                                <input id="inputState" class="form-control ml-3" type="text" name="Edit_Phone"
-                                    placeholder="Phone No"
-                                    value="Current Phone">
+                                <label for="inputState"><i class="fas fa-id-badge grey-text fa-2x"></i> NIC</label>
+                                <input id="Edit_Nic" class="form-control ml-3" type="text" name="Edit_Nic"
+                                    placeholder="NIC">
 
                             </div>
 
@@ -809,14 +781,13 @@
                             <div class="form-group col-md-4 ml-4">
                                 <label for="inputState"><i class="fas fa-shipping-fast grey-text fa-2x"></i>
                                     Address</label>
-                                <input id="inputState" placeholder="EditAddLine1" class="form-control ml-3" type="text" name="Edit_Email"
-                                    value="Current Address">
+                                <input id="inputState" placeholder="Address Line One" class="form-control ml-3"
+                                    type="text" name="AddressLineOne">
                             </div>
 
                             <div class="form-group col-md-4 ml-4 mt-5">
-                                <input id="inputState" placeholder="Line Two" class="form-control ml-3" type="text"
-                                    name="Edit_AddLine2"
-                                    value="Current Line Two">
+                                <input id="inputState" placeholder="Address Line Two" class="form-control ml-3"
+                                    type="text" name="Edit_AddLine2">
 
                             </div>
 
@@ -832,7 +803,7 @@
                                 class="fas fa-user-friends  fa-medium-m grey-text fa-2x"></i> Gender</label>
 
                         <div class="row">
-                            
+
                             <!-- Group of default radios - option 1 -->
                             <div class="custom-radio form-group col-md-2 ml-5 mt-2 row_radio">
                                 <input type="radio" class="custom-control-input ml-5" id="defaultGroupExample1"
@@ -848,7 +819,7 @@
                             </div>
 
                         </div>
-                        
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-blue-grey btn-sm" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-dark-green btn-sm">Save changes</button>
@@ -865,11 +836,11 @@
     </div>
     <!--Edit User Model-->
 
-    
+
 
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
     </script>
@@ -884,7 +855,7 @@
     <!--Swiper.js CDN-->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
+
     <!--User Js-->
     <script src="{% static 'js/HomePage.js' %}"></script>
 

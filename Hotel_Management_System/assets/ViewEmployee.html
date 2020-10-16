@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,11 +20,11 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!--Mahen CSS-->
-    <link rel="stylesheet" href="css/Mahendra/Dashboard.css">
-    <link rel="stylesheet" href="css/Mahendra/index.css">
-    <link rel="stylesheet" href="css/Mahendra/EmpDetails.css">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/Dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/EmpDetails.css' %}">
 
-    <link rel="icon" type="image/gif/png" href="img/Logo.png">
+    <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png' %}">
     <title>View Employee</title>
 </head>
 
@@ -38,7 +39,8 @@
                     <div class="sideback">
                         <div class="sidebarTop d-flex flex-row pt-4">
                             <div class="ml-2">
-                                <img src="img/Logo.png" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
+                                <img src="{% static 'img/Logo.png'%}" alt="Gaga Addara Hotel"
+                                    style="width: 80px; height: 90px;">
                             </div>
 
                             <div class="d-flex flex-column ml-2">
@@ -92,8 +94,9 @@
                                 <a class="dropBtn1" href="#"><i class="fas fa-users mr-3"></i>Employees <span
                                         class="fas fa-sort-down first-sp"></span></a>
                                 <ul class="dropCont1">
-                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="employeerepo">Attendence Report</a></li>
                                     <li><a href="">Add Employee</a></li>
+
                                 </ul>
                             </li>
 
@@ -180,12 +183,20 @@
 
                     <div class="col-3 p-2 mt-4 mr-4 mb-5 viewEmp_left">
                         <div class="col-12">
-                            <img src="img/sample_profPic.jpg" class="img-fluid rounded mt-4"
+                            {% if employee.img %}
+                            <img src="{{employee.img.url}}" class="img-fluid rounded mt-4"
                                 style="width: inherit; height: 300px;">
-                            <h3 class="font-weight-bold mb-0">Customer Name</h3>
-                            <h5 class="text-muted font-weight-bold mt-0 pt-0">Reg Number</h5>
-                            <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aspernatur
-                                ducimus explicabo, cupiditate ea consequatur facere. Modi itaque quia laudantium!</p>
+                            {% else %}
+                            <img src="{% static 'img/sample_profPic.jpg'%}" class="img-fluid rounded mt-4"
+                                style="width: inherit; height: 300px;">
+                            {% endif %}
+                            <h3 class="font-weight-bold mb-0">{{employee.f_name}} {{employee.l_name}}</h3>
+                            <h5 class="text-muted font-weight-bold mt-0 pt-0">{{employee.empid}}</h5>
+                            {% if employee.remark %}
+                            <p class="small">{{employee.remark}}</p>
+                            {% else %}
+                            <p class="small">No any remars added yet</p>
+                            {% endif %}
 
                             <table class="table table-striped">
 
@@ -212,7 +223,7 @@
                                     </tr>
                                     <tr>
                                         <th class="col-3 p-2">Joined On</th>
-                                        <td class="text-right p-2">15/05/2016</td>
+                                        <td class="text-right p-2">{{employee.reg_date}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -260,13 +271,14 @@
                                                     <h5 class="font-weight-bold"><i
                                                             class="fas fa-user fa-medium-m mr-2 detailsIcon"></i>First
                                                         Name</h5>
-                                                    <h6 class="ml-5 font-weight-bold text-muted">FName of Employee</h5>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">{{employee.f_name}}
+                                                        </h5>
                                                 </div>
                                                 <div class="col-6">
                                                     <h5 class="font-weight-bold"><i
                                                             class="far fa-user fa-medium-m mr-2 detailsIcon"></i>Last
                                                         Name</h4>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">LName of Employee
+                                                        <h6 class="ml-5 font-weight-bold text-muted">{{employee.l_name}}
                                                         </h6>
                                                 </div>
                                             </div>
@@ -276,14 +288,15 @@
                                                 <div class="col-6">
                                                     <h5 class="font-weight-bold"><i
                                                             class="fas fa-id-badge mr-2 detailsIcon"></i>NIC</h5>
-                                                    <h6 class="ml-5 font-weight-bold text-muted">658925124V
+                                                    <h6 class="ml-5 font-weight-bold text-muted">{{employee.empnic}}
                                                     </h6>
                                                 </div>
                                                 <div class="col-6">
                                                     <h5 class="font-weight-bold"><i
                                                             class="fas fa-id-card-alt mr-2 detailsIcon"></i>Employee Id
                                                         </h4>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">EMP1588</h6>
+                                                        <h6 class="ml-5 font-weight-bold text-muted">{{employee.empid}}
+                                                        </h6>
                                                 </div>
                                             </div>
 
@@ -293,15 +306,19 @@
                                                     <h5 class="font-weight-bold"><i
                                                             class="fas fa-shipping-fast mr-2 detailsIcon"></i>Postal
                                                         Address</h5>
-                                                    <h6 class="ml-5 font-weight-bold text-muted">Address Line 1</h6>
-                                                    <h6 class="ml-5 font-weight-bold text-muted">Address Line 2</h6>
-                                                    <h6 class="ml-5 font-weight-bold text-muted">Postal Code</h6>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">{{employee.address_l1}}
+                                                    </h6>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">{{employee.address_l2}}
+                                                    </h6>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">{{employee.postcode}}
+                                                    </h6>
                                                 </div>
                                                 <div class="col-6">
                                                     <h5 class="font-weight-bold"><i
                                                             class="fas fa-user-friends  fa-medium-m  mr-2 detailsIcon"></i>Gender
                                                         </h4>
-                                                        <h6 class="ml-5 font-weight-bold text-muted">Female</h6>
+                                                        <h6 class="ml-5 font-weight-bold text-muted">Male
+                                                        </h6>
                                                 </div>
                                             </div>
 
@@ -310,7 +327,7 @@
                                                     <h5 class="font-weight-bold"><i
                                                             class="fas fa-envelope-open mr-2 detailsIcon"></i>Email
                                                     </h5>
-                                                    <h6 class="ml-5 font-weight-bold text-muted">employeename@gmail.com
+                                                    <h6 class="ml-5 font-weight-bold text-muted">{{employee.email}}
                                                     </h6>
                                                 </div>
                                             </div>
@@ -320,13 +337,14 @@
                                                     <h5 class="font-weight-bold"><i
                                                             class="fas fa-phone-square mr-2 detailsIcon"></i>Contact
                                                         No</h5>
-                                                    <h6 class="ml-5 font-weight-bold text-muted">+94 71 245 8125</h6>
+                                                    <h6 class="ml-5 font-weight-bold text-muted">{{employee.phone}}
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="col-3 yellow ml-0 p-0">
-                                            <img src="img/emp1-crop.gif" class="empImg">
+                                            <img src="{% static 'img/emp1-crop.gif'%}" class="empImg">
                                         </div>
                                     </div>
 
@@ -344,7 +362,8 @@
                                         <div class="col-5 tabe_topCards mr-3 p-0">
                                             <div class="row ml-0 p-0">
                                                 <div class="col-5 ml-0 p-0">
-                                                    <img src="img/Working-crop.gif" alt="" class="tab2_img">
+                                                    <img src="{% static 'img/Working-crop.gif '%}" alt=""
+                                                        class="tab2_img">
                                                 </div>
                                                 <div class="col-6">
                                                     <h3 class="font-weight-bold mt-2 mb-0">OT Hours</h3>
@@ -358,7 +377,8 @@
                                         <div class="col-5 tabe_topCards  p-0">
                                             <div class="row ml-0 pl-0">
                                                 <div class="col-5 ml-0 pl-0">
-                                                    <img src="img/leaves-crop.gif" alt="" class="tab2_img">
+                                                    <img src="{% static 'img/leaves-crop.gif ' %}'" alt=""
+                                                        class="tab2_img">
                                                 </div>
                                                 <div class="col-6">
                                                     <h3 class="font-weight-bold mt-2 mb-0">Leaves</h3>
@@ -376,20 +396,21 @@
                                                     class="fas fa-user-tie mr-2 detailsIcon"></i>Current
                                                 Position
                                             </h5>
-                                            <h6 class="ml-5 font-weight-bold text-muted">Cashier</h6>
+                                            <h6 class="ml-5 font-weight-bold text-muted">Waiter</h6>
                                         </div>
                                         <div class="col-4 mt-3">
                                             <h5 class="font-weight-bold"><i
                                                     class="fas fa-hand-holding-usd mr-2 detailsIcon"></i>Basic
                                                 Salary
                                                 </h4>
-                                                <h6 class="ml-5 font-weight-bold text-muted">00000.00 Rs</h6>
+                                                <h6 class="ml-5 font-weight-bold text-muted">{{employee.basic_sal}}0 Rs
+                                                </h6>
                                         </div>
                                         <div class="col-4 mt-3">
                                             <h5 class="font-weight-bold"><i
                                                     class="fas fa-business-time mr-2 detailsIcon"></i>OT Rate
                                             </h5>
-                                            <h6 class="ml-5 font-weight-bold text-muted">000.00 Rs/Hr
+                                            <h6 class="ml-5 font-weight-bold text-muted">{{employee.ot_rate}}0 Rs/Hr
                                             </h6>
                                         </div>
                                     </div>
@@ -423,21 +444,21 @@
                                         <h2 class="text-center font-weight-bold mt-3 mb-0 ml-2">Monthly OT Report</h2>
 
                                         <div class="col-11 ml-5 mr-5">
-                                            <canvas  id="OTReport" width="120px"
-                                                height="40px"></canvas>
+                                            <canvas id="OTReport" width="120px" height="40px"></canvas>
                                         </div>
 
-                                        
+
 
                                     </div>
                                     <div class="row white mr-5 ml-3 repoDiv">
-                                         <h2 class="text-center font-weight-bold mt-3 mb-0 ml-2">Monthly Attendence Report</h2>
+                                        <h2 class="text-center font-weight-bold mt-3 mb-0 ml-2">Monthly Attendence
+                                            Report</h2>
 
-                                         <div class="col-11 ml-5 mr-5">
-                                             <canvas id="AttReport" width="120px" height="40px"></canvas>
-                                         </div>
+                                        <div class="col-11 ml-5 mr-5">
+                                            <canvas id="AttReport" width="120px" height="40px"></canvas>
+                                        </div>
                                     </div>
-                                   
+
                                 </div>
                             </div>
 
@@ -597,8 +618,8 @@
         </div>
 
         <!-- Full Height Modal Right -->
-        <div class="modal fade right" id="editEmployee" tabindex="-1" role="dialog"
-            aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade right" id="editEmployee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
 
             <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
             <div class="modal-dialog modal-full-height modal-right modal-lg " role="document">
@@ -614,17 +635,19 @@
 
                     <div class="modal-body">
 
-                        <form action="" class="ml-2">
-                            
+                        <form action="editemp" method="GET" class="ml-2">
+                            {% csrf_token %}
+
                             <h4 class="font-weight-bold">Basic Information</h4>
                             <hr class="empEdiFrmUnderline" />
                             <div class="row mt-3">
-                                <img src="img/sample_profPic.jpg" alt="" class="rounded ml-3 "
+                                <img src="{% static 'img/sample_profPic.jpg'%}" alt="" class="rounded ml-3 "
                                     style="width: 150px; height: 100px;">
 
                                 <div class="col align-items-center">
                                     <input type="image" value="Upload Image" class="btn btn-mdb-color btn-sm mt-5">
-                                    <p class="grey-text small ml-1">Please upload a .jpg or a .png file with minimum dimesion of
+                                    <p class="grey-text small ml-1">Please upload a .jpg or a .png file with minimum
+                                        dimesion of
                                         400w x 400h, not exeeding 5MB</p>
                                 </div>
                             </div>
@@ -634,25 +657,27 @@
                                 <div class="form-group ml-5 mr-5">
                                     <label for="inputState" class="EmpEditLabText"><i
                                             class="fas fa-id-card-alt edit_sec_Icon  fa-2x"></i> Employee
-                                            Id</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_Lname"
-                                        placeholder="Last Name" value="EMP4588" disabled>
+                                        Id</label>
+                                    <input id="inputState" class="form-control ml-3" name="Edit_eid"
+                                        placeholder="Last Name" value="{{employee.empid}}" disabled>
 
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-user edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-user edit_sec_Icon  fa-2x"></i>
                                         First
                                         Name</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_Fname"
-                                        placeholder="First Name" value="Current First Name">
+                                        placeholder="First Name" value="{{employee.f_name}}">
                                 </div>
 
                                 <div class="form-group ml-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="far fa-user edit_sec_Icon  fa-2x"></i> Last
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="far fa-user edit_sec_Icon  fa-2x"></i> Last
                                         Name</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_Lname"
-                                        placeholder="Last Name" value="Current Last Name">
+                                        placeholder="Last Name" value="{{employee.l_name}}">
 
                                 </div>
 
@@ -670,24 +695,26 @@
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="far fa-id-badge edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="far fa-id-badge edit_sec_Icon  fa-2x"></i>
                                         NIC</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_nic"
-                                        placeholder="First Name" value="Current First Name">
+                                        placeholder="First Name" value="{{employee.empnic}}">
                                 </div>
 
                             </div>
-                            <hr/>
+                            <hr />
                             <h4 class="font-weight-bold mt-2">Contact Information</h4>
                             <hr class="empEdiFrmUnderline" />
-                            
+
                             <div class="row row-cols-3">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-map-signs edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-map-signs edit_sec_Icon  fa-2x"></i>
                                         Address Line One</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_assL1"
-                                        placeholder="Last Name" value="Address Line One">
+                                        placeholder="Last Name" value="{{employee.address_l1}}">
 
                                 </div>
 
@@ -696,7 +723,7 @@
                                             class="fas fa-map-marked-alt edit_sec_Icon  fa-2x"></i>
                                         Address Line Two</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_assL2"
-                                        placeholder="First Name" value="Address Line Two">
+                                        placeholder="First Name" value="{{employee.address_l2}}">
                                 </div>
 
                             </div>
@@ -704,7 +731,8 @@
                             <div class="row">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-city edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-city edit_sec_Icon  fa-2x"></i>
                                         City</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_city"
                                         placeholder="Last Name" value="Colombo">
@@ -712,10 +740,11 @@
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-sign edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-sign edit_sec_Icon  fa-2x"></i>
                                         Post Code</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_Epost_code"
-                                        placeholder="First Name" value="2548">
+                                        placeholder="First Name" value="{{employee.postcode}}">
                                 </div>
 
                             </div>
@@ -726,7 +755,7 @@
                                             class="fas fa-envelope-open-text edit_sec_Icon  fa-2x"></i>
                                         Email</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_email"
-                                        placeholder="Last Name" value="example@gmail.com" type="email">
+                                        placeholder="Last Name" value="{{employee.email}}" type="email">
 
                                 </div>
 
@@ -735,21 +764,22 @@
                                             class="fas fa-phone-square edit_sec_Icon  fa-2x"></i>
                                         Phone</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_E_phone"
-                                        placeholder="First Name" value="+94 71 5 254 658">
+                                        placeholder="First Name" value="{{employee.phone}}">
                                 </div>
 
                             </div>
 
-                            <hr/>
+                            <hr />
                             <h4 class="font-weight-bold mt-2">Employee Information</h4>
-                            <hr class="empEdiFrmUnderline"/>
+                            <hr class="empEdiFrmUnderline" />
                             <div class="row">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i class="fas fa-briefcase edit_sec_Icon  fa-2x"></i>
+                                    <label for="inputState" class="EmpEditLabText"><i
+                                            class="fas fa-briefcase edit_sec_Icon  fa-2x"></i>
                                         Job Title / Occupation</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_Occu"
-                                        placeholder="Last Name" value="Cashier">
+                                        placeholder="Last Name" value="Waiter">
 
                                 </div>
 
@@ -758,7 +788,7 @@
                                             class="fas fa-calendar-week edit_sec_Icon  fa-2x"></i>
                                         Date of Appointment</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_Appdate"
-                                        placeholder="First Name" value="Current First Name" type="date" disabled>
+                                        placeholder="First Name" value="{{employee.reg_date}}" type="date" disabled>
                                 </div>
 
                                 <div class="form-group ml-5">
@@ -766,7 +796,7 @@
                                             class="fas fa-hand-holding-usd edit_sec_Icon  fa-2x"></i> Basic
                                         Salary</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_Bsal"
-                                        placeholder="Last Name" value="00000.00 Rs">
+                                        placeholder="Last Name" value="{{employee.basic_sal}}">
 
                                 </div>
 
@@ -777,7 +807,7 @@
                                     <label for="inputState" class="EmpEditLabText"><i
                                             class="fas fa-chart-line  fa-2x edit_sec_Icon"></i> OT Rate</label>
                                     <input id="inputState" class="form-control ml-3" name="Edit_OTrate"
-                                        placeholder="Last Name" value="000.00 Rs">
+                                        placeholder="Last Name" value="{{employee.ot_rate}}">
 
                                 </div>
 
@@ -798,16 +828,18 @@
                             </div>
 
 
-                        </form>
 
 
-                       
+
+
                     </div>
 
                     <div class="modal-footer justify-content-end">
-                        <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary btn-sm">Save changes</button>
+                        <button type="reset" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
                     </div>
+
+                    </form>
 
                 </div>
 
@@ -845,7 +877,7 @@
     <!--Chart.js CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!--User Js-->
-    <script src="js/Dashboard.js"></script>
+    <script src="{% static 'js/Dashboard.js'%}"></script>
 
     <script>
         var ctx = document.getElementById('OTReport');
@@ -890,8 +922,19 @@
             options: {
                 scales: {
                     yAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        ticks: {
+                            beginAtZero: true,
                         }
                     }]
                 }
@@ -926,6 +969,26 @@
                     borderColor: [],
                     borderWidth: 0
                 }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                        }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        ticks: {
+                            beginAtZero: true,
+                        }
+                    }]
+                }
             }
         });
     </script>

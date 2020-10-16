@@ -20,5 +20,17 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("", include('userlogin.urls')),
+    path("method/", include('method.urls')),
+
+    #Sayuru URL s
+
+    path('cashPayment/', include('cashPayment.urls')),
+    path('cardPayment/', include('cardPayment.urls')),
+    path('cashDashboard/', include('cashDashboard.urls')),
+    path('cardDashboard/', include('cardDashboard.urls')),
+    path('paymentReport/', include('paymentReport.urls')),
+    path('revokedPayment/', include('revokedPayment.urls')),
+    path('removePayment/', include('removePayment.urls')),
+
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

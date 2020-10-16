@@ -74,6 +74,11 @@
                     </div>
                 </li>
 
+                {% if userid == None %}
+                <li class="nav-item active ml-4 mr-2 row">
+                    <a class="nav-link" href="login" title="Sign in"><i class="fas fa-user-cricle fa-1x"></i></a>
+                </li>
+                {% else %}
                 <li class="nav-item active ml-4 row">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
@@ -101,6 +106,7 @@
                             Out</a>
                     </div>
                 </li>
+                {% endif %}
 
                 <li class="nav-item active ml-4 mr-2 row">
                     <a class="nav-link" href="login" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,98 +20,100 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!--Mahen CSS-->
-    <link rel="stylesheet" href="css/Mahendra/Dashboard.css">
-    <link rel="stylesheet" href="css/Mahendra/index.css">
-    <link rel="stylesheet" href="css/Mahendra/addEmployee.css">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/Dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Mahendra/addEmployee.css' %}">
 
-    <link rel="icon" type="image/gif/png" href="img/Logo.png">
+    <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png' %}">
     <title>Dashboard</title>
 </head>
 
 <body>
 
     <div class="container-fluid p-0 m-0 grey lighten-5">
-        <div class="row row-cols-2 p-0 m-0 pageContent" >
+        <div class="row row-cols-2 p-0 m-0 pageContent">
 
             <!--Start of SlideBar-->
             <div class="col-2 p-0 m-0" style="z-index: 0;">
                 <nav class="sidebar">
                     <div class="sideback">
-                    <div class="sidebarTop d-flex flex-row pt-4">
-                        <div class="ml-2">
-                            <img src="img/Logo.png" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
+                        <div class="sidebarTop d-flex flex-row pt-4">
+                            <div class="ml-2">
+                                <img src="{% static 'img/Logo.png' %}" alt="Gaga Addara Hotel"
+                                    style="width: 80px; height: 90px;">
+                            </div>
+
+                            <div class="d-flex flex-column ml-2">
+                                <h3 class="pt-3" style="font-weight: bold;">Hotel</h3>
+                                <h4 style="font-weight: bold;">Gaga Addara</h4>
+                            </div>
+
                         </div>
 
-                        <div class="d-flex flex-column ml-2">
-                            <h3 class="pt-3" style="font-weight: bold;">Hotel</h3>
-                            <h4 style="font-weight: bold;">Gaga Addara</h4>
-                        </div>
+                        <ul>
+                            <li class=""
+                                style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;">
+                                <a href="#"> <i class="fas fa-chart-pie mr-3"> </i> Dashboard</a>
 
-                    </div>
 
-                    <ul>
-                        <li class="" style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;">
-                            <a href="#"> <i class="fas fa-chart-pie mr-3"> </i>  Dashboard</a>
-                            
-                            
-                        </li>
+                            </li>
 
-                        <li><a class="dropBtn2" href="#"><i class="fas fa-box mr-3"></i>Packages<span
-                                    class="fas fa-sort-down secound-sp"></span></a>
-                            <ul class="dropCont2">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropBtn2" href="#"><i class="fas fa-box mr-3"></i>Packages<span
+                                        class="fas fa-sort-down secound-sp"></span></a>
+                                <ul class="dropCont2">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a class="dropbtnRooms" href="#"><i class="fas fa-bed mr-3"></i>Rooms<span
-                                    class="fas fa-sort-down rooms-sp"></span></a>
-                            <ul class="dropContRooms">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropbtnRooms" href="#"><i class="fas fa-bed mr-3"></i>Rooms<span
+                                        class="fas fa-sort-down rooms-sp"></span></a>
+                                <ul class="dropContRooms">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a class="dropbtnHalls" href="#"><i class="fas fa-hotel mr-3"></i>Reception Halls<span
-                                    class="fas fa-sort-down Halls-sp"></span></a>
-                            <ul class="dropContHalls">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropbtnHalls" href="#"><i class="fas fa-hotel mr-3"></i>Reception Halls<span
+                                        class="fas fa-sort-down Halls-sp"></span></a>
+                                <ul class="dropContHalls">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a class="dropBtnMenu" href="#"><i class="fas fa-concierge-bell mr-3"></i>Food Menu<span
-                                    class="fas fa-sort-down Menu-sp"></span></a>
-                            <ul class="dropContMenu">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropBtnMenu" href="#"><i class="fas fa-concierge-bell mr-3"></i>Food Menu<span
+                                        class="fas fa-sort-down Menu-sp"></span></a>
+                                <ul class="dropContMenu">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li>
-                            <a class="dropBtn1" href="#"><i class="fas fa-users mr-3"></i>Employees <span
-                                    class="fas fa-sort-down first-sp"></span></a>
-                            <ul class="dropCont1">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li>
+                                <a class="dropBtn1" href="#"><i class="fas fa-users mr-3"></i>Employees <span
+                                        class="fas fa-sort-down first-sp"></span></a>
+                                <ul class="dropCont1">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a class="dropBtnReport" href="#"><i class="fas fa-clipboard-list mr-3"></i>Food Report<span
-                                    class="fas fa-sort-down Report-sp"></span></a>
-                            <ul class="dropContReport">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
-                        
+                            <li><a class="dropBtnReport" href="#"><i class="fas fa-clipboard-list mr-3"></i>Food
+                                    Report<span class="fas fa-sort-down Report-sp"></span></a>
+                                <ul class="dropContReport">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a href=""><i class="fas fa-star-half-alt mr-3"></i>Feedback</a></li>
-                        <li><a href=""><i class="far fa-id-card mr-3"></i>Contact Us</a></li>
+
+                            <li><a href=""><i class="fas fa-star-half-alt mr-3"></i>Feedback</a></li>
+                            <li><a href=""><i class="far fa-id-card mr-3"></i>Contact Us</a></li>
 
 
 
-                    </ul>
+                        </ul>
                     </div>
                 </nav>
             </div>
@@ -122,21 +125,22 @@
                 <!--#ff4444-->
                 <nav class="navbar-expand-lg  pl-4 p-0 d-flex justify-content-between"
                     style="background-color: rgba(250, 68, 68 , 0.9); height: 70px;">
-                    
-                    <h1 class="navbar-brand mt-2" style="font-weight: bold; font-size: 30px;" ><i class="fas fa-user-plus mr-3"></i>ADD EMPLOYEE</h1>
-                    
+
+                    <h1 class="navbar-brand mt-2" style="font-weight: bold; font-size: 30px;"><i
+                            class="fas fa-user-plus mr-3"></i>ADD EMPLOYEE</h1>
+
                     <div class="mr-5">
-                        
+
 
                         <ul class="navbar-nav ml-auto nav-flex-icons">
                             <li class="nav-item mt-1">
                                 <a class="nav-link waves-effect waves-light">
-                                   <i class="fas fa-bell fa-2x mt-2 mr-3"></i>
+                                    <i class="fas fa-bell fa-2x mt-2 mr-3"></i>
                                 </a>
                             </li>
                             <li class="nav-item mt-1">
                                 <a class="nav-link waves-effect waves-light">
-                                   <i class="fas fa-envelope fa-2x mt-2 mr-3"></i>
+                                    <i class="fas fa-envelope fa-2x mt-2 mr-3"></i>
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
@@ -153,208 +157,214 @@
                                             class="img-fluid z-depth-1 rounded m-3" alt="Responsive image"
                                             style="width: 70px; height: 70px;">
 
-                                            <div class="d-flex flex-column">
-                                                <p class="m-0 p-0">Name</p>
-                                                mane15488@gmail.com
-                                            </div>
+                                        <div class="d-flex flex-column">
+                                            <p class="m-0 p-0">Name</p>
+                                            mane15488@gmail.com
+                                        </div>
                                     </div>
-                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"><i class="far fa-user-circle mr-3"></i>My Profile</a>
-                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"> <i class="fas fa-sign-out-alt mr-3"></i>Log
+                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"><i
+                                            class="far fa-user-circle mr-3"></i>My Profile</a>
+                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"> <i
+                                            class="fas fa-sign-out-alt mr-3"></i>Log
                                         Out</a>
                                 </div>
                             </li>
                         </ul>
-                            
-                            
+
+
                     </div>
 
                 </nav>
 
-            <!--Middle part-->
+                <!--Middle part-->
 
-            <form action="">
-                <div class="row m-4">
-                    <div class="col-6 p-3 ">
-                        <div class="col-12 white p-2 formTop">
-                            <h2 class="text-center font-weight-bold mb-0 mt-2">BASIC INFO</h2>
-                            <hr class="underline mt-0">
+                <form enctype="multipart/form-data" action="adduser" method="POST">
+                    {% csrf_token %}
+                    <div class="row m-4">
+                        <div class="col-6 p-3 ">
+                            <div class="col-12 white p-2 formTop">
+                                <h2 class="text-center font-weight-bold mb-0 mt-2">BASIC INFO</h2>
+                                <hr class="underline mt-0">
 
-                            <h5 class="font-weight-bold ml-2">Employee Image</h5>
-                            <div class="row ml-2 mr-2 mt-4">
-                                <img src="img/sample-profile.png" alt="" style="width: 100px; height: 100px;">
-                                <div class="col-8 pt-4">
-                                    <input class="btn btn-dark w-50 btn-sm" value="Upload Photo" type="button">
-                                    <input class="btn btn-dark w-50 btn-sm" value="Take Photo" type="button" />
-                                </div>
-                            </div>
-
-                            <div class="row ml-4 mr-2 mt-4 editEmpFormRow">
-                                <div class="md-form mr-2 mt-2 mb-0">
-                                    <input type="text" name="addEmpFname" id="addEmpFname"
-                                        class="form-control addempForm" required>
-                                    <label for="addEmpFname"><i class="fas fa-user mr-2"></i>FirstName</label>
+                                <h5 class="font-weight-bold ml-2">Employee Image</h5>
+                                <div class="row ml-2 mr-2 mt-4">
+                                    <img src="{% static 'img/sample-profile.png' %}" alt=""
+                                        style="width: 100px; height: 100px;">
+                                    <div class="col-8 pt-4">
+                                        <input type="file" class="btn btn-dark w-50 btn-sm" value="Upload Image"
+                                            name="empImgUpload" id="empImgUpload">
+                                           
+                                        <!-- <input type="" class="btn btn-dark w-50 btn-sm" value="Take Photo" /> -->
+                                    </div>
                                 </div>
 
-                                <div class="md-form ml-5  mt-2 mb-0" editEmpFormRow>
-                                    <input type="text" name="addEmpLname" id="addEmpLname"
-                                        class="form-control addempForm" required>
-                                    <label for="addEmpLname"><i class="far fa-user mr-2"></i>Last Name</label>
+                                <div class="row ml-4 mr-2 mt-4 editEmpFormRow">
+                                    <div class="md-form mr-2 mt-2 mb-0">
+                                        <input type="text" name="addEmpFname" id="addEmpFname"
+                                            class="form-control addempForm" required>
+                                        <label for="addEmpFname"><i class="fas fa-user mr-2"></i>FirstName</label>
+                                    </div>
+
+                                    <div class="md-form ml-5  mt-2 mb-0" editEmpFormRow>
+                                        <input type="text" name="addEmpLname" id="addEmpLname"
+                                            class="form-control addempForm" required>
+                                        <label for="addEmpLname"><i class="far fa-user mr-2"></i>Last Name</label>
+                                    </div>
+
                                 </div>
 
-                            </div>
+                                <div class="row ml-4 mr-2 editEmpFormRow">
+                                    <div class="md-form mr-2 mt-2 mb-0">
+                                        <input type="text" id="addEmpNIC" name="addEmpNIC"
+                                            class="form-control addempForm" required>
+                                        <label for="addEmpNIC"><i class="fas fa-id-badge mr-2"></i>NIC</label>
+                                    </div>
 
-                            <div class="row ml-4 mr-2 editEmpFormRow">
-                                <div class="md-form mr-2 mt-2 mb-0">
-                                    <input type="text" id="addEmpNIC" name="addEmpNIC" class="form-control addempForm"
-                                        required>
-                                    <label for="addEmpNIC"><i class="fas fa-id-badge mr-2"></i>NIC</label>
                                 </div>
 
+                                <h6 class="font-weight-bold text-muted ml-2 mt-3">Gender</h6>
+
+                                <div class="ml-4">
+                                    <label><input type="radio" id="addEmpMale" name="addEmpGender" value="Male">
+                                        Male</label>
+                                </div>
+
+                                <div style="position: relative; left: 100px;">
+                                    <label class="radio-inline">
+                                        <input type="radio" id="addEmpFEMale" name="addEmpGender" value="Female">
+                                        Female</label>
+                                </div>
+
+
                             </div>
 
-                            <h6 class="font-weight-bold text-muted ml-2 mt-3">Gender</h6>
-
-                            <div class="custom-control custom-radio custom-control-inline ml-4">
-                                <input type="radio" class="custom-control-input" id="addEmpMale"
-                                    name="addEmpMale">
-                                <label class="custom-control-label" for="defaultInline1">Male</label>
-                            </div>
-
-                            <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" class="custom-control-input" id="addEmpFemale"
-                                    name="addEmpFemale">
-                                <label class="custom-control-label" for="defaultInline2">Female</label>
-                            </div>
-                            
-                            
                         </div>
+                        <div class="col-6 p-3">
+                            <div class="col-12 white p-2 formTop">
+                                <h2 class="text-center font-weight-bold mb-0 mt-2">CONTACT INFO</h2>
+                                <hr class="underline mt-0">
 
-                    </div>
-                    <div class="col-6 p-3">
-                        <div class="col-12 white p-2 formTop">
-                            <h2 class="text-center font-weight-bold mb-0 mt-2">CONTACT INFO</h2>
-                            <hr class="underline mt-0">
 
-                            
                                 <div class="md-form mr-2 mt-2 mb-0 ml-4">
                                     <input type="email" id="addEmpEmail" name="addEmpEmail"
-                                        class="form-control addempForm  w-75"
-                                        required>
+                                        class="form-control addempForm  w-75" required>
                                     <label for="addEmpEmail"><i class="fas fa-envelope mr-2"></i>Employee Email</label>
                                 </div>
 
-                            
 
-                            <div class="row ml-4 mr-2  editEmpFormRow">
-                                <div class="md-form mr-2 mt-2 mb-0">
-                                    <input type="text" id="addEmpPhone" name="addEmpPhone"
-                                        class="form-control addempForm" required>
-                                    <label for="addEmpPhone"><i class="fas fa-phone mr-2"></i>Contact No</label>
+
+                                <div class="row ml-4 mr-2  editEmpFormRow">
+                                    <div class="md-form mr-2 mt-2 mb-0">
+                                        <input type="text" id="addEmpPhone" name="addEmpPhone"
+                                            class="form-control addempForm" required>
+                                        <label for="addEmpPhone"><i class="fas fa-phone mr-2"></i>Contact No</label>
+                                    </div>
+
+                                </div>
+
+                                <h5 class="font-weight-bold ml-2 mt-3">Address</h5>
+
+                                <div class="row ml-4 mr-2 mt-2 editEmpFormRow">
+                                    <div class="md-form mr-2 mt-2 mb-0">
+                                        <input type="text" name="addEpLineOne" id="addEpLineOne"
+                                            class="form-control addempForm" required>
+                                        <label for="addEpLineOne"><i class="fas fa-home mr-2"></i>Line One</label>
+                                    </div>
+
+                                    <div class="md-form ml-5  mt-2 mb-0" editEmpFormRow>
+                                        <input type="text" id="addEpLineTwo" name="addEpLineTwo"
+                                            class="form-control addempForm" required>
+                                        <label for="addEpLineTwo"><i class="fas fa-sign mr-2"></i>Line Two</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="row ml-4 mr-2  editEmpFormRow">
+                                    <div class="md-form mr-2 mt-2 mb-0">
+                                        <input type="text" id="addEmpcity" name="addEmpcity"
+                                            class="form-control addempForm" required>
+                                        <label for="addEmpcity"><i class="fas fa-city mr-2"></i>City</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="row ml-4 mr-2  editEmpFormRow">
+                                    <div class="md-form mr-2 mt-2 mb-0">
+                                        <input type="text" id="addEmpPCode" name="addEmpPCode"
+                                            class="form-control addempForm" required>
+                                        <label for="addEmpPCode"><i class="fas fa-mail-bulk mr-2"></i>Post Code</label>
+                                    </div>
+
                                 </div>
 
                             </div>
-
-                            <h5 class="font-weight-bold ml-2 mt-3">Address</h5>
-
-                            <div class="row ml-4 mr-2 mt-2 editEmpFormRow">
-                                <div class="md-form mr-2 mt-2 mb-0">
-                                    <input type="text" name="addEpLineOne" id="addEpLineOne"
-                                        class="form-control addempForm" required>
-                                    <label for="addEpLineOne"><i class="fas fa-home mr-2"></i>Line One</label>
-                                </div>
-
-                                <div class="md-form ml-5  mt-2 mb-0" editEmpFormRow>
-                                    <input type="text" id="addEpLineOne" name="addEpLineOne"
-                                        class="form-control addempForm" required>
-                                    <label for="addEpLineOne"><i class="fas fa-sign mr-2"></i>Line Two</label>
-                                </div>
-
-                            </div>
-
-                            <div class="row ml-4 mr-2  editEmpFormRow">
-                                <div class="md-form mr-2 mt-2 mb-0">
-                                    <input type="text" id="addEmpcity" name="addEmpcity" class="form-control addempForm"
-                                        required>
-                                    <label for="addEmpcity"><i class="fas fa-city mr-2"></i>City</label>
-                                </div>
-
-                            </div>
-
-                            <div class="row ml-4 mr-2  editEmpFormRow">
-                                <div class="md-form mr-2 mt-2 mb-0">
-                                    <input type="text" id="addEmpPCode" name="addEmpPCode"
-                                        class="form-control addempForm" required>
-                                    <label for="addEmpPCode"><i class="fas fa-mail-bulk mr-2"></i>Post Code</label>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row m-4 p-3 white">
-
-                    <div class="col-12">
-                        <h2 class="text-center font-weight-bold mb-0 mt-2">JOB INFO</h2>
-                        <hr class="underline mt-0">
-                    </div>
-
-                    <div class="col-12">
-                        <div class="row ml-4 mr-2 mt-2 editEmpFormRow d-flex  justify-content-between">
-                            <div class="md-form mr-2 mt-2 mb-0 w-25">
-                                
-                                <input type="text" name="addEmpEID" id="addEmpEID" class="form-control addempForm"
-                                    required>
-                                <label for="addEmpEID"><i class="fas fa-id-card-alt mr-2"></i>Eployee ID</label>
-                            </div>
-
-                            <div class="md-form ml-5  mt-2 mb-0 w-25" >
-                                
-                                <input type="date" id="addempDateOfJoin" name="addempDateOfJoin"
-                                    class="form-control addempForm" value="09/09/2020" required>
-                                <label for="addempDateOfJoin"><i class="far fa-calendar-alt mr-2"></i>Date Of Join</label>
-                            </div>
-
-                            <div class="md-form ml-5  mt-2 mb-0 w-25" >
-                                <select class="md-form selField">
-                                    <option value="" disabled selected><i class="fas fa-user-tie mr-2"></i>Occupation
-                                    </option>
-                                    <option value="Admin">Admin</option>
-                                    <option value="Cashier">Cashier</option>
-                                    <option value="Receptionist">Receptionist</option>
-                                    <option value="Waiter">Waiter</option>
-                                </select>
-                            </div>
-
                         </div>
                     </div>
 
-                    <div class="col-12">
-                         <div class="row ml-4 mr-2 mt-2 editEmpFormRow d-flex  justify-content-between">
-                             <div class="md-form mr-2 mt-2 mb-0 w-25">
-                                 
-                                 <input type="text" name="addempSal" id="addempSal" class="form-control addempForm"
-                                     required value="45 000 Rs">
-                                 <label for="addempSal"><i class="fas fa-dollar-sign mr-2"></i>Basic Salary</label>
-                             </div>
+                    <div class="row m-4 p-3 white">
 
-                             <div class="md-form ml-5  mt-2 mb-0 w-25">
-                                 
-                                 <input type="text" id="addempOTRate" name="addempOTRate"
-                                     class="form-control addempForm" required>
-                                 <label for="addempOTRate"><i class="fas fa-stopwatch mr-2"></i>OT Rate</label>
-                             </div>
+                        <div class="col-12">
+                            <h2 class="text-center font-weight-bold mb-0 mt-2">JOB INFO</h2>
+                            <hr class="underline mt-0">
+                        </div>
 
-                             
-                             <div class="md-form ml-5  mt-5 mb-0 w-25">
-                                 
-                             </div>
+                        <div class="col-12">
+                            <div class="row ml-4 mr-2 mt-2 editEmpFormRow d-flex  justify-content-between">
+                                <div class="md-form mr-2 mt-2 mb-0 w-25">
 
-                         </div>
-                    </div>
+                                    <input type="text" name="addEmpEID" id="addEmpEID" class="form-control addempForm"
+                                        required disabled>
+                                    <label for="addEmpEID"><i class="fas fa-id-card-alt mr-2"></i>Eployee ID</label>
+                                </div>
 
-                    <div class="col-12 d-flex  justify-content-end">
+                                <div class="md-form ml-5  mt-2 mb-0 w-25">
+
+                                    <input type="text" name="dateOfJoin" id="dateOfJoin"
+                                        class="form-control addempForm pl-4 pb-2" required disabled>
+                                    <label for="addEmpEID"><i class="fas fa-calendar mr-2"></i></label>
+                                </div>
+
+                                <div class="md-form ml-5  mt-2 mb-0 w-25">
+                                    <select class="md-form selField" name="setOccu">
+                                        <option disabled selected><i
+                                                class="fas fa-user-tie mr-2"></i>Occupation
+                                        </option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="Cashier">Cashier</option>
+                                        <option value="Receptionist">Receptionist</option>
+                                        <option value="Waiter">Waiter</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="row ml-4 mr-2 mt-2 editEmpFormRow d-flex  justify-content-between">
+                                <div class="md-form mr-2 mt-2 mb-0 w-25">
+
+                                    <input type="text" name="addempSal" id="addempSal" class="form-control addempForm"
+                                        required value="45000">
+                                    <label for="addempSal"><i class="fas fa-dollar-sign mr-2"></i>Basic Salary
+                                        (Rs)</label>
+                                </div>
+
+                                <div class="md-form ml-5  mt-2 mb-0 w-25">
+
+                                    <input type="text" id="addempOTRate" name="addempOTRate"
+                                        class="form-control addempForm" required>
+                                    <label for="addempOTRate"><i class="fas fa-stopwatch mr-2"></i>OT Rate (Rs)</label>
+                                </div>
+
+
+                                <div class="md-form ml-5  mt-5 mb-0 w-25">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 d-flex  justify-content-end">
 
                             <div class="mt-3 mb-0" editEmpFormRow>
 
@@ -368,22 +378,22 @@
                                 <input type="submit" id="form1" class="btn btn-pink subbtn font-weight-bold">
 
                             </div>
-                            
+
 
                         </div>
                     </div>
 
-                    </form>
+                </form>
 
-                   
 
-                
 
-            
 
-                
 
-            <!--Middle part-->
+
+
+
+
+                <!--Middle part-->
 
                 <!-- Footer -->
                 <footer class="page-footer font-small text-light">
@@ -515,24 +525,24 @@
 
                 </footer>
                 <!-- Footer -->
-                </div>
-
-
             </div>
-            <!--End of Content Area-->
-
 
 
         </div>
+        <!--End of Content Area-->
 
-        
+
 
     </div>
 
 
 
-    
-    
+    </div>
+
+
+
+
+
 
 
 
@@ -556,7 +566,15 @@
     <!--Chart.js CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!--User Js-->
-    <script src="js/Dashboard.js"></script>
+    <script src="{% static 'js/Dashboard.js' %}"></script>
+    <script>
+        var today = new Date();
+        var day = String(today.getDate());
+        var month = String(today.getMonth() + 1);
+        var year = String(today.getFullYear());
+        var formatedDay = year + '-' + month + '-' + day ;
+        document.getElementById("dateOfJoin").value = formatedDay;
+    </script>
 
 
 </body>
