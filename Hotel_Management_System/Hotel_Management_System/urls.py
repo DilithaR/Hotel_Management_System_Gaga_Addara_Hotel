@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("", include('userlogin.urls')),
+    path("employeeAttendence/", include('faceRecognitionAttendence.urls')),
     path("method/", include('method.urls')),
 
     #Sayuru URL s
