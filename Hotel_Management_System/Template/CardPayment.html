@@ -107,26 +107,33 @@
     <div class="middleArea" style="overflow-x: hidden;">
 
 	<br><br>
-	
+	<!--Card payment form-->
 	<center>
 			<form method="post" action="#">
                 {% csrf_token %}
-                <center><h2><u><b>Card Payment Form</b></u></h2></center><br>
-                    
-                    {{form}}
-                    <br><br>
+                <table border="5">
+                    <td>
+                        <center><h2><u><b>Card Payment Form</b></u></h2></center><br>
+                        <table border="0">  
+                            <td>
+                                {{form}}
+                            </td>
+                        </table> 
+                        <br><br>
 
-                    <center>
-					<p><b>Approved:</b><br>
-                    <img src="{% static 'img/card.png' %}" style="width:150px;height:30px">
-                    </center>
+                        <center>
+					    <p><b>Approved:</b><br>
+                        <img src="{% static 'img/card.png' %}" style="width:150px;height:30px">
+                        </center>
 
-                    <br><br>
+                        <br><br>
 
-					<center><input type="submit" id="submitCard" value="Complete Transaction" onclick=""></center><br>
-				
+					    <center><input type="submit" id="submitCard" value="Complete Transaction" onclick=""></center><br>
+                    </td>
+                </table>
 			</form>	
-	</center><br><br>	
+    </center><br><br>
+    <!--End of Card payment form-->		
 
 	<!-- Footer -->
         <footer class="page-footer font-small text-light">

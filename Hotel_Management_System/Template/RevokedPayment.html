@@ -111,6 +111,7 @@
                             <ul class="dropContPayment">
                                 <li><a href="/cashDashboard">Cash Payments</a></li>
                                 <li><a href="/cardDashboard">Card Payments</a></li>
+                                <li class="" style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;"><a href="/revokedPayment">Revoked Payments</a></li>
                                 <li><a href="/paymentReport">Payment Report</a></li>
                             </ul>
                         </li>
@@ -183,24 +184,48 @@
 
                 <br>
                 <center>
-                    <table id="rev" border="5" width="400px">
-                        <td>
-                            <form method="post">
+                    <form method="post" action="#">
+                        {% csrf_token %}
+                        <table id="rev" border="5">
+                            <td>
                                 <center><h2><u><b>Revoked Payment Form</b></u></h2></center><br>
-
-                                <p><b>Payment Id:</b><br>
-                                <input type="text" name="paymentid" id="pId" required>
-
-                                <p><b>Paid Amount:</b><br>
-                                <input type="text" name="paidamount" id="paid" required>
-
-                                <p><b>Returning Amount:(85%)</b><br>
-                                <input type="text" name="returning" id="return" required>
-
-                                <button id="revoke" onclick="">Revoke Payment</button>   
-                            </form>    
-                    </table>    
-                </center><br>    
+                                <table border="0">  
+                                    <td>
+                                        {{form}}
+                                    </td>
+                                </table> 
+                                <br><br>
+                                <center><input type="submit" id="revoke" value="Revoke Payment" onclick=""></center><br>
+                            </td>
+                        </table>        
+                    </form>        
+                    <br><br>
+                
+                    <table border="3" width="1000px">
+                        <tr>
+                            <th><b><center>Revoked ID</center></b></th>
+                            <th><b><center>Payment Type(Cash/Card)</center></b></th>
+                            <th><b><center>Paid Amount(Rs:)</center></b></th>
+                            <th><b><center>Revoked Amount(Rs:)</center></b></th>
+                        </tr>
+                        {% for instance in object_list %}
+                        <tr>
+                            <td>
+                                <center>{{ instance.id }}</center>
+                            </td>
+                            <td>
+                                <center>{{ instance.Payment_type }}</center>
+                            </td>
+                            <td>
+                                <center>{{ instance.Paid_amount }}</center>
+                            </td>
+                            <td>
+                                <center>{{ instance.Rev_amount }}</center>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table><br><br><br>
+                </center>    
 
                 <!-- Footer -->
                 <footer class="page-footer font-small text-light">

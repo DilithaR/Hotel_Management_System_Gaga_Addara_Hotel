@@ -32,15 +32,17 @@
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
+        var cash = 14500;
+        var card = 6500;
 
         var data = google.visualization.arrayToDataTable([
           ['PaymentType', 'Amount'],
-          ['Cash Payments(Rs:)', 87550],
-          ['Card Payments(Rs:)', 43400]
+          ['Cash Payments(Rs:)', cash],
+          ['Card Payments(Rs:)', card]
         ]);
 
         var options = {
-          title: 'Monthly Income'
+          title: 'Payment Details'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -133,6 +135,7 @@
                             <ul class="dropContPayment">
                                 <li><a href="/cashDashboard">Cash Payments</a></li>
                                 <li><a href="/cardDashboard">Card Payments</a></li>
+                                <li><a href="/revokedPayment">Revoked Payments</a></li>
                                 <li class="" style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;"><a href="/paymentReport">Payment Report</a></li>
                             </ul>
                         </li>
@@ -258,6 +261,7 @@
                                 <h6>{{totcard}}</h6>
                             </td>
                         </tr>
+                        <!--
                         <tr>
                             <td>
                                 <h4><b>Total Income</b></h4>
@@ -266,6 +270,7 @@
                                 <h6><b></b></h6>
                             </td>
                         </tr>
+                        -->
                     </table><br><br>
                 </center>
 
