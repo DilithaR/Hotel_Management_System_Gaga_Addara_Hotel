@@ -206,7 +206,7 @@
                                 <center>{{ instance.Amount }}</center>
                             </td>
                             <td>
-                                <center><button class="btn btn-warning btn-sm" onclick="location.href='/revokedPayment'">Revoke</button><a href="{% url 'delete_card' instance.id %}" class="btn btn-danger btn-sm" role="button">Delete</a></center>
+                                <center><button class="btn btn-warning btn-sm" onclick="location.href='/revokedPayment'">Revoke</button><a href="{% url 'delete_card' instance.id %}" onclick="return confirm('Do you want to delete this entry?')" class="btn btn-danger btn-sm" role="button">Delete</a></center>
                             </td>
                         </tr>
                         {% endfor %}

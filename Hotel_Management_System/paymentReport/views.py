@@ -4,4 +4,23 @@ from cardPayment.models import cardPayment
 from django.db.models import Sum
 
 def paymentReport(request):
-    return render(request, "PaymentReport.html", {'totcash':cashPayment.objects.aggregate(Sum('Net_amount')), 'totcard':cardPayment.objects.aggregate(Sum('Amount'))})
+    
+    totcash = 0.0
+    totcard = 0.0
+
+    queryset = cashPayment.objects.all()
+    queryset2 = cardPayment.objects.all()
+
+    for a in queryset:
+        totcash = totcash + a.Net_amount
+
+    for b in queryset2:
+        totcard = totcard + b.Amount
+
+    total = totcash + totcard
+
+    context = {
+        'totcash': totcash, 'totcard': totcard, 'total': total
+    }
+
+    return render(request, "PaymentReport.html", context)
