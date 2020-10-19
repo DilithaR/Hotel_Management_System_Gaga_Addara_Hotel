@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +22,7 @@
     <!--Mahen CSS-->
 
 
-    <link rel="icon" type="image/gif/png" href="img/Logo.png">
+    <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png' %}">
     <title>Dashboard</title>
 </head>
 
@@ -43,7 +44,7 @@
                             class="fas fa-chart-pie mr-3"></i>EMPLOYEE ATTENDENCE</h1>
 
 
-                    <a href="" class="d-flex flex-column"
+                    <a href="login/login" class="d-flex flex-column"
                         style="position: absolute; right: 50px; color: darkslategray;">
                         <i class="fas fa-sign-in-alt fa-3x pb-0"></i>
                         <p class="ml-2" style="font-size: smaller; color: white;">Login</p>
@@ -59,7 +60,7 @@
                         <div class="row row-cols-2">
 
                             <div class="container col-6 pl-5">
-                                
+
                                 <img src="{% url 'connectCamera' %}" alt="" style="height: 100%;" class="col-12">
                             </div>
 
@@ -71,11 +72,11 @@
 
                                 <div class="row d-flex justify-content-center">
 
-                                    <form class="text-center col-9" action="#!">
+                                    <form class="text-center col-9" action="ditectEmp" method="POST">
 
                                         {% csrf_token %}
 
-                                        <p class="h3 mb-4">Mark Your Attendence</p>
+                                        <p class="h3 mb-2">Mark Your Attendence</p>
 
                                         <p class="pb-0 mb-0 text-center font-weight-bold text-muted">Just type your
                                             Employee ID and
@@ -84,7 +85,7 @@
                                         </p>
 
                                         <center>
-                                            <input type="text" id="defaultSubscriptionFormPassword"
+                                            <input type="text" id="defaultSubscriptionFormPassword" name="empID_check"
                                                 class="form-control mb-4 col-8 text-center" placeholder="Employee ID">
 
                                             <button class="btn btn-success btn-block col-5" style="font-weight: bold;"
@@ -96,30 +97,50 @@
                                 </div>
 
 
-                                <div class="row d-flex justify-content-center mt-5">
+                                <div class="row d-flex justify-content-center mt-2">
+                                    {% if Employee.f_name != None %}
+                                    <form action="markAttendence" enctype="multipart/from-data" method="POST">
+                                        {% csrf_token %}
+                                        <div class="d-flex flex-column">
+                                            <div class="row d-flex justify-content-center">
+                                                <label class="font-weight-bold">Employee Name</label>
+                                                <input type="text" id="defaultSubscriptionFormPassword"
+                                                    class="form-control mb-4 text-center col-10"
+                                                    placeholder="Employee Name" name="empName"
+                                                    value="{{Employee.f_name}} {{Employee.l_name}}" disabled>
+                                                <input type="text" id="hiddenID"
+                                                    class="form-control mb-4 text-center col-5"
+                                                    placeholder="Employee Name" name="hiddenID"
+                                                    value="{{Employee.empid}}" style="display: hidden;">
 
-                                    <div class="d-flex flex-column">
-                                        <div class="row d-flex justify-content-center">
-                                            <input type="text" id="defaultSubscriptionFormPassword"
-                                                class="form-control mb-4 text-center col-10"
-                                                placeholder="Employee Name">
+                                            </div>
+
+
+                                            <div class="row d-flex flex-row justify-content-end ml-5">
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <label class="font-weight-bold" for="today">Date</label>
+                                                    <input type="text" id="today"
+                                                        class="form-control mb-4 w-75 text-center col-12"
+                                                        placeholder="Date" value="{{date}}" name="today">
+                                                </div>
+
+
+                                                <div class="d-flex flex-column justify-content-center ml-5">
+                                                    <label class="font-weight-bold" for="inTime">Time</label>
+                                                    <input type="text" id="inTime"
+                                                        class="form-control mb-4 w-75 text-center col-12"
+                                                        placeholder="Time" value="{{time}}"  name="inTime">
+                                                </div>
+                                            </div>
+
+                                            <div class="row d-flex justify-content-center">
+                                                <button class="btn btn-deep-purple btn-block w-50"
+                                                    style="font-weight: bold;" type="submit">Mark Attendence</button>
+                                            </div>
+
                                         </div>
-
-
-                                        <div class="row d-flex justify-content-between">
-                                            <input type="text" id="defaultSubscriptionFormPassword"
-                                                class="form-control mb-4 w-50 text-center col-5" placeholder="Date">
-                                            <input type="text" id="defaultSubscriptionFormPassword"
-                                                class="form-control mb-4 w-50 text-center col-5" placeholder="Time">
-                                        </div>
-
-                                        <div class="row d-flex justify-content-center">
-                                            <button class="btn btn-deep-purple btn-block w-50"
-                                                style="font-weight: bold;"
-                                                type="submit">Mark Attendence</button>
-                                        </div>
-
-                                    </div>
+                                    </form>
+                                    {% endif %}
 
 
 
@@ -181,7 +202,7 @@
     <!--Chart.js CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!--User Js-->
-    <script src="js/Dashboard.js"></script>
+    <script src="{% static 'js/Dashboard.js' %}"></script>
 
 
 </body>

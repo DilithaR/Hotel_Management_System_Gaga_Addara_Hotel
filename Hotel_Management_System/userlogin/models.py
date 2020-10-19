@@ -50,6 +50,8 @@ class Employee(models.Model):
     last_login = models.CharField(max_length=150, blank=True, null=True)
     occu = models.CharField(max_length=50, blank=True, null=True)
 
+    
+
     class Meta:
         managed = True
         db_table = 'Employee'
