@@ -1,0 +1,16 @@
+{% extends "food_home/backend.html" %}
+{% block content %}
+<br><br<br>
+<h2>Delete Promo Item</h2><br>
+
+<p>Are you sure you want to DELETE <b>{{item.promoTitle}}</b> Promotion from your menu</p>
+
+<form method="POST">
+
+  {% csrf_token %}
+  <a  class="btn btn-primary btn-lg" href='/menuBackend/'>Cancel</a>
+  <button type="submit" class="btn btn-danger btn-lg">Delete Item</button>
+
+</form>
+<br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}

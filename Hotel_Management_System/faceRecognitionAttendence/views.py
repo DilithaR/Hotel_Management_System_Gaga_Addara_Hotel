@@ -63,4 +63,4 @@ def markAttendence(request):
         empid=empID, date=today, timein=inTime, status="Available")
     attendEmp.save()
 
-    return render(request, 'EmployeeAttendence.html')
+    return render(request, 'EmployeeAttendence.html' , {'marked': True})

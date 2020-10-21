@@ -1,0 +1,200 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Gaga Addara Hotel</title>  
+    {% load static %}  
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!--Bootstrap Core CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!--Swiper CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"> 
+
+    <link rel="icon" type="image/gif/png" href="{% static 'img/Logo.png' %}"/> 
+
+</head>  
+<body>  
+
+  <div>
+
+        <nav class="navbar navbar-expand-lg topnav">
+
+        <img src="{% static 'img/Logo.png' %}" class="navbar-brand navLogo" alt="Gaga Addara Hotel">
+        <h4 style="font-weight: bolder; font-style: italic; font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: rgb(253, 71, 108);"
+            class="mt-2 ml-0">gaga addara hotel</h4> 
+
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="index.html" >Home </a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Featurs 1</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#" >Feature 2</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#" >Feature 3</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="{% url 'packages_home' %}" >Packages</a>
+                </li>
+                <li class="nav-item active ml-2 mr-1">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+
+                <li class="nav-item dropdown active ml-2 mr-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="overflow: hidden;">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+
+                <li class="nav-item active ml-4 row">
+                    <a class="nav-link" href="#" title="My Profile"><i class="fas fa-user-circle fa-1x"></i></a>
+                </li>
+
+                <li class="nav-item active ml-4 mr-2 row">
+                    <a class="nav-link" href="#" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>
+                </li>
+
+                
+
+            </ul>
+        </div>
+          </nav>
+        </div>
+
+        <header style="height: 50px;  background-image: url({% static 'img/serene_banner.jpg'%})">
+
+        <div class="overlay"></div>
+      
+          
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h2 class="display-3" style="font-weight: bolder; font-size: 54px">Book your Package Now</h2>
+                    <h3 class="lead mt-3">Spend your Dream Holiday with us</h3>
+                
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="middleArea" style="overflow-x: hidden;">
+
+        <hr style="height: 3px; background-color: rgb(228, 228, 228); border-radius: 5px;" class="ml-5 mr-4">
+
+
+ <hr class="SeperaterLine">
+        <div class="container"><p align="center">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p></div>
+        
+        <br>
+       
+        <hr class="SeperaterLine ml-5" class="d-flex justify-content-start">
+        <h2 class="d-flex justify-content-start ml-5">Booking Information</h2>
+
+
+<form method="POST" class="post-form" action="/booking" enctype="multipart/form-data">  
+
+
+        {% csrf_token %} 
+
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+     
+    </div>  
+  </div>  
+  
+  <div class="form-group row">  
+        <label class="col-sm-2 col-form-label">Select your package:</label>  
+        <div class="col-sm-4">  
+          <select id="bpacname" name="bpacname">
+            <option>Sea & Tea</option>
+            <option>Wedded Bliss</option>
+            <option>Mathota Elegance</option>
+            <option>Serene Matara</option>
+            <option>Eco-Luxury Escapes</option>
+            <option>Adventure trekking</option>
+            <option>Scuba Diving</option>
+            <option>Whale Watching</option>
+            
+          </select>  
+        </div>  
+      </div>    
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Customer First Name:</label>  
+    <div class="col-sm-4">  
+      {{ form.bfname }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Customer Last Name:</label>  
+    <div class="col-sm-4">  
+      {{ form.blname }}  
+    </div>  
+  </div> 
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Date:</label>  
+    <div class="col-sm-4">  
+      
+      <input type="date" name="bdate" id="bdate" required maxlength="50" id="id_firstname" />
+    </div>  
+  </div>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Adults(+13):</label>  
+    <div class="col-sm-4">  
+      {{ form.badults }}  
+    </div>  
+  </div>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Child(Age 4 to 12):</label>  
+    <div class="col-sm-4">  
+      {{ form.bchild }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Email:</label>  
+    <div class="col-sm-4">  
+      {{ form.bemail }}  
+    </div>  
+  </div>
+ 
+  
+    <div class="form-group row">  
+    <input type="checkbox">&nbsp; I have read and I agree to the terms & conditions
+      
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Proceed to Pay</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  

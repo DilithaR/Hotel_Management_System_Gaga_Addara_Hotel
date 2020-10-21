@@ -7,7 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <!--Jquery CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -30,6 +33,14 @@
 <body>
 
 
+    {% if isLoged %}
+    <script>
+        $(document).ready(function () {
+            swal("Welcome To Gaga Addara Hotel!", "You Have Signed Up Successfully", "success");
+        });
+    </script>
+    {% endif %}
+
     <nav class="navbar navbar-expand-lg topnav">
 
         <img src="{% static 'img/Logo.png' %}" class="navbar-brand navLogo" alt="Gaga Addara Hotel">
@@ -49,26 +60,34 @@
                 <li class="nav-item active ml-2 mr-1">
                     <a class="nav-link" href="#">Rooms</a>
                 </li>
-                <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Tours</a>
+                <li class="nav-item dropdown active ml-2 mr-1">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Halls
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="overflow: hidden;">
+                        
+                        <a class="dropdown-item" href="RHM/addres">Add Reservation</a>
+                        <a class="dropdown-item" href="RHM/Cviewres">View Reservation</a>
+                    </div>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Packages</a>
+                    <a class="nav-link" href="hotelpackages/packages_home">Packages</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="method">Payments</a>
                 </li>
                 <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Ratings</a>
+                    <a class="nav-link" href="feedback_app/addfeedback">Feedbacks</a>
                 </li>
 
                 <li class="nav-item dropdown active ml-2 mr-1">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Dropdown link
+                        Actions
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="overflow: hidden;">
-                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="hotelpackages/booking">Book Package</a>
                         <a class="dropdown-item" href="#">Another action</a>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
@@ -1100,9 +1119,7 @@
 
     </div>
 
-    <!--Jquery CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+    
     <!--Popper.js CDN-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">

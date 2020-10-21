@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+        th,td{
+        padding:3px;
+        }
+        th{
+        background-color:black;
+        color:white;
+        }
+      </style>
+  </head>
+  <body>
+
+    <table class="table" border="1">
+
+      <h3>Food Menu Items</h3>
+      <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+      </tr>
+
+      {% for a in projects %}
+      <tr>
+          <td>{{a.title}}</td>
+          <td>{{a.description}}</td>
+          <td>{{a.price}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+
+    <br><br>
+
+    <table class="table" border="1">
+
+      <h3>Promotions</h3>
+      <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Expire Date</th>
+      </tr>
+
+      {% for b in promos %}
+      <tr>
+          <td>{{b.promoTitle}}</td>
+          <td>{{b.promoDescription}}</td>
+          <td>{{b.promoPrice}}</td>
+          <td>{{b.expiredate}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+
+    <br><br>
+
+    <table class="table" border="1">
+
+      <h3>Orders</h3>
+      <tr>
+          <th>Title</th>
+          <th>User</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Amount</th>
+      </tr>
+
+      {% for c in cart %}
+      <tr>
+          <td>{{c.item}}</td>
+          <td>{{c.user}}</td>
+          <td>{{c.quantity}}</td>
+          <td>{{c.item.price}}</td>
+          <td>{{c.amount}}</td>
+      </tr>
+      {% endfor %}
+
+    </table>
+
+    <br><br>
+    <h2>Total Menu Items : {{projects.count}}</h2>
+    <h2>Total Menu Promotions : {{promos.count}}</h2>
+    <h2>Total Orders : {{cart.count}}</h2>
+  </body>
+
+
+</html>

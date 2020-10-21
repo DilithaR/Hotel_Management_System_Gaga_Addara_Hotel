@@ -1,0 +1,57 @@
+  <table class="review">
+            <h2 class="heading21"><center>User Feedbacks</center></h2>
+            
+                <hr style="border:1px solid #000000">
+            
+                <input id="myInput" type="text" placeholder="Search..">
+            
+            <thead>
+                <div class="details">
+        
+            </div>
+            </thead>
+            <tbody id="myTable">
+            <div class="piccontent" >
+            {% for feedback in feedbacks %}   
+              
+
+                <tr>
+                    <td class="txt-left">{{ feedback.description }}</td>
+                    <td class="txt-left">{{ feedback.category }}</td>
+                    <td class="txt-left">{{ feedback.ansDescription }}</td>
+	
+                </tr>
+            {% endfor %}
+        
+            </div>
+        </tbody>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+       <div class="containing">
+        <form >
+                            
+            <fieldset>
+            <h2 class="heading21"><center>User Feedbacks</center></h2>
+            {% for feedback in feedbacks %}
+
+        <div class="card">
+            <h5 class="card-header">{{ feedback.category }}</h5>
+            <div class="card-body">
+              <h5 class="card-title">{{ feedback.description }}</h5>
+              <h5 class="card-title">{{ feedback.ansDescription }}</h5>
+              
+             
+            </div>
+          </div>  
+          {% endfor %}
+        </div> 

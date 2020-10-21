@@ -1,0 +1,153 @@
+{% extends "food_home/backend.html" %}
+{% block content %}
+
+<br><br><br>
+   <div class="row">
+        <div class="col">
+            <div class="col-md">
+                  <div class="card text-center text-white  mb-3" style="background-color: #66bb6a">
+                        <div class="card-header">
+                          <h5 class="card-title">Total Menu Items</h5>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="card-title">{{projects.count}}</h3>
+                        </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="col-md">
+                  <div class="card text-center text-white  mb-3" style="background-color: #ba68c8 ">
+                        <div class="card-header">
+                          <h5 class="card-title">Total Promotions</h5>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="card-title">{{promos.count}}</h3>
+                        </div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="col-md">
+                  <div class="card text-center text-white  mb-3" style="background-color: #7CD1C0">
+                        <div class="card-header">
+                          <h5 class="card-title">Orders Pending</h5>
+                        </div>
+                        <div class="card-body">
+                          <h3 class="card-title">{{cart.count}}</h3>
+                        </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <br><br>
+        <h3>Menu Items</h3>
+        <hr>
+        <div class="card card-body">
+          <a class="btn btn-primary btn-sm btn-block" href="{% url 'menu:menuBackCreate'  %}"><h4>Create Menu Item</h4></a>
+          <table class="table table-sm">
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>image Url</th>
+              <th>price</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+
+            {% for project in projects %}
+            <tr>
+              <td>{{ project.title }}</td>
+              <td>{{ project.description }}</td>
+              <td>{{ project.image.url }}</td>
+              <td>{{ project.price }}</td>
+              <td><a class="btn btn-sm btn-info" href="{% url 'menu:menuBackUpdate' project.id  %}">Update</a></td>
+              <td><a class="btn btn-sm btn-danger" href="{% url 'menu:menuBackDelete' project.id  %}">Delete</a></td>
+            </tr>
+            {%endfor%}
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <br><br>
+        <h3>Promotions</h3>
+        <hr>
+        <div class="card card-body">
+          <a class="btn btn-primary btn-sm btn-block" href="{% url 'menu:promoBackCreate'  %}"><h4>Create Promotion Item</h4></a>
+          <table class="table table-sm">
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>image Url</th>
+              <th>price</th>
+              <th>Expire Date</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+
+            {% for po in promos %}
+            <tr>
+              <td>{{ po.promoTitle }}</td>
+              <td>{{ po.promoDescription }}</td>
+              <td>{{  po.promoImage.url }}</td>
+              <td>{{ po.promoPrice }}</td>
+              <td>{{ po.expiredate }}</td>
+              <td><a class="btn btn-sm btn-info" href="{% url 'menu:promoBackUpdate' po.id  %}">Update</a></td>
+              <td><a class="btn btn-sm btn-danger" href="{% url 'menu:promoBackDelete' po.id  %}">Delete</a></td>
+            </tr>
+            {%endfor%}
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-10">
+        <br><br>
+        <h3>Orders</h3>
+        <hr>
+        <div class="card card-body">
+          <a class="btn btn-primary btn-sm btn-block" href="#"><h4>Order List</h4></a>
+          <table class="table table-sm">
+            <tr>
+              <th>Item</th>
+              <th>User</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Amount</th>
+              <th>Delete</th>
+            </tr>
+
+            {% for a in cart %}
+            <tr>
+              <td>{{ a.item }}</td>
+              <td>{{ a.user }}</td>
+              <td>{{ a.quantity }}</td>
+              <td>{{ a.item.price }}</td>
+              <td>{{ a.amount }}</td>
+              <td><a class="btn btn-sm btn-danger" href="{% url 'menu:deletefromcartback' a.id  %}" onclick="return confirm('DELETE! Are you sure?')">Delete</a></td>
+            </tr>
+            {%endfor%}
+          </table>
+        </div>
+      </div>
+
+    </div>
+    <br><br><br>
+
+    <a class="btn btn-outline-success" href="{% url 'menu:getPdfPage' %}">Genarate Food Report</a>
+
+    <br><br><br> <br><br>
+
+{% endblock %}

@@ -1,0 +1,109 @@
+body,
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    
+}
+
+.pageContent{
+    overflow-x: hidden;
+}
+
+.sidebar{
+    position: fixed;
+    width: 256px;
+    left: 0px;
+    background-color: #1c2331;
+    /* background-color: whitesmoke; */
+    height: 100%;
+    padding: 0px;
+    /* overflow-y: hidden; */
+    
+}
+
+.sidebarTop{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+}
+
+nav ul{
+    list-style: none;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    padding: 0px;
+    list-style: none;
+}
+
+
+
+nav ul li{
+    line-height: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a {
+    position: relative;
+    color:  white;
+    padding-left: 30px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border-left: 2px solid transparent;
+}
+.sidebar ul li a:hover {
+    color: cyan;
+    border-left-color: cyan;
+    text-decoration: none;
+}
+
+nav ul ul{ 
+    position: static;
+    display: none;
+}
+
+nav ul .dropCont1.show {
+    display: block;
+}
+
+nav ul .dropCont2.show {
+    display: block;
+}
+
+nav ul .dropCont3.show {
+    display: block;
+}
+
+
+nav ul ul li{
+    line-height: 40px;
+    border-bottom: none;
+
+}
+nav ul ul li a{
+    font-size: 17px;
+    color: white;
+    padding-left: 60px;
+}
+
+nav ul li a span{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.4s ;
+}
+
+nav ul li a:hover span{
+    transform: translateY(-50%) rotate(-180deg);
+}
+
+
+
+
+
+

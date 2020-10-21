@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Jquery CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -27,6 +32,22 @@
 </head>
 
 <body>
+
+    {% if reset == True %}
+    <script>
+        $(document).ready(function () {
+            swal("You Have Reset your password successfully", "Please login with new credencials", "success");
+        });
+    </script>
+    {% endif %}
+
+    {% if isSigned %}
+    <script>
+        $(document).ready(function () {
+            swal("You Have Signed Up Successfully!", "Please fill the form to login to the system", "success");
+        });
+    </script>
+    {% endif %}
 
     <div class="Fulscreen_slide">
         <div class="container-fluid p-0 m-0 inner_layer d-flex justify-content-center align-items-center">
@@ -139,9 +160,7 @@
 
 
 
-    <!--Jquery CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+    
     <!--Popper.js CDN-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">

@@ -108,18 +108,24 @@
 
 	<br><br>
 	
+    <!--Cash payment form-->
 	<center>
-			<form method="post" action="#">
-                {% csrf_token %}
-                <center><h2><u><b>Cash Payment Form</b></u></h2></center><br>    
-                    
-                    {{form}}
-     
+        <form method="post" action="#">
+            {% csrf_token %}
+            <table border="5">
+                <td>
+                    <center><h2><u><b>Cash Payment Form</b></u></h2></center><br>    
+                    <table border="0">  
+                        <td>
+                            {{form}}
+                        </td>
+                    </table>   
                 <br><br><center><input type="submit" id="submitCash" value="Complete Transaction"></center><br> 
-			</form>	
-			
-
-	</center>	
+                </td>
+            </table>    
+        </form>	
+    </center>
+    <!--End of Cash payment form-->		
 
 	<!-- Footer -->
         <footer class="page-footer font-small text-light">

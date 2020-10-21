@@ -1,0 +1,87 @@
+{% extends "food_home/base.html" %}
+{% block content %}
+<br><br><br>
+
+<div class="section">
+
+  <div class="container">
+
+       <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="order-summary clearfix">
+
+                    <div class="section-title">
+                      <h2 class="title">Your Cart</h2>
+                    </div>
+                    <br>
+                    <table class="shopping-cart-table table">
+                        <thead>
+                          <tr>
+                            <th>ITEM</th>
+                            <th></th>
+                            <th class="text-center">PRICE</th>
+                            <th class="text-center">QUANTITY</th>
+                            <th class="text-center">TOTAL</th>
+                            <th class="text-right"></th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+
+                            {% for a in shopcart %}
+
+                              <tr>
+                                  <td><img src="{{ a.item.image.url }}" style="width:140px;height:80px"></img></td>
+                                  <td><strong> {{a.item}} </strong></td>
+                                  <td class="price text-center"><strong>LKR {{a.item.price}}</strong></td>
+                                  <td class="qty text-center"><strong> {{a.quantity}}</strong></td>
+                                  <td class="amount text-center"><strong class="primary-color">LKR {{a.amount}}</strong> </td>
+                                  <td class="text-right"><a href="/cart/deletefromcart/{{a.id}}" onclick="return confirm('DELETE! Are you sure?')" class="main-btn icon-btn"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+
+                              </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+                        <tfoot>
+
+                            <tr>
+                                <th class="empty" colspan="3"></th>
+                                <th class="text-center">SUBTOTAL</th>
+                                <th class="sub-total text-right" colspan="2">LKR{{total}}</th>
+                            </tr>
+                            <tr>
+                                <th class="empty" colspan="3"></th>
+                                <th class="text-center">TAX</th>
+                                <th class="tax text-right" colspan="2">Tax Free</th>
+                            </tr>
+                            <tr>
+                                <th class="empty" colspan="3"></th>
+                                <th class="text-center">TOTAL</th>
+                                <th class="total text-right" colspan="2">LKR {{total}}</th>
+                            </tr>
+
+                        </tfoot>
+
+                    </table>
+
+                    <div class="pull-right">
+                      <button class="btn btn-primary btn-lg float-right">Place Order</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<br><br><br>
+{% endblock %}

@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -688,7 +691,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="updateCus/{{customer.cus_index}}" enctype="multipart/form-data" method="POST">
+                    <form action="updateCus/{{customer.cus_index}}" enctype="multipart/form-data" method="POST" id="userEditForm">
                         {% csrf_token %}
                         <div class="row row row-cols-3">
                             <div class="col-xl-5 col-md-5 ml-4 mb-0 text-center">
@@ -764,13 +767,13 @@
                                 <label for="inputState"><i class="fas fa-envelope-open grey-text fa-2x"></i>
                                     Email</label>
                                 <input id="inputemail" class="form-control ml-3" type="email" name="Edit_Email"
-                                    placeholder="Email" value="{{customer.email}}">
+                                    placeholder="Email" value="{{customer.email}}" required>
                             </div>
 
                             <div class="form-group col-md-4 ml-4">
                                 <label for="inputState"><i class="fas fa-id-badge grey-text fa-2x"></i> NIC</label>
                                 <input id="Edit_Nic" class="form-control ml-3" type="text" name="Edit_Nic"
-                                    placeholder="NIC">
+                                    placeholder="NIC" required minlength="10">
 
                             </div>
 
@@ -782,18 +785,18 @@
                                 <label for="inputState"><i class="fas fa-shipping-fast grey-text fa-2x"></i>
                                     Address</label>
                                 <input id="inputState" placeholder="Address Line One" class="form-control ml-3"
-                                    type="text" name="AddressLineOne">
+                                    type="text" name="AddressLineOne" required>
                             </div>
 
                             <div class="form-group col-md-4 ml-4 mt-5">
                                 <input id="inputState" placeholder="Address Line Two" class="form-control ml-3"
-                                    type="text" name="Edit_AddLine2">
+                                    type="text" name="Edit_AddLine2" required>
 
                             </div>
 
                             <div class="form-group col-md-2 ml-4 mt-5">
                                 <input id="inputState" placeholder="Post Code" class="form-control ml-3" type="text"
-                                    name="Edit_PCode" value="">
+                                    name="Edit_PCode" required>
 
                             </div>
 
@@ -826,7 +829,9 @@
                         </div>
 
                     </form>
-
+                    <script>
+                        $("userEditForm").validate();
+                    </script>
 
 
                 </div>
@@ -838,9 +843,7 @@
 
 
 
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
     </script>

@@ -1,0 +1,37 @@
+{% extends "food_home/base.html" %}
+{% load static %}
+{% block content %}
+<br><br<br><br><br>
+
+<h2><b>Place Order</b></h2><br>
+
+<hr>
+
+<h3><u>{{ food.title }}</u></h3><br>
+<img src="{{ food.image.url }}" style="width:280px;height:200px"></img> <br><br>
+<h3>{{ food.description }}</h3><br>
+<h3>Price - {{ food.price }}</h3><br>
+
+<span class="text-uppercase">Choose Your Size :</span>
+
+<ul class="list-group col-md-2">
+    <li class="list-group-item"><a href="#" style="color:black" >Small</a></li>
+    <li class="list-group-item active"><a href="#" style="color:black" >Medium</a></li>
+    <li class="list-group-item"><a href="" style="color:black" >Large</a></li>
+</ul>
+
+<br>
+<form method="POST" action = "/cart/addtocart/{{food.id}}">
+   {% csrf_token %}
+  <div class="qty-input">
+      <span class="text-uppercase">QTY: </span>
+      <input class="input" name="quantity" type="number" value="1" min="1" max="10" >
+  </div>
+  <br>
+  <button type="submit" class="btn btn-success btn-lg">Add To Cart</button>
+
+</form>
+
+<img src="{% static "img/placeOrder.png" %}" alt="My image" style="width:700px;height:570px;margin-left:600px;margin-top:-900px"><br><br>
+
+{% endblock %}

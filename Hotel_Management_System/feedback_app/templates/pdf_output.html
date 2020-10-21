@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <style>
+        
+        th{
+        background-color:black;
+        color:white;
+        padding: 1px;
+        }
+        td{
+          padding: 1px;
+        }
+        
+        
+      </style>
+  </head>
+  <body>
+
+    <table class="table" border="1">
+      
+      
+        <h2>Feedback Summary</h3>
+
+        <tr>
+          <th>Feedback</th>
+          <th>Category</th>
+          <th>Date</th>
+          
+        </tr>
+
+        <tbody>
+          {% for a in feedbacks %}
+          <tr>
+            <td>{{a.description}}</td>
+            <td>{{a.category}}</td>
+            <td>{{a.date}}</td>
+           
+          </tr>
+          {% endfor %}
+        </tbody>
+      
+
+
+    </table>
+
+
+    <!--
+      <table class="review">
+            
+      <thead>
+          <div class="details">
+    
+  
+            <h3>Feedback Summary</h3>
+            <tr>
+                <th>Feedback</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Reply</th>
+          </tr>
+
+      </div>
+      </thead>
+      <tbody>
+      <div class="piccontent" >
+        {% for a in feedbacks %}
+        <tr>
+            <td>{{a.description}}</td>
+            <td>{{a.category}}</td>
+            <td>{{a.date}}</td>
+            <td>{{a.ansDescription}}</td>
+        </tr>
+        {% endfor %}
+      
+      </div>
+  </tbody>
+  </table>
+    -->
+    
+
+    
+
+  
+  </body>
+
+
+</html>

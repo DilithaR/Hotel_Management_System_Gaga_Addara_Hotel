@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("", include('userlogin.urls')),
     path("employeeAttendence/", include('faceRecognitionAttendence.urls')),
+    path("attendenceReport/", include('attendenceReport.urls')),
     path("method/", include('method.urls')),
 
     #Sayuru URL s
@@ -35,5 +36,10 @@ urlpatterns = [
     path('revokedPayment/', include('revokedPayment.urls')),
     path('removePayment/', include('removePayment.urls')),
 
+    path('hotelpackages/', include('hotelpackages.urls')),
+    path('RHM/', include('RHM.urls')),
+    path('feedback_app/', include('feedback_app.urls')),
+
     path('admin/', admin.site.urls),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

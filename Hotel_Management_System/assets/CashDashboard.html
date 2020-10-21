@@ -111,6 +111,7 @@
                             <ul class="dropContPayment">
                                 <li class="" style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;"><a href="/cashDashboard">Cash Payments</a></li>
                                 <li><a href="/cardDashboard">Card Payments</a></li>
+                                <li><a href="/revokedPayment">Revoked Payments</a></li>
                                 <li><a href="/paymentReport">Payment Report</a></li>
                             </ul>
                         </li>
@@ -183,37 +184,13 @@
 
                 <br>
                 <center>
-                    <h3><b>Select the year</b></h3> 
-                    <select name="yearcash1" id="yearCash1"  required>
-                        <option value="" selected disabled hidden>------</option>   
-                        <option value="2020">2020</option>    
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                        <option value="2027">2027</option>
-                    </select>
-                    <br>
-                    <h3><b>Select the month</b></h3> 
-                    <select name="monthcash1" id="monthCash1"  required>
-                        <option value="" selected disabled hidden>------</option>   
-                        <option value="Jan">January</option>    
-                        <option value="Feb">February</option>
-                        <option value="Mar">March</option>
-                        <option value="Apr">April</option>
-                        <option value="May">May</option>
-                        <option value="Jun">June</option>
-                        <option value="Jul">July</option>
-                        <option value="Aug">August</option>
-                        <option value="Sep">September</option>
-                        <option value="Oct">October</option>
-                        <option value="Nov">November</option>
-                        <option value="Dec">December</option>
-                    </select>
+                    <form method="GET">
+                        <h3><b>Select the year and month:</b></h3><br>
+                        {{myFilter.form}}
+                        <button id="m1" onclick="">Go</button><br><br>
+                    </form>
+                    
                     <br><br>
-                    <button id="m1" onclick="">Go</button><br><br>
 
                     <table border="3" width="700px">
 						<tr>
@@ -242,13 +219,11 @@
                                 <center>{{ instance.Net_amount }}</center>
                             </td>
                             <td>
-                                <center><a href="{% url 'delete_cash' instance.id %}" class="btn btn-danger btn-sm" role="button">Delete</a></center>
+                                <center><button class="btn btn-warning btn-sm" onclick="location.href='/revokedPayment'">Revoke</button><a href="{% url 'delete_cash' instance.id %}" onclick="return confirm('Do you want to delete this entry?')" class="btn btn-danger btn-sm" role="button">Delete</a></center>
                             </td>
                         </tr>
                         {% endfor %}
                     </table><br><br>
-
-                    <button id="re1" onclick="location.href='/revokedPayment'">Revoke Payment</button>
                 </center>
 
                 <!-- Footer -->

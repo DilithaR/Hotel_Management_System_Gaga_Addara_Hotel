@@ -1,0 +1,22 @@
+{% extends "food_home/base.html" %}
+{% block content %}
+<br><br>
+
+<h1>{{ promos.count }} Promotion{{ promos.count|pluralize }} Available Right Now</h1><br>
+
+<div class="row">
+
+    <br><br>
+  {% for po in promos %}
+    <div class="col-lg-6 col-md-4">
+        <img src="{{ po.promoImage.url }}" style="width:280px;height:200px"></img> <br><br>
+        <h2>{{ po.promoTitle }}</h2>
+        <h4>{{ po.promoDescription }}</h4>
+        <h3>Price: LKR{{ po.promoPrice }}</h3>
+        <h4>Expire:{{po.expiredate}}</h4><br>
+        <button type="button" class="btn btn-success btn-lg">Add to Cart</button><br><br>
+    </div>
+  {% endfor %}
+
+</div>
+{% endblock %}

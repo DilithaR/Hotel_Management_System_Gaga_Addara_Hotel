@@ -32,15 +32,17 @@
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
+        var cash = 14500;
+        var card = 6500;
 
         var data = google.visualization.arrayToDataTable([
           ['PaymentType', 'Amount'],
-          ['Cash Payments(Rs:)', 87550],
-          ['Card Payments(Rs:)', 43400]
+          ['Cash Payments(Rs:)', cash],
+          ['Card Payments(Rs:)', card]
         ]);
 
         var options = {
-          title: 'Monthly Income'
+          title: 'Payment Details'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
@@ -133,6 +135,7 @@
                             <ul class="dropContPayment">
                                 <li><a href="/cashDashboard">Cash Payments</a></li>
                                 <li><a href="/cardDashboard">Card Payments</a></li>
+                                <li><a href="/revokedPayment">Revoked Payments</a></li>
                                 <li class="" style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;"><a href="/paymentReport">Payment Report</a></li>
                             </ul>
                         </li>
@@ -205,38 +208,6 @@
 
                 <br>
                 <center>
-                    <h3><b>Select the year</b></h3> 
-                    <select name="yearrep" id="yearRep1"  required>
-                        <option value="" selected disabled hidden>------</option>   
-                        <option value="2020">2020</option>    
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
-                        <option value="2027">2027</option>
-                    </select>
-                    <br>
-                    <h3><b>Select the month</b></h3> 
-                    <select name="monthrep" id="monthRep1"  required>
-                        <option value="" selected disabled hidden>------</option>   
-                        <option value="Jan">January</option>    
-                        <option value="Feb">February</option>
-                        <option value="Mar">March</option>
-                        <option value="Apr">April</option>
-                        <option value="May">May</option>
-                        <option value="Jun">June</option>
-                        <option value="Jul">July</option>
-                        <option value="Aug">August</option>
-                        <option value="Sep">September</option>
-                        <option value="Oct">October</option>
-                        <option value="Nov">November</option>
-                        <option value="Dec">December</option>
-                    </select>
-                    <br><br>
-                    <button id="m3" onclick="">Go</button><br><br>
-
                     <div id="piechart" style="width: 700px; height: 400px;"></div>
                     
                     <br><br>
@@ -263,7 +234,7 @@
                                 <h4><b>Total Income</b></h4>
                             </td>
                             <td>
-                                <h6><b></b></h6>
+                                <h6><b>{{total}}</b></h6>
                             </td>
                         </tr>
                     </table><br><br>

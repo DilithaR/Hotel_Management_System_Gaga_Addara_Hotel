@@ -23,5 +23,6 @@ urlpatterns = [
     path("employeeList", views.employeeList, name="employeeList"),
     path("filterEmployees", views.filterEmployees,name="filterEmployees"),
     path("resetPWinForgetPw", views.resetPWinForgetPw,name="resetPWinForgetPw"),
+    path("fullemployee/deleteEmp/<int:id_Emp>",views.deleteEmp, name="deleteEmp")
     
 ]

@@ -1,0 +1,24 @@
+{% extends "food_home/base.html" %}
+{% load static %}
+{% block content %}
+
+  <br><br><br>
+  <h1 class="text-center"><b>Food Menu</b></h1>
+
+  <div class="row">
+      {% for project in projects %}
+          <div class="col-lg-4 col-md-6">
+              <br><br><br>
+              <img src="{{ project.image.url }}" style="width:280px;height:200px"></img> <br>
+              <a href="{% url 'menu:customize' project.id %}"><h2>{{ project.title }}</h2></a>
+              <h4>{{ project.description }}</h4>
+              <h3>LKR {{ project.price }}</h3>
+          </div>
+      {% endfor %}
+  </div>
+
+  <img src="{% static "img/bac-san.jpg" %}" alt="My image" style="width:1710px;height:810px;margin-left:-300px;margin-top:-770px"><br><br>
+
+  <br><br>
+
+{% endblock %}

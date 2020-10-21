@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -53,7 +55,7 @@
                         <ul>
                             <li class=""
                                 style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;">
-                                <a href="#"> <i class="fas fa-chart-pie mr-3"> </i> Dashboard</a>
+                                <a href="admin"> <i class="fas fa-chart-pie mr-3"> </i> Dashboard</a>
 
 
                             </li>
@@ -231,8 +233,11 @@
                             <div class="row">
                                 <button class="btn btn-dark-green mb-0 w-100 font-weight-bold" data-toggle="modal"
                                     data-target="#editEmployee">Edit</button>
-                                <button class="btn btn-danger w-100 font-weight-bold">Delete</button>
+                                <!-- <button class="btn btn-danger w-100 font-weight-bold">Delete</button> -->
+                                <a class="btn btn-danger w-100 font-weight-bold"
+                                    href="deleteEmp/{{employee.emp_index}}">Delete</a>
                             </div>
+                            
 
 
                         </div>
@@ -635,17 +640,21 @@
 
                     <div class="modal-body">
 
-                        <form action="editemp" method="GET" class="ml-2">
+                        <form action="editemp" method="GET" class="ml-2" id="empEditForm">
                             {% csrf_token %}
 
                             <h4 class="font-weight-bold">Basic Information</h4>
                             <hr class="empEdiFrmUnderline" />
                             <div class="row mt-3">
+                                {% if employee.img %}
+                                <img src="{{employee.img.url}}" alt="" class="rounded ml-3 "
+                                    style="width: 150px; height: 100px;">
+                                {% else %}
                                 <img src="{% static 'img/sample_profPic.jpg'%}" alt="" class="rounded ml-3 "
                                     style="width: 150px; height: 100px;">
-
+                                {% endif %}
                                 <div class="col align-items-center">
-                                    <input type="image" value="Upload Image" class="btn btn-mdb-color btn-sm mt-5">
+                                    <input type="file" value="Upload Image" class="btn btn-mdb-color btn-sm mt-5">
                                     <p class="grey-text small ml-1">Please upload a .jpg or a .png file with minimum
                                         dimesion of
                                         400w x 400h, not exeeding 5MB</p>
@@ -658,26 +667,26 @@
                                     <label for="inputState" class="EmpEditLabText"><i
                                             class="fas fa-id-card-alt edit_sec_Icon  fa-2x"></i> Employee
                                         Id</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_eid"
+                                    <input id="Edit_eid" class="form-control ml-3" name="Edit_eid"
                                         placeholder="Last Name" value="{{employee.empid}}" disabled>
 
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_E_Fname" class="EmpEditLabText"><i
                                             class="fas fa-user edit_sec_Icon  fa-2x"></i>
                                         First
                                         Name</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_E_Fname"
-                                        placeholder="First Name" value="{{employee.f_name}}">
+                                    <input id="Edit_E_Fname" class="form-control ml-3" name="Edit_E_Fname"
+                                        placeholder="First Name" value="{{employee.f_name}}" required >
                                 </div>
 
                                 <div class="form-group ml-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_E_Lname" class="EmpEditLabText"><i
                                             class="far fa-user edit_sec_Icon  fa-2x"></i> Last
                                         Name</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_E_Lname"
-                                        placeholder="Last Name" value="{{employee.l_name}}">
+                                    <input id="Edit_E_Lname" class="form-control ml-3" name="Edit_E_Lname"
+                                        placeholder="Last Name" value="{{employee.l_name}}" required>
 
                                 </div>
 
@@ -695,11 +704,11 @@
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_E_nic" class="EmpEditLabText"><i
                                             class="far fa-id-badge edit_sec_Icon  fa-2x"></i>
                                         NIC</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_E_nic"
-                                        placeholder="First Name" value="{{employee.empnic}}">
+                                    <input id="Edit_E_nic" class="form-control ml-3" name="Edit_E_nic"
+                                        placeholder="First Name" value="{{employee.empnic}}" required minlength="10">
                                 </div>
 
                             </div>
@@ -710,19 +719,19 @@
                             <div class="row row-cols-3">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_E_assL1" class="EmpEditLabText"><i
                                             class="fas fa-map-signs edit_sec_Icon  fa-2x"></i>
                                         Address Line One</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_E_assL1"
+                                    <input id="Edit_E_assL1" class="form-control ml-3" name="Edit_E_assL1"
                                         placeholder="Last Name" value="{{employee.address_l1}}">
 
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_E_assL2" class="EmpEditLabText"><i
                                             class="fas fa-map-marked-alt edit_sec_Icon  fa-2x"></i>
                                         Address Line Two</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_E_assL2"
+                                    <input id="Edit_E_assL2" class="form-control ml-3" name="Edit_E_assL2"
                                         placeholder="First Name" value="{{employee.address_l2}}">
                                 </div>
 
@@ -731,19 +740,19 @@
                             <div class="row">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_E_city" class="EmpEditLabText"><i
                                             class="fas fa-city edit_sec_Icon  fa-2x"></i>
                                         City</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_E_city"
+                                    <input id="Edit_E_city" class="form-control ml-3" name="Edit_E_city"
                                         placeholder="Last Name" value="Colombo">
 
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_Epost_code" class="EmpEditLabText"><i
                                             class="fas fa-sign edit_sec_Icon  fa-2x"></i>
                                         Post Code</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_Epost_code"
+                                    <input id="Edit_Epost_code" class="form-control ml-3" name="Edit_Epost_code"
                                         placeholder="First Name" value="{{employee.postcode}}">
                                 </div>
 
@@ -751,20 +760,20 @@
                             <div class="row row-cols-3">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_E_email" class="EmpEditLabText"><i
                                             class="fas fa-envelope-open-text edit_sec_Icon  fa-2x"></i>
                                         Email</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_E_email"
-                                        placeholder="Last Name" value="{{employee.email}}" type="email">
+                                    <input id="Edit_E_email" class="form-control ml-3" name="Edit_E_email"
+                                        placeholder="Last Name" value="{{employee.email}}" type="email" required>
 
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_E_phone" class="EmpEditLabText"><i
                                             class="fas fa-phone-square edit_sec_Icon  fa-2x"></i>
                                         Phone</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_E_phone"
-                                        placeholder="First Name" value="{{employee.phone}}">
+                                    <input id="Edit_E_phone" class="form-control ml-3" name="Edit_E_phone"
+                                        placeholder="First Name" value="{{employee.phone}}" required>
                                 </div>
 
                             </div>
@@ -775,28 +784,28 @@
                             <div class="row">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_Occu" class="EmpEditLabText"><i
                                             class="fas fa-briefcase edit_sec_Icon  fa-2x"></i>
                                         Job Title / Occupation</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_Occu"
+                                    <input id="Edit_Occu" class="form-control ml-3" name="Edit_Occu"
                                         placeholder="Last Name" value="Waiter">
 
                                 </div>
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_Appdate" class="EmpEditLabText"><i
                                             class="fas fa-calendar-week edit_sec_Icon  fa-2x"></i>
                                         Date of Appointment</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_Appdate"
-                                        placeholder="First Name" value="{{employee.reg_date}}" type="date" disabled>
+                                    <input id="Edit_Appdate" class="form-control ml-3" name="Edit_Appdate"
+                                        placeholder="First Name" value="{{employee.reg_date}}" type="text" disabled>
                                 </div>
 
                                 <div class="form-group ml-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_Bsal" class="EmpEditLabText"><i
                                             class="fas fa-hand-holding-usd edit_sec_Icon  fa-2x"></i> Basic
                                         Salary</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_Bsal"
-                                        placeholder="Last Name" value="{{employee.basic_sal}}">
+                                    <input type= "text" id="Edit_Bsal" class="form-control ml-3" name="Edit_Bsal"
+                                        placeholder="Last Name" value="{{employee.basic_sal}}" required>
 
                                 </div>
 
@@ -804,10 +813,10 @@
                             <div class="row">
 
                                 <div class="form-group ml-5 mr-5">
-                                    <label for="inputState" class="EmpEditLabText"><i
+                                    <label for="Edit_OTrate" class="EmpEditLabText"><i
                                             class="fas fa-chart-line  fa-2x edit_sec_Icon"></i> OT Rate</label>
-                                    <input id="inputState" class="form-control ml-3" name="Edit_OTrate"
-                                        placeholder="Last Name" value="{{employee.ot_rate}}">
+                                    <input id="Edit_OTrate" class="form-control ml-3" name="Edit_OTrate"
+                                        placeholder="Last Name" value="{{employee.ot_rate}}" required>
 
                                 </div>
 
@@ -832,7 +841,7 @@
 
 
 
-                    </div>
+                        </div>
 
                     <div class="modal-footer justify-content-end">
                         <button type="reset" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
@@ -840,6 +849,10 @@
                     </div>
 
                     </form>
+
+                    <script>
+                        $("#empEditForm").validate();
+                    </script>
 
                 </div>
 
@@ -862,9 +875,8 @@
 
 
 
-    <!--Jquery CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+    
+    
     <!--Popper.js CDN-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -876,10 +888,21 @@
     <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
     <!--Chart.js CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!--sweetAlert CDN-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <!--User Js-->
     <script src="{% static 'js/Dashboard.js'%}"></script>
 
     <script>
+        $('#empEditForm').submit(function () {
+            $("#empEditForm :disabled").removeAttr('disabled');
+        });
+        
+
+
+
+
         var ctx = document.getElementById('OTReport');
         var myChart = new Chart(ctx, {
             type: 'bar',

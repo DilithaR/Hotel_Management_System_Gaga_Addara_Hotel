@@ -1,0 +1,13 @@
+{% extends "food_home/backend.html" %}
+{% block content %}
+<br><br<br>
+<h2>Add Promo Item</h2><br>
+
+<form method="POST" action="" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <button type="submit" class="btn btn-primary btn-lg">Add Item</button>
+</form>
+<br><br><br>
+{% endblock %}

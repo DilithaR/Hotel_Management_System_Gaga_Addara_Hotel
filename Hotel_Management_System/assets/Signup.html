@@ -6,6 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Jquery CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <!--sweetAleert CDN-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
+
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -28,6 +36,14 @@
 
 <body>
 
+    {% if error == True %}
+    <script>
+        $(document).ready(function () {
+            swal("Passwords Are Not Matching!", "Please Try Again", "error");
+        });
+    </script>
+    {% endif %}
+
     <div class="Fulscreen_slide">
         <div class="container-fluid p-0 m-0 inner_layer d-flex justify-content-center align-items-center">
 
@@ -40,7 +56,7 @@
                         <div class="col-6 signupLeft">
 
                             <!-- Default form register -->
-                            <form class="text-center p-3" action="signUpVer" method="POST">
+                            <form class="text-center p-3" action="signUpVer" method="POST" id="signUpForm">
                                 {% csrf_token %}
 
                                 <h1 class="h1 mb-0 d-flex flex-row">Sign up</h1>
@@ -50,29 +66,29 @@
                                     <div class="col">
                                         <!-- First name -->
                                         <input type="text" id="signFname" name="signFname" class="form-control"
-                                            placeholder="First name">
+                                            placeholder="First name" minlength="6" required>
                                     </div>
                                     <div class="col">
                                         <!-- Last name -->
                                         <input type="text" id="signLname" name="signLname" class="form-control"
-                                            placeholder="Last name">
+                                            placeholder="Last name" minlength="6" required>
                                     </div>
                                 </div>
 
                                 <!-- E-mail -->
                                 <input type="email" id="signEmail" name="signEmail" class="form-control mb-4"
-                                    placeholder="E-mail">
+                                    placeholder="E-mail" required>
 
                                 <!-- Password -->
                                 <input type="password" id="signPW" name="signPW" class="form-control"
-                                    placeholder="Password" name="">
+                                    placeholder="Password" name="" required>
                                 <small  class="form-text text-muted mb-3">
                                     At least 8 characters and 1 digit
                                 </small>
 
                                 <!-- Confirm Password -->
                                 <input type="password" id="signConfermPw" class="form-control mb-3"
-                                    placeholder="Confirm Password" name="signConfermPw">
+                                    placeholder="Confirm Password" name="signConfermPw" required>
 
 
                                 <!-- Sign up button -->
@@ -93,6 +109,9 @@
 
 
                             </form>
+                        <script>
+                            $("#signUpForm").validate();
+                        </script>
                             <!-- Default form register -->
 
                         </div>
@@ -149,6 +168,8 @@
     <script src="https://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js"></script>
     <!--Chart.js CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    
     <!--User Js-->
     <script src="{% static 'js/Dashboard.js' %}"></script>
 

@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Google Fonts -->
@@ -53,7 +55,7 @@
                         <ul>
                             <li class=""
                                 style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;">
-                                <a href="#"> <i class="fas fa-chart-pie mr-3"> </i> Dashboard</a>
+                                <a href="/admin"> <i class="fas fa-chart-pie mr-3"> </i> Dashboard</a>
 
 
                             </li>
@@ -178,7 +180,7 @@
 
                 <!--Middle part-->
 
-                <form enctype="multipart/form-data" action="adduser" method="POST">
+                <form enctype="multipart/form-data" action="adduser" method="POST" id="addForm">
                     {% csrf_token %}
                     <div class="row m-4">
                         <div class="col-6 p-3 ">
@@ -193,7 +195,7 @@
                                     <div class="col-8 pt-4">
                                         <input type="file" class="btn btn-dark w-50 btn-sm" value="Upload Image"
                                             name="empImgUpload" id="empImgUpload">
-                                           
+
                                         <!-- <input type="" class="btn btn-dark w-50 btn-sm" value="Take Photo" /> -->
                                     </div>
                                 </div>
@@ -216,7 +218,7 @@
                                 <div class="row ml-4 mr-2 editEmpFormRow">
                                     <div class="md-form mr-2 mt-2 mb-0">
                                         <input type="text" id="addEmpNIC" name="addEmpNIC"
-                                            class="form-control addempForm" required>
+                                            class="form-control addempForm" minlength="10" required>
                                         <label for="addEmpNIC"><i class="fas fa-id-badge mr-2"></i>NIC</label>
                                     </div>
 
@@ -326,8 +328,7 @@
 
                                 <div class="md-form ml-5  mt-2 mb-0 w-25">
                                     <select class="md-form selField" name="setOccu">
-                                        <option disabled selected><i
-                                                class="fas fa-user-tie mr-2"></i>Occupation
+                                        <option disabled selected><i class="fas fa-user-tie mr-2"></i>Occupation
                                         </option>
                                         <option value="Admin">Admin</option>
                                         <option value="Cashier">Cashier</option>
@@ -384,6 +385,10 @@
                     </div>
 
                 </form>
+
+                <script>
+                    $("#addForm").validate();
+                </script>
 
 
 
@@ -551,9 +556,7 @@
 
 
 
-    <!--Jquery CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+    
     <!--Popper.js CDN-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -566,16 +569,33 @@
     <!--Chart.js CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!--User Js-->
-    <script src="{% static 'js/Dashboard.js' %}"></script>
     <script src="{% static 'js/AddEmpValidations.js' %}"></script>
+    <script src="{% static 'js/Dashboard.js' %}"></script>
+
     <script>
         var today = new Date();
         var day = String(today.getDate());
         var month = String(today.getMonth() + 1);
         var year = String(today.getFullYear());
-        var formatedDay = year + '-' + month + '-' + day ;
+        var formatedDay = year + '-' + month + '-' + day;
         document.getElementById("dateOfJoin").value = formatedDay;
+        document.getElementById("addEmpFname").value = "mahendra";
+        document.getElementById("addEmpLname").value = "mahendra";
+
+        document.getElementById("addForm").addEventListener('submit', function (event) {
+
+            if (document.getElementById("empImgUpload").validity.valueMissing) {
+                alert("I am an alert box!");
+                event.preventDefault();
+            } else if (document.getElementById("addEmpFname").validity.valueMissing) {
+                alert("I am an alert box!");
+            } else if (document.getElementById("addEmpLname").validity.valueMissing) {
+                alert("I am an alert box!");
+            }
+        });
     </script>
+
+    
 
 
 </body>

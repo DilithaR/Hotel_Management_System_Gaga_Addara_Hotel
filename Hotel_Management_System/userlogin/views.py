@@ -80,7 +80,7 @@ def resetPWinForgetPw(request):
     if password == confPassword:
         leagalCus.password = password
         leagalCus.save()
-        return render(request, 'login.html')
+        return render(request, 'login.html' , {'reset': True})
     else:
         return render(request, 'Forgot_password_3.html')
 
@@ -125,21 +125,23 @@ def vertifyLogin(request):
         if customer.password == Password:
             request.session['userid'] = customer.cusid
             print("Customer valid")
-            return render(request, 'index.html', {'userid': customer.cusid, 'userEmail': customer.email})
+            return render(request, 'index.html', {'userid': customer.cusid, 'isLoged': True , 'userEmail': customer.email})
         else:
             request.session['userid'] = None
-            return redirect('login')
-    else:
+            return render(request, 'login.html')
+    elif Admin.objects.filter(adminid=Email).exists():
         adminExist = Admin.objects.filter(adminid=Email).exists()
         if adminExist == True:
             admin = Admin.objects.get(adminid=Email)
             if admin.password == Password:
                 request.session['eid'] = admin.adminid
                 print("admin valid")
-                return render(request, 'Dashboard.html')
+                return render(request, 'Dashboard.html', {'isLoged' : True})
             else:
                 request.session['userid'] = None
-                return redirect('login')
+                return render(request, 'login.html')
+    else :
+        return render(request, 'login.html')
 
     #     admin = auth.authenticate(adminid=Email, password = Password)
     #     print("add checked")
@@ -165,7 +167,7 @@ def signUpVer(request):
     lname = request.POST['signLname']
 
     if ConPw != Password:
-        return render(request, 'login.html')
+        return render(request, 'Signup.html', {'error': True})
 
     # elif Customer.objects.filter(email=Email).exists:
     #     return render(request, 'login.html')
@@ -178,7 +180,7 @@ def signUpVer(request):
                             password=Password, f_name=fname, l_name=lname)
         customer.save()
         print("Saved Customer")
-        return render(request, 'index.html')
+        return render(request, 'login.html', {'isSigned': True})
 
 
 def updateCus(request, id_cus):
@@ -255,7 +257,7 @@ def fullemployee(request, id_emp):
 
 def editemp(request):
 
-    #eid = request.GET['Edit_eid']
+    eid = request.GET['Edit_eid']
     addEmpFname = request.GET['Edit_E_Fname']
     addEmpLname = request.GET['Edit_E_Lname']
     addEmpNIC = request.GET['Edit_E_nic']
@@ -271,11 +273,22 @@ def editemp(request):
     addempSal = request.GET['Edit_Bsal']
     addempOTRate = request.GET['Edit_OTrate']
 
-    employee = Employee(empid='EMP98245', f_name=addEmpFname,
-                        l_name=addEmpLname, empnic=addEmpNIC, gender='Male',    email=addEmpEmail, phone=addEmpPhone,
-                        address_l1=addEpLineOne, address_l2=addEpLineTwo, postcode=addEmpPCode, basic_sal=addempSal,
-                        ot_rate=addempOTRate)
+    print("employee Id edited Now : " + str(eid))
+    employee = Employee.objects.get(empid=eid)
+    employee.empid=eid 
+    employee.f_name=addEmpFname
+    employee.l_name=addEmpLname
+    employee.empnic=addEmpNIC 
+    employee.gender='Male'    
+    employee.email=addEmpEmail 
+    employee.phone=addEmpPhone
+    employee.address_l1 = addEpLineOne 
+    employee.address_l2 = addEpLineTwo 
+    employee.postcode = addEmpPCode 
+    employee.basic_sal = addempSal
+    employee.ot_rate=addempOTRate
 
+    employee.save()
     return render(request, 'ViewEmployee.html', {'employee': employee})
 
 #Adding filters app
@@ -327,3 +340,12 @@ def filterEmployees(request):
 
     # return employeeList(request)
     return render(request, 'EmployeeList.html',  {'employees': filteedSet})
+
+
+
+
+
+def deleteEmp(request, id_Emp):
+
+    emp = Employee.objects.get(emp_index=id_Emp).delete()
+    return render(request,  'Dashboard.html')

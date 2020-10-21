@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+>
+    <!--Mahen CSS-->
+    <link rel="stylesheet" href="{% static 'css/Mahendra/index.css' %}">
+
+    <style>
+        @font-face {
+            font-family: OtherFont;
+            src: url(font/OtherFont.ttf);
+        }
+
+        body {
+            font-family: OtherFont;
+        }
+    </style>
+
+    <title>Gaga Addara Hotel</title>
+</head>
+
+<body>
+
+
+    <div class="row" style="background-color: crimson ; height : 150px ">
+        <h1 class="font-weight-bold mt-4 ml-5" style="color: white ; font-size: 30px ; text-align : center">Gaga Addara
+            Hotel</h1>
+    </div>
+
+
+    <div class="" style="height : 100px">
+        <h1 class="" style="color: black; font-size: 30px;">Monthly Attendence
+            report</h1>
+    </div>
+
+    <div class="row d-flex justify-content-start ml-5">
+        <div class="col-1"></div>
+        <div class="col-8">
+            <div class="row">
+                <h4 class="font-weight-bold mt-4 " style="color: black;">Report Date : {{currentDate}}</h4>
+
+            </div>
+            <div class="row">
+                <h4 class="font-weight-bold mt-4 " style="color: black;">Report Time : {{currentTime}}</h4>
+
+            </div>
+            <div class="row">
+                <h4 class="font-weight-bold mt-4 " style="color: black;">Report by : Admin</h4>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="">
+        <table class="">
+            <thead class="">
+                <tr>
+                    <th class="" scope="col">Employee Name</th>
+                    <th class="" scope="col">Employee ID</th>
+                    <th class="" scope="col">Expected working Days</th>
+                    <th class="" scope="col">Total working Days</th>
+                    <th class="" scope="col">Leaves</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for empfull in FullReportVals %}
+                <tr>
+                    <td class="" style="text-align:center">{{empfull.name}}</td>
+                    <td class="" style="text-align:center">{{empfull.eId}}</td>
+                    <td class="" style="text-align:center">{{empfull.expDays}}</td>
+                    <td class="" style="text-align:center">{{empfull.totDays}}</td>
+                    <td class="" style="text-align:center">{{empfull.leaves}}</td>
+                </tr>
+                {% endfor  %}
+            </tbody>
+        </table>
+    </div>
+
+    
+    <!--User Js-->
+    <script src="{% static 'js/HomePage.js' %}"></script>
+
+
+
+</body>
+
+</html>

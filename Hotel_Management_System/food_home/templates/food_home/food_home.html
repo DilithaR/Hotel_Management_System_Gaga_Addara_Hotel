@@ -1,0 +1,33 @@
+{% extends "food_home/base.html" %}
+{% load static %}
+{% block content %}
+
+  <br><br>
+  <div class="text-center">
+    <br>
+      <h1><b>Welcome To The FOOD Section<hr></b></h1>
+      <br>
+      <img src="{% static "img/pizza.jpg" %}" alt="My image" style="width:1000px;height:400px"><br><br>
+
+      <a href="{% url 'menu:home' %}"><button type="button" class="btn btn-primary btn-lg">MENU</button></a>
+      <a href="{% url 'promo:promo' %}"><button type="button" class="btn btn-primary btn-lg">PROMOTIONS</button></a>
+  </div>
+  <br><hr><br>
+
+  <h1 class="text-center"><b>Promotions Avaliable Now</b></h1>
+  <br><br>
+  <div class="row">
+      <br><br>
+      {% for po in promos %}
+          <div class="col-lg-4 col-md-6">
+              <img src="{{ po.promoImage.url }}" style="width:280px;height:180px"></img> <br><br>
+              <h2>{{ po.promoTitle }}</h2>
+              <h3>Price: LKR{{ po.promoPrice }}</h3>
+              <h4>Expire:{{po.expiredate}}</h4><br>
+          </div>
+      {% endfor %}
+
+  </div>
+
+  <br><br>
+{% endblock %}

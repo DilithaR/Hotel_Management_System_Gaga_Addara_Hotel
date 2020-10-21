@@ -5,7 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!--Jquery CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <!--sweetAleert CDN-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -27,6 +31,15 @@
 </head>
 
 <body style="background-color: rgba(255, 217, 146, 0.233); overflow-y: hidden;">
+
+
+    {% if marked == True %}
+    <script>
+        $(document).ready(function () {
+            swal("Attendence id Marked", "Next Employee", "success");
+        });
+    </script>
+    {% endif %}
 
     <div class="container-fluid p-0 m-0 grey lighten-5">
         <div class="row row-cols-2 p-0 m-0 pageContent">
@@ -129,7 +142,7 @@
                                                     <label class="font-weight-bold" for="inTime">Time</label>
                                                     <input type="text" id="inTime"
                                                         class="form-control mb-4 w-75 text-center col-12"
-                                                        placeholder="Time" value="{{time}}"  name="inTime">
+                                                        placeholder="Time" value="{{time}}" name="inTime">
                                                 </div>
                                             </div>
 
@@ -187,9 +200,7 @@
 
 
 
-    <!--Jquery CDN-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    </script>
+
     <!--Popper.js CDN-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
