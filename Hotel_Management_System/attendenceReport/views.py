@@ -82,7 +82,7 @@ def attendenceReport (request):
 
     return render(request, "AttendenceReport.html", context)
 
-
+#Pdf generation function
 def generatePDf(request):
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
