@@ -33,7 +33,7 @@ def validateEmp(request):
         empImg = emp.img
         print(empImg)
         #result = compareImages("mahendra.jpg")
-        result = compareImages("mahendra.jpg" , request , emp)
+        result = compareImages(str(empImg) , request , emp)
         print(result)
 
         if result == True:
@@ -50,4 +50,16 @@ def validateEmp(request):
         print("emp Not Found")
         return render(request, 'EmployeeAttendence.html')
     
+def markAttendence(request):
+    
+    empID = request.POST['hiddenID']
+    today = request.POST['today']
+    inTime = request.POST['inTime']
 
+    print(empID , inTime , today)
+
+    attendEmp = Attendencesheet(
+        empid=empID, date=today, timein=inTime, status="Available")
+    attendEmp.save()
+
+    return render(request, 'EmployeeAttendence.html' , {'marked': True})

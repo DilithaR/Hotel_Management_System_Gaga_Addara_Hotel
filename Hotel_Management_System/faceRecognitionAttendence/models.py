@@ -4,7 +4,7 @@ from django.db import models
 class Attendencesheet(models.Model):
     # Field name made lowercase.
     empid = models.CharField(db_column='empId', primary_key=True, max_length=8)
-    date = models.DateField()
+    date = models.DateField(db_column='date')
     timein = models.TimeField(db_column='timeIn')  # Field name made lowercase.
     # Field name made lowercase.
     timeout = models.TimeField(db_column='timeOut', blank=True, null=True)
