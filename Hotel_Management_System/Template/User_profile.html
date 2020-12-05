@@ -33,63 +33,7 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg topnav">
-
-        <img src="{% static 'img/Logo.png'%}" class="navbar-brand navLogo" alt="Gaga Addara Hotel">
-        <h4 style="font-weight: bolder; font-style: italic; font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: rgb(253, 71, 108);"
-            class="mt-2 ml-0">gaga addara hotel</h4>
-        <!-- <a class="navbar-brand" href="#">GAGA ADDARA HOTEL</a> -->
-
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button> -->
-        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Home </a>
-                </li>
-                <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Featurs 1</a>
-                </li>
-                <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Feature 2</a>
-                </li>
-                <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Feature 3</a>
-                </li>
-                <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item active ml-2 mr-1">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-
-                <li class="nav-item dropdown active ml-2 mr-1">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Dropdown link
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="overflow: hidden;">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-
-                <li class="nav-item active ml-4 row">
-                    <a class="nav-link" href="#" title="My Profile"><i class="fas fa-user-circle fa-1x"></i></a>
-                </li>
-
-                <li class="nav-item active ml-4 mr-2 row">
-                    <a class="nav-link" href="#" title="Sign in"><i class="fas fa-sign-in-alt fa-1x"></i></a>
-                </li>
-
-
-
-            </ul>
-        </div>
-    </nav>
+    {% include 'frontendNavBar.html' %}
 
     <header>
 
@@ -691,7 +635,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="updateCus/{{customer.cus_index}}" enctype="multipart/form-data" method="POST" id="userEditForm">
+                    <form action="updateCus/{{customer.cus_index}}" enctype="multipart/form-data" method="POST"
+                        id="userEditForm">
                         {% csrf_token %}
                         <div class="row row row-cols-3">
                             <div class="col-xl-5 col-md-5 ml-4 mb-0 text-center">
@@ -702,7 +647,7 @@
                                 <img src="https://mdbootstrap.com/img/Photos/Avatars/img(31).jpg"
                                     class="img-fluid z-depth-1">
                                 {% endif %}
-                                
+
                                 <input type="file" id="cusImg" name="cusImg" class="btn btn-warning rounded btn-sm"
                                     value="Upload Image">
 
@@ -843,7 +788,7 @@
 
 
 
-    
+
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
     </script>
