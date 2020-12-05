@@ -298,16 +298,19 @@
 </head>
 
 <body>
-    {% include 'frontendNavBar.html' %}
-        
+    <div style="color : blueviolet">
+        {% include 'frontendNavBar.html' %}
+    </div>
+    
+
     <div class="testbox">
-            <form >
-                
-                <div class="banners">
-                    <h1> Reception Hall Reservation</h1>
-                </div>
-                <br />
-                <fieldset>
+        <form>
+
+            <div class="banners">
+                <h1> Reception Hall Reservation</h1>
+            </div>
+            <br />
+            <fieldset>
                 <legend class="legends">Reservation Details</legend>
                 <table class="table table-dark">
                     <thead>
@@ -322,22 +325,26 @@
                     </thead>
                     <tbody>
                         {% for datadisplay in viewres%}
-    <tr>
+                        <tr>
 
 
-        <td>{{datadisplay.RH_reserveID}}</td>
-        <td>{{datadisplay.cusId}}</td>
-        <td>{{datadisplay.theme}}</td>
-        <td>{{datadisplay.date}}</td>
-        <td>{{datadisplay.timeFrom}}</td>
-        <td>{{datadisplay.timeTo}}</td>
+                            <td>{{datadisplay.RH_reserveID}}</td>
+                            <td>{{datadisplay.cusId}}</td>
+                            <td>{{datadisplay.theme}}</td>
+                            <td>{{datadisplay.date}}</td>
+                            <td>{{datadisplay.timeFrom}}</td>
+                            <td>{{datadisplay.timeTo}}</td>
 
-        {% endfor %}
+                            {% endfor %}
 
-        </tbody>
-        </table>
-        </fieldset>
+                    </tbody>
+                </table>
+            </fieldset>
         </form>
-        </div>
-        </bod>
-        </htm>
+    </div>
+    <!-- Footer -->
+    {% include 'FrontendFooter.html' %}
+    <!-- Footer -->
+</body>
+
+</html>
