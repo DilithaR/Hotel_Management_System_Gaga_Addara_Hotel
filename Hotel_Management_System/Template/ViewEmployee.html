@@ -36,90 +36,7 @@
         <div class="row row-cols-2 p-0 m-0 pageContent">
 
             <!--Start of SlideBar-->
-            <div class="col-2 p-0 m-0" style="z-index: 0;">
-                <nav class="sidebar">
-                    <div class="sideback">
-                        <div class="sidebarTop d-flex flex-row pt-4">
-                            <div class="ml-2">
-                                <img src="{% static 'img/Logo.png'%}" alt="Gaga Addara Hotel"
-                                    style="width: 80px; height: 90px;">
-                            </div>
-
-                            <div class="d-flex flex-column ml-2">
-                                <h3 class="pt-3" style="font-weight: bold;">Hotel</h3>
-                                <h4 style="font-weight: bold;">Gaga Addara</h4>
-                            </div>
-
-                        </div>
-
-                        <ul>
-                            <li class=""
-                                style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;">
-                                <a href="admin"> <i class="fas fa-chart-pie mr-3"> </i> Dashboard</a>
-
-
-                            </li>
-
-                            <li><a class="dropBtn2" href="#"><i class="fas fa-box mr-3"></i>Packages<span
-                                        class="fas fa-sort-down secound-sp"></span></a>
-                                <ul class="dropCont2">
-                                    <li><a href="">View Employees</a></li>
-                                    <li><a href="">Add Employee</a></li>
-                                </ul>
-                            </li>
-
-                            <li><a class="dropbtnRooms" href="#"><i class="fas fa-bed mr-3"></i>Rooms<span
-                                        class="fas fa-sort-down rooms-sp"></span></a>
-                                <ul class="dropContRooms">
-                                    <li><a href="">View Employees</a></li>
-                                    <li><a href="">Add Employee</a></li>
-                                </ul>
-                            </li>
-
-                            <li><a class="dropbtnHalls" href="#"><i class="fas fa-hotel mr-3"></i>Reception Halls<span
-                                        class="fas fa-sort-down Halls-sp"></span></a>
-                                <ul class="dropContHalls">
-                                    <li><a href="">View Employees</a></li>
-                                    <li><a href="">Add Employee</a></li>
-                                </ul>
-                            </li>
-
-                            <li><a class="dropBtnMenu" href="#"><i class="fas fa-concierge-bell mr-3"></i>Food Menu<span
-                                        class="fas fa-sort-down Menu-sp"></span></a>
-                                <ul class="dropContMenu">
-                                    <li><a href="">View Employees</a></li>
-                                    <li><a href="">Add Employee</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a class="dropBtn1" href="#"><i class="fas fa-users mr-3"></i>Employees <span
-                                        class="fas fa-sort-down first-sp"></span></a>
-                                <ul class="dropCont1">
-                                    <li><a href="employeerepo">Attendence Report</a></li>
-                                    <li><a href="">Add Employee</a></li>
-
-                                </ul>
-                            </li>
-
-                            <li><a class="dropBtnReport" href="#"><i class="fas fa-clipboard-list mr-3"></i>Food
-                                    Report<span class="fas fa-sort-down Report-sp"></span></a>
-                                <ul class="dropContReport">
-                                    <li><a href="">View Employees</a></li>
-                                    <li><a href="">Add Employee</a></li>
-                                </ul>
-                            </li>
-
-
-                            <li><a href=""><i class="fas fa-star-half-alt mr-3"></i>Feedback</a></li>
-                            <li><a href=""><i class="far fa-id-card mr-3"></i>Contact Us</a></li>
-
-
-
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+            {% include 'DashboardSidebar.html' %}
             <!--End of SlideBar-->
 
             <!--Start of Content Area-->
@@ -237,7 +154,7 @@
                                 <a class="btn btn-danger w-100 font-weight-bold"
                                     href="deleteEmp/{{employee.emp_index}}">Delete</a>
                             </div>
-                            
+
 
 
                         </div>
@@ -678,7 +595,7 @@
                                         First
                                         Name</label>
                                     <input id="Edit_E_Fname" class="form-control ml-3" name="Edit_E_Fname"
-                                        placeholder="First Name" value="{{employee.f_name}}" required >
+                                        placeholder="First Name" value="{{employee.f_name}}" required>
                                 </div>
 
                                 <div class="form-group ml-5">
@@ -804,7 +721,7 @@
                                     <label for="Edit_Bsal" class="EmpEditLabText"><i
                                             class="fas fa-hand-holding-usd edit_sec_Icon  fa-2x"></i> Basic
                                         Salary</label>
-                                    <input type= "text" id="Edit_Bsal" class="form-control ml-3" name="Edit_Bsal"
+                                    <input type="text" id="Edit_Bsal" class="form-control ml-3" name="Edit_Bsal"
                                         placeholder="Last Name" value="{{employee.basic_sal}}" required>
 
                                 </div>
@@ -841,7 +758,7 @@
 
 
 
-                        </div>
+                    </div>
 
                     <div class="modal-footer justify-content-end">
                         <button type="reset" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
@@ -875,8 +792,8 @@
 
 
 
-    
-    
+
+
     <!--Popper.js CDN-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -898,7 +815,7 @@
         $('#empEditForm').submit(function () {
             $("#empEditForm :disabled").removeAttr('disabled');
         });
-        
+
 
 
 
