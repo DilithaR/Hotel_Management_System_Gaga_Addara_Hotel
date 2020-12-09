@@ -32,97 +32,100 @@
 <body>
 
     <div class="container-fluid p-0 m-0 grey lighten-5">
-        <div class="row row-cols-2 p-0 m-0 pageContent" >
+        <div class="row row-cols-2 p-0 m-0 pageContent">
 
             <!--Start of SlideBar-->
             <div class="col-2 p-0 m-0" style="z-index: 0;">
                 <nav class="sidebar">
                     <div class="sideback">
-                    <div class="sidebarTop d-flex flex-row pt-4">
-                        <div class="ml-2">
-                            <img src="{% static 'img/Logo.png' %}" alt="Gaga Addara Hotel" style="width: 80px; height: 90px;">
+                        <div class="sidebarTop d-flex flex-row pt-4">
+                            <div class="ml-2">
+                                <img src="{% static 'img/Logo.png' %}" alt="Gaga Addara Hotel"
+                                    style="width: 80px; height: 90px;">
+                            </div>
+
+                            <div class="d-flex flex-column ml-2">
+                                <h3 class="pt-3" style="font-weight: bold;">Hotel</h3>
+                                <h4 style="font-weight: bold;">Gaga Addara</h4>
+                            </div>
+
                         </div>
 
-                        <div class="d-flex flex-column ml-2">
-                            <h3 class="pt-3" style="font-weight: bold;">Hotel</h3>
-                            <h4 style="font-weight: bold;">Gaga Addara</h4>
-                        </div>
+                        <ul>
+                            <li>
+                                <a href="#"> <i class="fas fa-chart-pie mr-3"> </i> Dashboard</a>
 
-                    </div>
 
-                    <ul>
-                        <li>
-                            <a href="#"> <i class="fas fa-chart-pie mr-3"> </i>  Dashboard</a>
-                            
-                            
-                        </li>
+                            </li>
 
-                        <li><a class="dropBtn2" href="#"><i class="fas fa-box mr-3"></i>Packages<span
-                                    class="fas fa-sort-down secound-sp"></span></a>
-                            <ul class="dropCont2">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropBtn2" href="#"><i class="fas fa-box mr-3"></i>Packages<span
+                                        class="fas fa-sort-down secound-sp"></span></a>
+                                <ul class="dropCont2">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a class="dropbtnRooms" href="#"><i class="fas fa-bed mr-3"></i>Rooms<span
-                                    class="fas fa-sort-down rooms-sp"></span></a>
-                            <ul class="dropContRooms">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropbtnRooms" href="#"><i class="fas fa-bed mr-3"></i>Rooms<span
+                                        class="fas fa-sort-down rooms-sp"></span></a>
+                                <ul class="dropContRooms">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a class="dropbtnHalls" href="#"><i class="fas fa-hotel mr-3"></i>Reception Halls<span
-                                    class="fas fa-sort-down Halls-sp"></span></a>
-                            <ul class="dropContHalls">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropbtnHalls" href="#"><i class="fas fa-hotel mr-3"></i>Reception Halls<span
+                                        class="fas fa-sort-down Halls-sp"></span></a>
+                                <ul class="dropContHalls">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a class="dropBtnMenu" href="#"><i class="fas fa-concierge-bell mr-3"></i>Food Menu<span
-                                    class="fas fa-sort-down Menu-sp"></span></a>
-                            <ul class="dropContMenu">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropBtnMenu" href="#"><i class="fas fa-concierge-bell mr-3"></i>Food Menu<span
+                                        class="fas fa-sort-down Menu-sp"></span></a>
+                                <ul class="dropContMenu">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li>
-                            <a class="dropBtn1" href="#"><i class="fas fa-users mr-3"></i>Employees <span
-                                    class="fas fa-sort-down first-sp"></span></a>
-                            <ul class="dropCont1">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li>
+                                <a class="dropBtn1" href="#"><i class="fas fa-users mr-3"></i>Employees <span
+                                        class="fas fa-sort-down first-sp"></span></a>
+                                <ul class="dropCont1">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a class="dropBtnReport" href="#"><i class="fas fa-clipboard-list mr-3"></i>Food Report<span
-                                    class="fas fa-sort-down Report-sp"></span></a>
-                            <ul class="dropContReport">
-                                <li><a href="">View Employees</a></li>
-                                <li><a href="">Add Employee</a></li>
-                            </ul>
-                        </li>
+                            <li><a class="dropBtnReport" href="#"><i class="fas fa-clipboard-list mr-3"></i>Food
+                                    Report<span class="fas fa-sort-down Report-sp"></span></a>
+                                <ul class="dropContReport">
+                                    <li><a href="">View Employees</a></li>
+                                    <li><a href="">Add Employee</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a class="dropBtnPayment" href="#"><i class="fas fa-dollar-sign mr-3"></i>Payments<span
-                                    class="fas fa-sort-down Payment-sp"></span></a>
-                            <ul class="dropContPayment">
-                                <li class="" style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;"><a href="/cashDashboard">Cash Payments</a></li>
-                                <li><a href="/cardDashboard">Card Payments</a></li>
-                                <li><a href="/revokedPayment">Revoked Payments</a></li>
-                                <li><a href="/paymentReport">Payment Report</a></li>
-                            </ul>
-                        </li>
-                        
+                            <li><a class="dropBtnPayment" href="#"><i class="fas fa-dollar-sign mr-3"></i>Payments<span
+                                        class="fas fa-sort-down Payment-sp"></span></a>
+                                <ul class="dropContPayment">
+                                    <li class=""
+                                        style=" background-color: rgb(255, 255, 255 , 0.4); margin: 10px; border-radius: 5px;">
+                                        <a href="/cashDashboard">Cash Payments</a></li>
+                                    <li><a href="/cardDashboard">Card Payments</a></li>
+                                    <li><a href="/revokedPayment">Revoked Payments</a></li>
+                                    <li><a href="/paymentReport">Payment Report</a></li>
+                                </ul>
+                            </li>
 
-                        <li><a href=""><i class="fas fa-star-half-alt mr-3"></i>Feedback</a></li>
-                        <li><a href=""><i class="far fa-id-card mr-3"></i>Contact Us</a></li>
+
+                            <li><a href=""><i class="fas fa-star-half-alt mr-3"></i>Feedback</a></li>
+                            <li><a href=""><i class="far fa-id-card mr-3"></i>Contact Us</a></li>
 
 
 
-                    </ul>
+                        </ul>
                     </div>
                 </nav>
             </div>
@@ -134,21 +137,22 @@
                 <!--#ff4444-->
                 <nav class="navbar-expand-lg  pl-4 p-0 d-flex justify-content-between"
                     style="background-color: rgba(250, 68, 68 , 0.9); height: 70px;">
-                    
-                    <h1 class="navbar-brand mt-2" style="font-weight: bold; font-size: 30px;" ><i class="fas fa-money-bill mr-3"></i>CASH PAYMENTS</h1>
-                    
+
+                    <h1 class="navbar-brand mt-2" style="font-weight: bold; font-size: 30px;"><i
+                            class="fas fa-money-bill mr-3"></i>CASH PAYMENTS</h1>
+
                     <div class="mr-5">
-                        
+
 
                         <ul class="navbar-nav ml-auto nav-flex-icons">
                             <li class="nav-item mt-1">
                                 <a class="nav-link waves-effect waves-light">
-                                   <i class="fas fa-bell fa-2x mt-2 mr-3"></i>
+                                    <i class="fas fa-bell fa-2x mt-2 mr-3"></i>
                                 </a>
                             </li>
                             <li class="nav-item mt-1">
                                 <a class="nav-link waves-effect waves-light">
-                                   <i class="fas fa-envelope fa-2x mt-2 mr-3"></i>
+                                    <i class="fas fa-envelope fa-2x mt-2 mr-3"></i>
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
@@ -165,19 +169,21 @@
                                             class="img-fluid z-depth-1 rounded m-3" alt="Responsive image"
                                             style="width: 70px; height: 70px;">
 
-                                            <div class="d-flex flex-column">
-                                                <p class="m-0 p-0">Name</p>
-                                                mane15488@gmail.com
-                                            </div>
+                                        <div class="d-flex flex-column">
+                                            <p class="m-0 p-0">Name</p>
+                                            mane15488@gmail.com
+                                        </div>
                                     </div>
-                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"><i class="far fa-user-circle mr-3"></i>My Profile</a>
-                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"> <i class="fas fa-sign-out-alt mr-3"></i>Log
+                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"><i
+                                            class="far fa-user-circle mr-3"></i>My Profile</a>
+                                    <a class="dropdown-item mt-0 mb-0 pt-0 pb-0" href="#"> <i
+                                            class="fas fa-sign-out-alt mr-3"></i>Log
                                         Out</a>
                                 </div>
                             </li>
                         </ul>
-                            
-                            
+
+
                     </div>
 
                 </nav>
@@ -189,17 +195,29 @@
                         {{myFilter.form}}
                         <button id="m1" onclick="">Go</button><br><br>
                     </form>
-                    
+
                     <br><br>
 
                     <table border="3" width="700px">
-						<tr>
-                            <th><b><center>Payment ID</center></b></th>
-							<th><b><center>Item Type</center></b></th>
-                            <th><b><center>Item Number</center></b></th>
-                            <th><b><center>Quantity</center></b></th>
-                            <th><b><center>Net Amount(Rs:)</center></b></th>
-                            <th><b><center>Action</center></b></th>
+                        <tr>
+                            <th><b>
+                                    <center>Payment ID</center>
+                                </b></th>
+                            <th><b>
+                                    <center>Item Type</center>
+                                </b></th>
+                            <th><b>
+                                    <center>Item Number</center>
+                                </b></th>
+                            <th><b>
+                                    <center>Quantity</center>
+                                </b></th>
+                            <th><b>
+                                    <center>Net Amount(Rs:)</center>
+                                </b></th>
+                            <th><b>
+                                    <center>Action</center>
+                                </b></th>
                         </tr>
                         {% for instance in object_list %}
                         <tr>
@@ -219,7 +237,11 @@
                                 <center>{{ instance.Net_amount }}</center>
                             </td>
                             <td>
-                                <center><button class="btn btn-warning btn-sm" onclick="location.href='/revokedPayment'">Revoke</button><a href="{% url 'delete_cash' instance.id %}" onclick="return confirm('Do you want to delete this entry?')" class="btn btn-danger btn-sm" role="button">Delete</a></center>
+                                <center><button class="btn btn-warning btn-sm"
+                                        onclick="location.href='/revokedPayment'">Revoke</button><a
+                                        href="{% url 'delete_cash' instance.id %}"
+                                        onclick="return confirm('Do you want to delete this entry?')"
+                                        class="btn btn-danger btn-sm" role="button">Delete</a></center>
                             </td>
                         </tr>
                         {% endfor %}
@@ -227,136 +249,9 @@
                 </center>
 
                 <!-- Footer -->
-                <br><br><br><br><br>
-                <footer class="page-footer font-small text-light">
-
-
-                    <div class="footertop d-flex align-items-center">
-                        <div class="col-5 d-flex justify-content-left ml-4">
-                            <h5>Lorem ipsum dolor sit amet.</h5>
-                        </div>
-                        <div class="col-5 d-flex justify-content-end mr-4">
-                            <!-- Facebook -->
-                            <a href="#" class="SocialBtn">
-                                <i class="fab fa-facebook-f white-text mr-4"> </i>
-                            </a>
-                            <!-- Twitter -->
-                            <a href="#" class="SocialBtn">
-                                <i class="fab fa-twitter white-text mr-4"> </i>
-                            </a>
-                            <!-- Google +-->
-                            <a href="#" class="SocialBtn">
-                                <i class="fab fa-google-plus-g white-text mr-4"> </i>
-                            </a>
-                            <!--Linkedin -->
-                            <a href="#" class="SocialBtn">
-                                <i class="fab fa-linkedin-in white-text mr-4"> </i>
-                            </a>
-                            <!--Instagram-->
-                            <a href="#" class="SocialBtn">
-                                <i class="fab fa-instagram white-text"> </i>
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <!-- Footer Links -->
-                    <div class="text-center text-md-left pt-4 d-flex justify-content-between"
-                        style="background-color: #1c2a48;">
-
-                        <!-- Grid row -->
-
-
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-
-                            <!-- Content -->
-                            <h6 class="text-uppercase font-weight-bold">Company name</h6>
-                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                            <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit
-                                amet,
-                                consectetur
-                                adipisicing elit.</p>
-
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                            <!-- Links -->
-                            <h6 class="text-uppercase font-weight-bold">Products</h6>
-                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                            <p>
-                                <a href="#!">MDBootstrap</a>
-                            </p>
-                            <p>
-                                <a href="#!">MDWordPress</a>
-                            </p>
-                            <p>
-                                <a href="#!">BrandFlow</a>
-                            </p>
-                            <p>
-                                <a href="#!">Bootstrap Angular</a>
-                            </p>
-
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-
-                            <!-- Links -->
-                            <h6 class="text-uppercase font-weight-bold">Useful links</h6>
-                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                            <p>
-                                <a href="#!">Your Account</a>
-                            </p>
-                            <p>
-                                <a href="#!">Become an Affiliate</a>
-                            </p>
-                            <p>
-                                <a href="#!">Shipping Rates</a>
-                            </p>
-                            <p>
-                                <a href="#!">Help</a>
-                            </p>
-
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-
-                            <!-- Links -->
-                            <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                            <p>
-                                <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                            <p>
-                                <i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                            <p>
-                                <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                            <p>
-                                <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-
-                        </div>
-                        <!-- Grid column -->
-
-
-                        <!-- Grid row -->
-
-                    </div>
-                    <!-- Footer Links -->
-
-                    <!-- Copyright -->
-                    <div class="footer-copyright text-center py-3" style="background-color: #1c2331;">© 2020 Copyright:
-                        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-                    </div>
-                    <!-- Copyright -->
-
-                </footer>
+                {% include 'FrontendFooter.html' %}
                 <!-- Footer -->
+
             </div>
             <!--End of Content Area-->
         </div>
@@ -378,7 +273,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <!--User Js-->
     <script src="{% static 'js/Dashboard.js' %}"></script>
-    
+
 
 
 </body>
