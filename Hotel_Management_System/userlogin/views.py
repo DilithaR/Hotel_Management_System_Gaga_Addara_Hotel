@@ -30,7 +30,7 @@ def signUp(request):
 
 
 def admin(request):
-    return render(request, 'Dashboard.html')
+    return render(request, 'Dashboard.html' , {'Title' : "Dashboard"})
 
 
 def forgetpassword(request):
@@ -91,22 +91,22 @@ def customerLogout(request):
 
 
 def addEmployees(request):
-    return render(request, 'AddEmployee.html')
+    return render(request, 'AddEmployee.html' , {'Title' : "ADD EMPLOYEE"})
 
 
 def employeerepo(request):
-    return render(request, 'AttendenceReport.html')
+    return render(request, 'AttendenceReport.html' , {'Title' : "Employee Report"})
 
 
 def employeeList(request):
     emp = Employee.objects.all()
-    return render(request, 'EmployeeList.html',  {'employees': emp})
+    return render(request, 'EmployeeList.html',  {'employees': emp , 'Title' : "Employee List"})
 
 
 def myprofile(request):
     print("sesseionvalue : " + request.session['userid'])
     cus1 = Customer.objects.get(cusid=request.session['userid'])
-    return render(request, 'User_profile.html', {'customer': cus1})
+    return render(request, 'User_profile.html', {'customer': cus1 , 'Title' : "User Profile"})
 
 
 # login function
@@ -136,7 +136,7 @@ def vertifyLogin(request):
             if admin.password == Password:
                 request.session['eid'] = admin.adminid
                 print("admin valid")
-                return render(request, 'Dashboard.html', {'isLoged' : True})
+                return render(request, 'Dashboard.html', {'isLoged' : True , 'Title' : "Dashboard"})
             else:
                 request.session['userid'] = None
                 return render(request, 'login.html')
@@ -207,7 +207,7 @@ def updateCus(request, id_cus):
         cus.save()
 
     cus = Customer.objects.get(cusid=request.session['userid'])
-    return render(request, 'User_profile.html', {'customer': cus, 'media_url': settings.MEDIA_URL})
+    return render(request, 'User_profile.html', {'customer': cus, 'media_url': settings.MEDIA_URL , 'Title' : "User Profile"})
 
 
 def adduser(request):
@@ -247,12 +247,12 @@ def adduser(request):
     employee.save()
     print("Saved Customer")
     emp = Employee.objects.all()
-    return render(request, 'EmployeeList.html', {'employees': emp})
+    return render(request, 'EmployeeList.html', {'employees': emp , 'Title' : "Employee List"})
 
 
 def fullemployee(request, id_emp):
     emp = Employee.objects.get(emp_index=id_emp)
-    return render(request, 'ViewEmployee.html', {'employee': emp})
+    return render(request, 'ViewEmployee.html', {'employee': emp , 'Title' : "Employee Profile"})
 
 
 def editemp(request):
@@ -289,7 +289,7 @@ def editemp(request):
     employee.ot_rate=addempOTRate
 
     employee.save()
-    return render(request, 'ViewEmployee.html', {'employee': employee})
+    return render(request, 'ViewEmployee.html', {'employee': employee , 'Title' : "Employee Profile"})
 
 #Adding filters app
 def filterEmployees(request):
@@ -339,7 +339,7 @@ def filterEmployees(request):
           srchByName, srchByGender, srchByEid, srchByOccu)
 
     # return employeeList(request)
-    return render(request, 'EmployeeList.html',  {'employees': filteedSet})
+    return render(request, 'EmployeeList.html',  {'employees': filteedSet , 'Title' : "Employee List"})
 
 
 
@@ -348,4 +348,4 @@ def filterEmployees(request):
 def deleteEmp(request, id_Emp):
 
     emp = Employee.objects.get(emp_index=id_Emp).delete()
-    return render(request,  'Dashboard.html')
+    return render(request,  'Dashboard.html' , {'Title' : "Dashboard"})

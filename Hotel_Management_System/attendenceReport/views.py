@@ -78,7 +78,7 @@ def attendenceReport (request):
         fullRepList.append(fullRep)
 
     context = {'mon': json.dumps(empCountList[0]), 'tue': json.dumps(empCountList[1]), 'wed': json.dumps(empCountList[2]), 'thu': json.dumps(empCountList[3]), 'fri': json.dumps(empCountList[4]), 'sat': json.dumps(empCountList[5]), 'sun': json.dumps(empCountList[6]), 'AvailableEmp': availEmp, 'dailyAttendence': empCountList,
-               'TodayCount': empCountToday, 'fullAttendList': fullAttendList, 'FullReportVals': fullRepList}
+               'TodayCount': empCountToday, 'fullAttendList': fullAttendList, 'FullReportVals': fullRepList ,'Title' : "ATTENDANCE REPORT"}
 
     return render(request, "AttendenceReport.html", context)
 
